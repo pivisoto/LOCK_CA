@@ -1,4 +1,4 @@
-# LOCK_CA
+# :lock: LOCK_CA
 ## Sistema de locação dos materiais no Centro Acadêmico 
 ### Integrantes:
 - Pedro Guilherme Toloni Luxenani – 19.02530-0
