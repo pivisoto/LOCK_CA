@@ -7,6 +7,7 @@ import java.util.Map;
 import java.awt.font.TextAttribute;
 import javax.swing.*;
 import java.awt.*;
+import javax.swing.border.Border;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 
@@ -14,16 +15,18 @@ import javax.swing.tree.DefaultTreeModel;
  *
  * @author pivis
  */
-public class PaginaRegistro extends javax.swing.JFrame {
+public class PaginaLogin extends javax.swing.JFrame {
+
+    private Border FlatTextBorder;
 
     /**
      * Creates new form PaginaInicial
      */
-    public PaginaRegistro() {
+    public PaginaLogin() {
         initComponents();
+        button_login.setFocusPainted(false);
         button_cadastrar.setFocusPainted(false);
         button_confirmar.setFocusPainted(false);
-        button_login.setFocusPainted(false);
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -48,26 +51,22 @@ public class PaginaRegistro extends javax.swing.JFrame {
         button_login = new javax.swing.JButton();
         button_cadastro = new javax.swing.JPanel();
         button_cadastrar = new javax.swing.JButton();
-        ra_field = new javax.swing.JTextField();
         button_confirmar = new javax.swing.JButton();
-        recebe_senha = new javax.swing.JPasswordField();
         email_label = new javax.swing.JLabel();
-        senha_label = new javax.swing.JLabel();
-        confirma_senha = new javax.swing.JPasswordField();
-        confirmasenha_label = new javax.swing.JLabel();
-        email_field1 = new javax.swing.JTextField();
-        ra_label = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        password_field_login = new javax.swing.JPasswordField();
+        email_field = new javax.swing.JTextField();
         Nome_logo = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(950, 500));
         setUndecorated(true);
 
         Header.setBackground(new java.awt.Color(0, 0, 0));
         Header.setPreferredSize(new java.awt.Dimension(800, 50));
+        Header.setLayout(new java.awt.BorderLayout());
 
         header_icon.setBackground(new java.awt.Color(0, 0, 0));
         header_icon.setPreferredSize(new java.awt.Dimension(200, 100));
@@ -77,7 +76,10 @@ public class PaginaRegistro extends javax.swing.JFrame {
         icon_label_maua.setForeground(new java.awt.Color(255, 255, 255));
         icon_label_maua.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         icon_label_maua.setText("MAUÁ");
+        icon_label_maua.setPreferredSize(new java.awt.Dimension(20, 10));
         header_icon.add(icon_label_maua, java.awt.BorderLayout.CENTER);
+
+        Header.add(header_icon, java.awt.BorderLayout.LINE_START);
 
         icone_min_max_close.setBackground(new java.awt.Color(0, 0, 0));
         icone_min_max_close.setPreferredSize(new java.awt.Dimension(150, 50));
@@ -139,27 +141,19 @@ public class PaginaRegistro extends javax.swing.JFrame {
 
         icone_min_max_close.add(close_panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 50, 50));
 
-        javax.swing.GroupLayout HeaderLayout = new javax.swing.GroupLayout(Header);
-        Header.setLayout(HeaderLayout);
-        HeaderLayout.setHorizontalGroup(
-            HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(HeaderLayout.createSequentialGroup()
-                .addComponent(header_icon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(600, 600, 600)
-                .addComponent(icone_min_max_close, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        HeaderLayout.setVerticalGroup(
-            HeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(header_icon, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(icone_min_max_close, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
+        Header.add(icone_min_max_close, java.awt.BorderLayout.LINE_END);
+
+        getContentPane().add(Header, java.awt.BorderLayout.PAGE_START);
 
         login_cadastro_panel.setBackground(new java.awt.Color(73, 128, 242));
         login_cadastro_panel.setToolTipText("");
         login_cadastro_panel.setPreferredSize(new java.awt.Dimension(500, 450));
 
         login.setBackground(new java.awt.Color(73, 128, 242));
+        login.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         login.setToolTipText("");
+        login.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 12)); // NOI18N
+        login.setOpaque(false);
         login.setPreferredSize(new java.awt.Dimension(100, 100));
         login.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -175,14 +169,12 @@ public class PaginaRegistro extends javax.swing.JFrame {
         button_login.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 24)); // NOI18N
         button_login.setText("LOGIN");
         button_login.setToolTipText("");
-        button_login.setBorder(null);
+        button_login.setBorder(javax.swing.BorderFactory.createCompoundBorder());
         button_login.setBorderPainted(false);
         button_login.setContentAreaFilled(false);
         button_login.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        button_login.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         button_login.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                button_loginMouseClicked(evt);
-            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 button_loginMouseEntered(evt);
             }
@@ -190,12 +182,7 @@ public class PaginaRegistro extends javax.swing.JFrame {
                 button_loginMouseExited(evt);
             }
         });
-        button_login.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                button_loginActionPerformed(evt);
-            }
-        });
-        login.add(button_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(63, 70, 80, -1));
+        login.add(button_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 62, -1, 40));
 
         button_cadastro.setBackground(new java.awt.Color(72, 128, 242));
         button_cadastro.setMinimumSize(new java.awt.Dimension(200, 50));
@@ -222,21 +209,11 @@ public class PaginaRegistro extends javax.swing.JFrame {
         });
         button_cadastro.add(button_cadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 150, 30));
 
-        ra_field.setBackground(new java.awt.Color(0, 0, 0));
-        ra_field.setForeground(new java.awt.Color(255, 255, 255));
-        ra_field.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        ra_field.setToolTipText("");
-        ra_field.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ra_fieldActionPerformed(evt);
-            }
-        });
-
-        button_confirmar.setBackground(new java.awt.Color(0, 0, 0));
+        button_confirmar.setBackground(new java.awt.Color(73, 128, 242));
         button_confirmar.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
         button_confirmar.setText("confirmar");
         button_confirmar.setActionCommand("");
-        button_confirmar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        button_confirmar.setBorder(null);
         button_confirmar.setBorderPainted(false);
         button_confirmar.setContentAreaFilled(false);
         button_confirmar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -256,33 +233,18 @@ public class PaginaRegistro extends javax.swing.JFrame {
             }
         });
 
-        recebe_senha.setBackground(new java.awt.Color(0, 0, 0));
-        recebe_senha.setForeground(new java.awt.Color(255, 255, 255));
-
         email_label.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
-        email_label.setText("Insira seu Email constitucional :");
+        email_label.setText("Email constitucional :");
 
-        senha_label.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
-        senha_label.setText("Insira sua Senha :");
+        jLabel7.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        jLabel7.setText("Senha :");
 
-        confirma_senha.setBackground(new java.awt.Color(0, 0, 0));
-        confirma_senha.setForeground(new java.awt.Color(255, 255, 255));
+        password_field_login.setBackground(new java.awt.Color(0, 0, 0));
+        password_field_login.setForeground(new java.awt.Color(255, 255, 255));
 
-        confirmasenha_label.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
-        confirmasenha_label.setText("Insira sua senha novamente :");
-
-        email_field1.setBackground(new java.awt.Color(0, 0, 0));
-        email_field1.setForeground(new java.awt.Color(255, 255, 255));
-        email_field1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        email_field1.setToolTipText("");
-        email_field1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                email_field1ActionPerformed(evt);
-            }
-        });
-
-        ra_label.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 14)); // NOI18N
-        ra_label.setText("Insira seu R.A :");
+        email_field.setBackground(new java.awt.Color(0, 0, 0));
+        email_field.setForeground(new java.awt.Color(255, 255, 255));
+        email_field.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
         javax.swing.GroupLayout login_cadastro_panelLayout = new javax.swing.GroupLayout(login_cadastro_panel);
         login_cadastro_panel.setLayout(login_cadastro_panelLayout);
@@ -291,21 +253,18 @@ public class PaginaRegistro extends javax.swing.JFrame {
             .addGroup(login_cadastro_panelLayout.createSequentialGroup()
                 .addComponent(login, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(button_cadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(69, 69, 69))
+                .addComponent(button_cadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(80, 80, 80))
             .addGroup(login_cadastro_panelLayout.createSequentialGroup()
                 .addGap(64, 64, 64)
-                .addGroup(login_cadastro_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ra_label, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(login_cadastro_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(email_field1)
-                        .addComponent(confirmasenha_label)
-                        .addComponent(senha_label)
-                        .addComponent(button_confirmar, javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(ra_field)
-                        .addComponent(recebe_senha, javax.swing.GroupLayout.DEFAULT_SIZE, 335, Short.MAX_VALUE)
-                        .addComponent(confirma_senha)
-                        .addComponent(email_label, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(login_cadastro_panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(password_field_login)
+                    .addComponent(email_label, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7)
+                    .addGroup(login_cadastro_panelLayout.createSequentialGroup()
+                        .addGap(258, 258, 258)
+                        .addComponent(button_confirmar))
+                    .addComponent(email_field))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         login_cadastro_panelLayout.setVerticalGroup(
@@ -317,26 +276,19 @@ public class PaginaRegistro extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(email_label)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(email_field1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(8, 8, 8)
-                .addComponent(ra_label)
+                .addComponent(email_field, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ra_field, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(senha_label)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(recebe_senha, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(confirmasenha_label)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(confirma_senha, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(password_field_login, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(button_confirmar)
-                .addGap(42, 42, 42))
+                .addGap(141, 141, 141))
         );
 
+        getContentPane().add(login_cadastro_panel, java.awt.BorderLayout.LINE_START);
+
         Nome_logo.setBackground(new java.awt.Color(73, 128, 242));
-        Nome_logo.setPreferredSize(new java.awt.Dimension(400, 260));
         Nome_logo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel8.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 48)); // NOI18N
@@ -355,36 +307,15 @@ public class PaginaRegistro extends javax.swing.JFrame {
         jLabel2.setText("esportivos do Centro Acadêmico");
         Nome_logo.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, 270, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Header, javax.swing.GroupLayout.PREFERRED_SIZE, 950, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(login_cadastro_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(Nome_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(Header, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(login_cadastro_panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Nome_logo, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
+        getContentPane().add(Nome_logo, java.awt.BorderLayout.CENTER);
 
         setSize(new java.awt.Dimension(950, 500));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ra_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ra_fieldActionPerformed
+    private void button_confirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_confirmarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ra_fieldActionPerformed
-
-    private void button_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_loginActionPerformed
-    
-    }//GEN-LAST:event_button_loginActionPerformed
+    }//GEN-LAST:event_button_confirmarActionPerformed
 
     private void loginMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginMouseEntered
     
@@ -393,20 +324,6 @@ public class PaginaRegistro extends javax.swing.JFrame {
     private void loginMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginMouseExited
         // TODO add your handling code here:
     }//GEN-LAST:event_loginMouseExited
-
-    private void button_loginMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_loginMouseEntered
-        Font originalFont = button_login.getFont();
-        Map attributes = originalFont.getAttributes();
-        attributes.put(TextAttribute.UNDERLINE, TextAttribute.UNDERLINE_ON);
-        button_login.setFont(originalFont.deriveFont(attributes));
-    }//GEN-LAST:event_button_loginMouseEntered
-
-    private void button_loginMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_loginMouseExited
-       Font originalFont = button_login.getFont();
-        Map attributes = originalFont.getAttributes();
-        attributes.put(TextAttribute.UNDERLINE,-1);
-        button_login.setFont(originalFont.deriveFont(attributes));
-    }//GEN-LAST:event_button_loginMouseExited
 
     private void button_cadastrarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_cadastrarMouseEntered
          Font originalFont = button_cadastrar.getFont();
@@ -448,49 +365,50 @@ public class PaginaRegistro extends javax.swing.JFrame {
          if(this.getExtendedState()!= PaginaLogin.MAXIMIZED_BOTH){
              this.setExtendedState(PaginaLogin.MAXIMIZED_BOTH);
          }
-         
          else{
              this.setExtendedState(PaginaLogin.NORMAL);
          }
     }//GEN-LAST:event_max_panelMouseClicked
 
     private void button_cadastrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_cadastrarMouseClicked
-
+        PaginaRegistro mi = new PaginaRegistro();
+                    mi.setVisible(true);
+                    this.dispose();
     }//GEN-LAST:event_button_cadastrarMouseClicked
 
-    private void email_field1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_email_field1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_email_field1ActionPerformed
+    private void button_confirmarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_confirmarMouseClicked
+         PaginaMateriais mi = new PaginaMateriais();
+                    mi.setVisible(true);
+                    this.dispose();
+    }//GEN-LAST:event_button_confirmarMouseClicked
 
-    private void button_loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_loginMouseClicked
-        PaginaLogin voltar = new PaginaLogin();
-        voltar.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_button_loginMouseClicked
-
-    private void button_confirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_confirmarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_button_confirmarActionPerformed
-    
     private void button_confirmarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_confirmarMouseEntered
         Font originalFont = button_confirmar.getFont();
         Map attributes = originalFont.getAttributes();
         attributes.put(TextAttribute.UNDERLINE, TextAttribute.UNDERLINE_ON);
-        button_confirmar.setFont(originalFont.deriveFont(attributes));           
+        button_confirmar.setFont(originalFont.deriveFont(attributes)); 
     }//GEN-LAST:event_button_confirmarMouseEntered
 
     private void button_confirmarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_confirmarMouseExited
-        Font originalFont = button_confirmar.getFont();
-        Map attributes = originalFont.getAttributes();
-        attributes.put(TextAttribute.UNDERLINE,-1);
-        button_confirmar.setFont(originalFont.deriveFont(attributes));
+       Font originalFont = button_confirmar.getFont();
+       Map attributes = originalFont.getAttributes();
+       attributes.put(TextAttribute.UNDERLINE,-1);
+       button_confirmar.setFont(originalFont.deriveFont(attributes));
     }//GEN-LAST:event_button_confirmarMouseExited
 
-    private void button_confirmarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_confirmarMouseClicked
-        PaginaLogin no = new PaginaLogin();
-            no.setVisible(true);
-            this.dispose();
-    }//GEN-LAST:event_button_confirmarMouseClicked
+    private void button_loginMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_loginMouseExited
+        Font originalFont = button_login.getFont();
+        Map attributes = originalFont.getAttributes();
+        attributes.put(TextAttribute.UNDERLINE,-1);
+        button_login.setFont(originalFont.deriveFont(attributes));
+    }//GEN-LAST:event_button_loginMouseExited
+
+    private void button_loginMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_loginMouseEntered
+        Font originalFont = button_login.getFont();
+        Map attributes = originalFont.getAttributes();
+        attributes.put(TextAttribute.UNDERLINE, TextAttribute.UNDERLINE_ON);
+        button_login.setFont(originalFont.deriveFont(attributes));
+    }//GEN-LAST:event_button_loginMouseEntered
     
         /**
      * @param args the command line arguments
@@ -518,6 +436,7 @@ public class PaginaRegistro extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(PaginaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -538,22 +457,18 @@ public class PaginaRegistro extends javax.swing.JFrame {
     private javax.swing.JPanel button_min;
     private javax.swing.JLabel button_sair;
     private javax.swing.JPanel close_panel;
-    private javax.swing.JPasswordField confirma_senha;
-    private javax.swing.JLabel confirmasenha_label;
-    private javax.swing.JTextField email_field1;
+    private javax.swing.JTextField email_field;
     private javax.swing.JLabel email_label;
     private javax.swing.JPanel header_icon;
     private javax.swing.JLabel icon_label_maua;
     private javax.swing.JPanel icone_min_max_close;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel login;
     private javax.swing.JPanel login_cadastro_panel;
     private javax.swing.JPanel max_panel;
-    private javax.swing.JTextField ra_field;
-    private javax.swing.JLabel ra_label;
-    private javax.swing.JPasswordField recebe_senha;
-    private javax.swing.JLabel senha_label;
+    private javax.swing.JPasswordField password_field_login;
     // End of variables declaration//GEN-END:variables
 }
