@@ -2,15 +2,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package lock.ca_projeto;
+// package lock.ca_projeto;
 
 import java.util.Map;
 import java.awt.font.TextAttribute;
+import java.sql.ResultSet;
+
 import javax.swing.*;
 import java.awt.*;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
+
+import lock.DAO.FeedbackDAO;
+import lock.DTO.FeedbackDTO;
+
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -341,31 +347,22 @@ public class PaginaFeedback extends javax.swing.JFrame {
         jScrollPane1.setBackground(new java.awt.Color(0, 0, 0));
         jScrollPane1.setBorder(null);
 
+
+        FeedbackDAO feedbackDAO = new FeedbackDAO();
+        Object[][] listFeedback;
+        try{
+            listFeedback = feedbackDAO.getFeedbacks();
+            JTable1.setModel(new javax.swing.table.DefaultTableModel(
+                listFeedback,
+                new String [] {
+                    "Material", "R.A", "Feedback"
+                }
+            ));
+        } catch (Exception exception) {
+            JOptionPane.showMessageDialog(null, "FeedbackDAO: " + exception);
+        }
         JTable1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         JTable1.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
-        JTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {"Pietro", "22.01046-7", "Estava Faltando uma bolinha"},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
-            },
-            new String [] {
-                "Material", "R.A", "Feedback"
-            }
-        ));
         JTable1.setFocusable(false);
         JTable1.setGridColor(new java.awt.Color(0, 0, 0));
         JTable1.setRowHeight(25);

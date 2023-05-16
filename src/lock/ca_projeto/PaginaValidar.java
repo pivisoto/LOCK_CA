@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package lock.ca_projeto;
+// package lock.ca_projeto;
 
 import java.util.Map;
 import java.awt.font.TextAttribute;
@@ -11,6 +11,9 @@ import java.awt.*;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
+
+import lock.DAO.ValidarDAO;
+
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -325,29 +328,19 @@ public class PaginaValidar extends javax.swing.JFrame {
 
         JTable1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         JTable1.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
-        JTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {"Pietro", "22.01046-7", "Kit sinuca"},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
-            },
-            new String [] {
-                "Nome", "R.A", "Material"
-            }
-        ));
+        ValidarDAO validarDAO = new ValidarDAO();
+        Object[][] listValidar;
+        try{
+            listValidar = validarDAO.getMateriais();
+            JTable1.setModel(new javax.swing.table.DefaultTableModel(
+                listValidar,
+                new String [] {
+                    "Nome", "R.A", "Material"
+                }
+            ));
+        } catch (Exception exception) {
+            JOptionPane.showMessageDialog(null, "FeedbackDAO: " + exception);
+        }
         JTable1.setFocusable(false);
         JTable1.setGridColor(new java.awt.Color(0, 0, 0));
         JTable1.setRowHeight(25);
