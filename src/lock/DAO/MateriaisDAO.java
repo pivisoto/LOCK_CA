@@ -9,39 +9,40 @@ import javax.swing.JOptionPane;
 
 import lock.Database.ConnectionFactory;
 
-public class FeedbackDAO {
+public class MateriaisDAO {
     Connection conn;
     PreparedStatement pstm;
     ResultSet rs;
 
-    public Object[][] getFeedbacks() throws Exception 
+    public Object[][] getMateriais() throws Exception 
     {
-    Object[][] listaFeedback = new Object[16][3];
+    Object[][] listaMateriais = new Object[16][3];
     int i = 0;
     
     conn = ConnectionFactory.getConnection();
                 
     try {
-            String sql = "select * from feedback";
+            String sql = "select * from material";
             
             PreparedStatement pstm = (PreparedStatement) conn.prepareStatement(sql);
             ResultSet rs = pstm.executeQuery();
             while(rs.next()) {
                 Object[] temp = new Object[3];
-                temp[0] = rs.getString("idMaterial");
-                temp[1] = rs.getString("idUsuario");
-                temp[2] = rs.getString("feedback");
-                listaFeedback[i] = temp;
+                temp[0] = rs.getString("material");
+                temp[1] = rs.getString("quantidade");
+                if(rs.getBoolean("disp")) temp[2] = "Disponível";
+                else temp[2] = "Indisponível";
+                listaMateriais[i] = temp;
                 i++;
             }
             while(i<16) {
-                listaFeedback[i] = new Object[3];
+                listaMateriais[i] = new Object[3];
                 i++;
             }
-            return listaFeedback;
+            return listaMateriais;
             
         } catch (SQLException exception) {
-            JOptionPane.showMessageDialog(null, "FeedbackDAO: " + exception);
+            JOptionPane.showMessageDialog(null, "MateriaisDAO: " + exception);
             return null;
         }
     }
