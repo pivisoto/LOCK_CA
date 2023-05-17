@@ -5,11 +5,18 @@
 // package lock.ca_projeto;
 import java.util.Map;
 import java.awt.font.TextAttribute;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 import javax.swing.*;
 import java.awt.*;
 import javax.swing.border.Border;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
+
+import lock.DAO.LoginDAO;
+import lock.DTO.LoginDTO;
+import lock.Global.Globals;
 
 /**
  *
@@ -372,14 +379,12 @@ public class PaginaLogin extends javax.swing.JFrame {
 
     private void button_cadastrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_cadastrarMouseClicked
         PaginaRegistro mi = new PaginaRegistro();
-                    mi.setVisible(true);
-                    this.dispose();
+            mi.setVisible(true);
+            this.dispose();
     }//GEN-LAST:event_button_cadastrarMouseClicked
 
     private void button_confirmarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_confirmarMouseClicked
-         PaginaMateriais mi = new PaginaMateriais();
-                    mi.setVisible(true);
-                    this.dispose();
+        Logar();
     }//GEN-LAST:event_button_confirmarMouseClicked
 
     private void button_confirmarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_confirmarMouseEntered
@@ -444,6 +449,38 @@ public class PaginaLogin extends javax.swing.JFrame {
                 new PaginaLogin().setVisible(true);
             }
         });
+    }
+
+    private void Logar() {
+        try {
+            String email, senha;
+            email = email_field.getText();
+            senha = password_field_login.getText();
+
+            LoginDTO loginDTO = new LoginDTO();
+            loginDTO.setEmail(email);
+            loginDTO.setSenha(senha);
+
+            LoginDAO loginDAO = new LoginDAO();
+            ResultSet rsusuariodao = loginDAO.autenticacaoUsuario(loginDTO);
+ 
+            if (rsusuariodao.next()) {
+                int id = Globals.getInstance(loginDAO.GetIdbyEmail(loginDTO.getEmail())).getIdUsuario();
+
+                PaginaMateriais mi = new PaginaMateriais();
+                mi.setVisible(true);
+                this.dispose();
+
+            } else {
+                // enviar mensagem dizendo incorreto
+                JOptionPane.showMessageDialog(null, "Usuário ou Senha incorreto");
+            
+            } 
+
+        }catch (Exception erro) {
+          JOptionPane.showMessageDialog(null,"FMRLOGIN" + erro);
+                }
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
