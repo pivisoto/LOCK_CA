@@ -1,10 +1,73 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Start Page</title>
+        <title></title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport"content="width=device-width">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <header>
+            <h1>LOCKC.A</h1>
+        </header>
+        <section class="container forms">
+                <div class="form login">
+                    <div class="form-content">
+                        <main>Login</main>
+                        <form action = "#">
+                            <div class="field input-field">
+                                <input type="text" placeholder="email Institucional" class ="input">
+                            </div>
+
+                            <div class="field input-field">
+                                <input type="password" placeholder="senha" class="password">
+                                <i class='bx bx-hide eye-icon'></i>
+                            </div>
+
+                            <div class = "form-link">
+                                <a href="#" class="forgot">Esqueceu a senha?</a>
+                            </div>
+
+                            <div class="field field-button">
+                                <button class="botao">Confirmar</button>
+                            </div>
+                            <div class="line"></div>
+                            <div class="field ">
+                                <button type="button" class="registerButton" onclick="toggleLogin();">Cadastrar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="form cadastrar">
+                    <div class="form-content">
+                        <main>Cadastrar</main>
+                        <form action = "#">
+                            <div class="field input-field">
+                                <input type="text" placeholder="email Institucional" class ="input">
+                            </div>
+
+                            <div class="field input-field">
+                                <input type="password" placeholder="insira uma senha" class="password">
+                            </div>
+
+                            <div class="field input-field">
+                                <input type="password" placeholder="insira novamente" class="password">
+                                <i class='bx bx-hide eye-icon'></i>
+                            </div>
+                            <div class="field button-field">
+                                <button class="button cadastrar-button">Confirmar</button>
+                            </div>
+                            <div class="line"></div>
+                            <div class="field button-field">
+                                <button type="button" class="botaoLogar" onclick="toggleLogin();">Logar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+           
+               
+        </section>
+        <script src="javascript.js"></script>
     </body>
 </html>
