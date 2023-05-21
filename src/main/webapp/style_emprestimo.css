@@ -30,9 +30,6 @@ header>h1 {
     font-size: 1.5em;
     text-decoration: 5px underline;
 }
-.form-content a:hover{
-  text-decoration: underline;
-}
 .container{
   height: 100vh;
   width: 100%;
@@ -49,18 +46,6 @@ header>h1 {
   border-radius: 6px;
   background-color: white;
 }
-.form.cadastrar{
-  opacity: 0;
-  pointer-events: none;
-}
-.forms.show-cadastrar .form.cadastrar{
-  opacity: 1;
-  pointer-events: auto;
-}
-.forms.show-cadastrar .form.login{
-  opacity: 0;
-  pointer-events: none;
-}
 main{
   color:black;
   font-size:28px;
@@ -73,63 +58,46 @@ form{
 .form .field{
   position: relative;
   height: 50px;
-  width: 100%;
   margin-top: 20px;
-  border-radius: 6px;
+  border-radius: 5px;
 }
-.field input,
+.field{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+.field p,
 .field button{
   height:100%;
-  width: 100%;
   border:none;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   border-radius: 6px;
 }
-.field input{
-  outline: none;
-  padding: 0 15px;
-  border:1px solid#CACACA;
+.item{
+  width: 40%;
 }
-.field input:focus{
-  border-bottom-width: 2px;
+.botao-item{
+  width: 100%;
+}
+.field p{
+  width: 100%;
+  padding-top: 10px;
 }
 .field button{
+  width: 100%;
   color: #fff;
   background-color: #0171d3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .field button:hover{
   color: #fff;
   background-color: #016dcb;
   transition: all 0.3 ease;
   cursor: pointer;
-}
-.eye-icon{
-  position: absolute;
-  top: 50%;
-  right:10px;
-  transform: translateY(-50%);
-  font-size: 18px;
-  color: #8b8b8b;
-  cursor: pointer;
-  padding: 5px;
-}
-.form-link{
-  text-align: center;
-  margin-top: 10px;
-}
-.form-link span,
-.form-link a{
-  color:black;
-  font-size:14px;
-  font-weight: 400;
-}
-.form a{
-  color: #0171d3;
-  text-decoration: none;
-}
-.form a:hover{
-  text-decoration: underline;
 }
 .line{
   position: relative;
@@ -139,7 +107,6 @@ form{
   background-color: #d4d4d4
 }
 .line::before{
-  content: 'Ou';
   position: absolute;
   top: 50%;
   left: 50%;
@@ -159,7 +126,7 @@ form{
       font-size: 1em;
         }
     .form{
-      padding: 20px 10px;
+        padding: 20px 10px;
         }
     }
   

@@ -17,8 +17,6 @@ ShowHide.forEach((eyeIcon) => {
   });
 });
 
-// document.getElementById("registerButton").onclick = teste();
-
 function toggleLogin() {
   forms.classList.toggle("show-cadastrar");
 }
