@@ -57,6 +57,13 @@ public class PaginaMateriais extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         JTable1 = new javax.swing.JTable();
+        Panel_button_sair = new javax.swing.JPanel();
+        button_voltar = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        button_voltar1 = new javax.swing.JLabel();
+        panel_barra_menu = new javax.swing.JPanel();
+        panel_hide_menu = new javax.swing.JPanel();
+        button_hide_menu = new javax.swing.JLabel();
         Panel_Menu_Extendido = new javax.swing.JPanel();
         Panel_button_materiais = new javax.swing.JPanel();
         button_materiais = new javax.swing.JLabel();
@@ -64,11 +71,13 @@ public class PaginaMateriais extends javax.swing.JFrame {
         button_autorizacao = new javax.swing.JLabel();
         Panel_button_feedbacks = new javax.swing.JPanel();
         button_feedbacks = new javax.swing.JLabel();
-        Panel_button_sair = new javax.swing.JPanel();
-        button_voltar = new javax.swing.JLabel();
-        panel_barra_menu = new javax.swing.JPanel();
-        panel_hide_menu = new javax.swing.JPanel();
-        button_hide_menu = new javax.swing.JLabel();
+        Panel_botoes_CRUD = new javax.swing.JPanel();
+        Panel_button_criar = new javax.swing.JPanel();
+        button_criar = new javax.swing.JLabel();
+        Panel_button_atualizar = new javax.swing.JPanel();
+        button_atualizar = new javax.swing.JLabel();
+        Panel_button_deletar = new javax.swing.JPanel();
+        button_deletar = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -161,19 +170,31 @@ public class PaginaMateriais extends javax.swing.JFrame {
 
         JTable1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         JTable1.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
-        MateriaisDAO materiaisDAO = new MateriaisDAO();
-        Object[][] listMateriais;
-        try{
-            listMateriais = materiaisDAO.getMateriais();
-            JTable1.setModel(new javax.swing.table.DefaultTableModel(
-                listMateriais,
-                new String [] {
-                    "Materiais", "Quantidade", "Status"
-                }
-            ));
-        } catch (Exception exception) {
-            JOptionPane.showMessageDialog(null, "FeedbackDAO: " + exception);
-        }
+        JTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"Kit sinuca", "23", null},
+                {"", null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "Materiais", "Quantidade", "Status"
+            }
+        ));
         JTable1.setFocusable(false);
         JTable1.setGridColor(new java.awt.Color(0, 0, 0));
         JTable1.setRowHeight(25);
@@ -184,9 +205,93 @@ public class PaginaMateriais extends javax.swing.JFrame {
         JTable1.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(JTable1);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 70, 540, 320));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 550, 320));
 
-        Panel_Menu_Extendido.setBackground(new java.awt.Color(19, 19, 19));
+        Panel_button_sair.setBackground(new java.awt.Color(73, 128, 242));
+        Panel_button_sair.setLayout(new java.awt.BorderLayout());
+
+        button_voltar.setBackground(new java.awt.Color(73, 128, 242));
+        button_voltar.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
+        button_voltar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        button_voltar.setText("SAIR");
+        button_voltar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                button_voltarMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                button_voltarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                button_voltarMouseExited(evt);
+            }
+        });
+        Panel_button_sair.add(button_voltar, java.awt.BorderLayout.PAGE_END);
+
+        jPanel2.add(Panel_button_sair, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 400, 60, 30));
+
+        jLabel1.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
+        jLabel1.setText("MATERIAIS DO CA");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, 160, 30));
+
+        button_voltar1.setBackground(new java.awt.Color(73, 128, 242));
+        button_voltar1.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
+        button_voltar1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        button_voltar1.setText("SAIR");
+        button_voltar1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                button_voltar1MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                button_voltar1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                button_voltar1MouseExited(evt);
+            }
+        });
+        jPanel2.add(button_voltar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 410, 60, -1));
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 50, 740, 450));
+
+        panel_barra_menu.setBackground(new java.awt.Color(0, 0, 0));
+
+        panel_hide_menu.setBackground(new java.awt.Color(0, 0, 0));
+        panel_hide_menu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                panel_hide_menuMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                panel_hide_menuMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                panel_hide_menuMouseExited(evt);
+            }
+        });
+        panel_hide_menu.setLayout(new java.awt.BorderLayout());
+
+        button_hide_menu.setBackground(new java.awt.Color(0, 0, 0));
+        button_hide_menu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/left_arrow_icon.png"))); // NOI18N
+        panel_hide_menu.add(button_hide_menu, java.awt.BorderLayout.PAGE_START);
+
+        javax.swing.GroupLayout panel_barra_menuLayout = new javax.swing.GroupLayout(panel_barra_menu);
+        panel_barra_menu.setLayout(panel_barra_menuLayout);
+        panel_barra_menuLayout.setHorizontalGroup(
+            panel_barra_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_barra_menuLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(panel_hide_menu, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        panel_barra_menuLayout.setVerticalGroup(
+            panel_barra_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panel_barra_menuLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(panel_hide_menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(panel_barra_menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 50, 450));
+
+        Panel_Menu_Extendido.setBackground(new java.awt.Color(0, 0, 0));
         Panel_Menu_Extendido.setPreferredSize(new java.awt.Dimension(160, 360));
 
         Panel_button_materiais.setBackground(new java.awt.Color(200, 200, 200));
@@ -293,70 +398,116 @@ public class PaginaMateriais extends javax.swing.JFrame {
                 .addComponent(Panel_button_feedbacks, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanel2.add(Panel_Menu_Extendido, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 450));
+        getContentPane().add(Panel_Menu_Extendido, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, -1, 450));
 
-        Panel_button_sair.setBackground(new java.awt.Color(73, 128, 242));
-        Panel_button_sair.setLayout(new java.awt.BorderLayout());
+        Panel_botoes_CRUD.setBackground(new java.awt.Color(0, 0, 0));
+        Panel_botoes_CRUD.setPreferredSize(new java.awt.Dimension(160, 360));
 
-        button_voltar.setBackground(new java.awt.Color(73, 128, 242));
-        button_voltar.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
-        button_voltar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        button_voltar.setText("SAIR");
-        button_voltar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                button_voltarMouseClicked(evt);
-            }
+        Panel_button_criar.setBackground(new java.awt.Color(230, 230, 230));
+        Panel_button_criar.setPreferredSize(new java.awt.Dimension(135, 60));
+        Panel_button_criar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                button_voltarMouseEntered(evt);
+                Panel_button_criarMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                button_voltarMouseExited(evt);
+                Panel_button_criarMouseExited(evt);
             }
         });
-        Panel_button_sair.add(button_voltar, java.awt.BorderLayout.PAGE_END);
 
-        jPanel2.add(Panel_button_sair, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 400, 60, 30));
+        button_criar.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
+        button_criar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        button_criar.setText("Criar");
+        button_criar.setPreferredSize(new java.awt.Dimension(60, 135));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 900, 450));
+        javax.swing.GroupLayout Panel_button_criarLayout = new javax.swing.GroupLayout(Panel_button_criar);
+        Panel_button_criar.setLayout(Panel_button_criarLayout);
+        Panel_button_criarLayout.setHorizontalGroup(
+            Panel_button_criarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(button_criar, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+        );
+        Panel_button_criarLayout.setVerticalGroup(
+            Panel_button_criarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(button_criar, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+        );
 
-        panel_barra_menu.setBackground(new java.awt.Color(0, 0, 0));
-
-        panel_hide_menu.setBackground(new java.awt.Color(0, 0, 0));
-        panel_hide_menu.addMouseListener(new java.awt.event.MouseAdapter() {
+        Panel_button_atualizar.setBackground(new java.awt.Color(230, 230, 230));
+        Panel_button_atualizar.setPreferredSize(new java.awt.Dimension(135, 60));
+        Panel_button_atualizar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                panel_hide_menuMouseClicked(evt);
+                Panel_button_atualizarMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                panel_hide_menuMouseEntered(evt);
+                Panel_button_atualizarMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                panel_hide_menuMouseExited(evt);
+                Panel_button_atualizarMouseExited(evt);
             }
         });
-        panel_hide_menu.setLayout(new java.awt.BorderLayout());
 
-        button_hide_menu.setBackground(new java.awt.Color(0, 0, 0));
-        button_hide_menu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/left_arrow_icon.png"))); // NOI18N
-        panel_hide_menu.add(button_hide_menu, java.awt.BorderLayout.PAGE_START);
+        button_atualizar.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
+        button_atualizar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        button_atualizar.setText("Atualizar");
 
-        javax.swing.GroupLayout panel_barra_menuLayout = new javax.swing.GroupLayout(panel_barra_menu);
-        panel_barra_menu.setLayout(panel_barra_menuLayout);
-        panel_barra_menuLayout.setHorizontalGroup(
-            panel_barra_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_barra_menuLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(panel_hide_menu, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(12, Short.MAX_VALUE))
+        javax.swing.GroupLayout Panel_button_atualizarLayout = new javax.swing.GroupLayout(Panel_button_atualizar);
+        Panel_button_atualizar.setLayout(Panel_button_atualizarLayout);
+        Panel_button_atualizarLayout.setHorizontalGroup(
+            Panel_button_atualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(button_atualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
-        panel_barra_menuLayout.setVerticalGroup(
-            panel_barra_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_barra_menuLayout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(panel_hide_menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(399, Short.MAX_VALUE))
+        Panel_button_atualizarLayout.setVerticalGroup(
+            Panel_button_atualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(button_atualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        getContentPane().add(panel_barra_menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 50, 450));
+        Panel_button_deletar.setBackground(new java.awt.Color(230, 230, 230));
+        Panel_button_deletar.setPreferredSize(new java.awt.Dimension(135, 60));
+        Panel_button_deletar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Panel_button_deletarMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Panel_button_deletarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Panel_button_deletarMouseExited(evt);
+            }
+        });
+
+        button_deletar.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
+        button_deletar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        button_deletar.setText("Deletar");
+
+        javax.swing.GroupLayout Panel_button_deletarLayout = new javax.swing.GroupLayout(Panel_button_deletar);
+        Panel_button_deletar.setLayout(Panel_button_deletarLayout);
+        Panel_button_deletarLayout.setHorizontalGroup(
+            Panel_button_deletarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(button_deletar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        Panel_button_deletarLayout.setVerticalGroup(
+            Panel_button_deletarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(button_deletar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+
+        javax.swing.GroupLayout Panel_botoes_CRUDLayout = new javax.swing.GroupLayout(Panel_botoes_CRUD);
+        Panel_botoes_CRUD.setLayout(Panel_botoes_CRUDLayout);
+        Panel_botoes_CRUDLayout.setHorizontalGroup(
+            Panel_botoes_CRUDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Panel_button_criar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Panel_button_atualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Panel_button_deletar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        Panel_botoes_CRUDLayout.setVerticalGroup(
+            Panel_botoes_CRUDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_botoes_CRUDLayout.createSequentialGroup()
+                .addGap(80, 80, 80)
+                .addComponent(Panel_button_criar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50)
+                .addComponent(Panel_button_atualizar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50)
+                .addComponent(Panel_button_deletar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        getContentPane().add(Panel_botoes_CRUD, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, -1, 450));
 
         pack();
         setLocationRelativeTo(null);
@@ -378,12 +529,26 @@ public class PaginaMateriais extends javax.swing.JFrame {
     public void hideshow(JPanel menushowhide,boolean dashboard){
       if (dashboard == true){  
          Panel_Menu_Extendido.setPreferredSize(new Dimension(0, Panel_Menu_Extendido.getHeight()));
+         Panel_button_materiais.setVisible(false);
+         Panel_button_autorizacao.setVisible(false);
+         Panel_button_feedbacks.setVisible(false);
+         Panel_botoes_CRUD.setPreferredSize(new Dimension(160, Panel_botoes_CRUD.getHeight()));
+         Panel_button_atualizar.setVisible(true);
+         Panel_button_criar.setVisible(true);
+         Panel_button_deletar.setVisible(true);
          //int x , int y , width , height
          jScrollPane1.setBounds(540,320,460,400);
          changeimage(button_hide_menu,"/icons/right_arrow_icon.png");
       }
       else{
          Panel_Menu_Extendido.setPreferredSize(new Dimension(160, Panel_Menu_Extendido.getHeight()));
+         Panel_button_materiais.setVisible(true);
+         Panel_button_autorizacao.setVisible(true);
+         Panel_button_feedbacks.setVisible(true);
+         Panel_botoes_CRUD.setPreferredSize(new Dimension(0, Panel_botoes_CRUD.getHeight()));
+         Panel_button_atualizar.setVisible(false);
+         Panel_button_criar.setVisible(false);
+         Panel_button_deletar.setVisible(false);
          changeimage(button_hide_menu,"/icons/left_arrow_icon.png");
       }  jScrollPane1.setBounds(540,320,460,400);
     }
@@ -507,6 +672,58 @@ public class PaginaMateriais extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_Panel_button_feedbacksMouseClicked
 
+    private void Panel_button_criarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_criarMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel_button_criarMouseEntered
+
+    private void Panel_button_criarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_criarMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel_button_criarMouseExited
+
+    private void Panel_button_atualizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_atualizarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel_button_atualizarMouseClicked
+
+    private void Panel_button_atualizarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_atualizarMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel_button_atualizarMouseEntered
+
+    private void Panel_button_atualizarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_atualizarMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel_button_atualizarMouseExited
+
+    private void Panel_button_deletarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_deletarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel_button_deletarMouseClicked
+
+    private void Panel_button_deletarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_deletarMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel_button_deletarMouseEntered
+
+    private void Panel_button_deletarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_deletarMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel_button_deletarMouseExited
+
+    private void button_voltar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_voltar1MouseClicked
+        PaginaLogin mi = new PaginaLogin();
+        mi.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_button_voltar1MouseClicked
+
+    private void button_voltar1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_voltar1MouseEntered
+        Font originalFont = button_voltar.getFont();
+        Map attributes = originalFont.getAttributes();
+        attributes.put(TextAttribute.UNDERLINE, TextAttribute.UNDERLINE_ON);
+        button_voltar.setFont(originalFont.deriveFont(attributes));
+    }//GEN-LAST:event_button_voltar1MouseEntered
+
+    private void button_voltar1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_voltar1MouseExited
+        Font originalFont = button_voltar.getFont();
+        Map attributes = originalFont.getAttributes();
+        attributes.put(TextAttribute.UNDERLINE,-1);
+        button_voltar.setFont(originalFont.deriveFont(attributes));
+    }//GEN-LAST:event_button_voltar1MouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -553,11 +770,18 @@ public class PaginaMateriais extends javax.swing.JFrame {
     private javax.swing.JPanel Header;
     public javax.swing.JTable JTable1;
     private javax.swing.JPanel Panel_Menu_Extendido;
+    private javax.swing.JPanel Panel_botoes_CRUD;
+    private javax.swing.JPanel Panel_button_atualizar;
     private javax.swing.JPanel Panel_button_autorizacao;
+    private javax.swing.JPanel Panel_button_criar;
+    private javax.swing.JPanel Panel_button_deletar;
     private javax.swing.JPanel Panel_button_feedbacks;
     private javax.swing.JPanel Panel_button_materiais;
     private javax.swing.JPanel Panel_button_sair;
+    private javax.swing.JLabel button_atualizar;
     private javax.swing.JLabel button_autorizacao;
+    private javax.swing.JLabel button_criar;
+    private javax.swing.JLabel button_deletar;
     private javax.swing.JLabel button_feedbacks;
     private javax.swing.JLabel button_hide_menu;
     private javax.swing.JLabel button_materiais;
@@ -565,10 +789,12 @@ public class PaginaMateriais extends javax.swing.JFrame {
     private javax.swing.JPanel button_min;
     private javax.swing.JLabel button_sair;
     private javax.swing.JLabel button_voltar;
+    private javax.swing.JLabel button_voltar1;
     private javax.swing.JPanel close_panel;
     private javax.swing.JPanel header_icon;
     private javax.swing.JLabel icon_label_maua;
     private javax.swing.JPanel icone_min_max_close;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;

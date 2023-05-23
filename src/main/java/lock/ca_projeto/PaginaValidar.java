@@ -28,7 +28,6 @@ public class PaginaValidar extends javax.swing.JFrame {
     public PaginaValidar() {
         initComponents();
         setBackground(new Color(0,0,0,0));
-        
         JTable1.getTableHeader().setFont(new Font("Microsoft Yahei UI Light",Font.PLAIN , 14));
         JTable1.getTableHeader().setOpaque(false);
         JTable1.getTableHeader().setBackground(new Color(0,0,0));
@@ -66,13 +65,19 @@ public class PaginaValidar extends javax.swing.JFrame {
         button_autorizacao = new javax.swing.JLabel();
         Panel_button_feedbacks = new javax.swing.JPanel();
         button_feedbacks = new javax.swing.JLabel();
-        Panel_funcoes = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         JTable1 = new javax.swing.JTable();
         Panel_button_sair = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         button_voltar = new javax.swing.JLabel();
+        Panel_botoes_CRUD = new javax.swing.JPanel();
+        Panel_button_criar = new javax.swing.JPanel();
+        button_criar = new javax.swing.JLabel();
+        Panel_button_atualizar = new javax.swing.JPanel();
+        button_atualizar = new javax.swing.JLabel();
+        Panel_button_deletar = new javax.swing.JPanel();
+        button_deletar = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -196,7 +201,7 @@ public class PaginaValidar extends javax.swing.JFrame {
 
         getContentPane().add(panel_barra_menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 50, 450));
 
-        Panel_Menu_Extendido.setBackground(new java.awt.Color(19, 19, 19));
+        Panel_Menu_Extendido.setBackground(new java.awt.Color(0, 0, 0));
         Panel_Menu_Extendido.setPreferredSize(new java.awt.Dimension(160, 360));
 
         Panel_button_materiais.setPreferredSize(new java.awt.Dimension(135, 60));
@@ -228,7 +233,7 @@ public class PaginaValidar extends javax.swing.JFrame {
             .addComponent(button_materiais, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
 
-        Panel_button_autorizacao.setBackground(new java.awt.Color(230, 230, 230));
+        Panel_button_autorizacao.setBackground(new java.awt.Color(200, 200, 200));
         Panel_button_autorizacao.setPreferredSize(new java.awt.Dimension(135, 60));
 
         button_autorizacao.setBackground(new java.awt.Color(200, 200, 200));
@@ -305,21 +310,6 @@ public class PaginaValidar extends javax.swing.JFrame {
 
         getContentPane().add(Panel_Menu_Extendido, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, -1, 450));
 
-        Panel_funcoes.setBackground(new java.awt.Color(73, 128, 242));
-
-        javax.swing.GroupLayout Panel_funcoesLayout = new javax.swing.GroupLayout(Panel_funcoes);
-        Panel_funcoes.setLayout(Panel_funcoesLayout);
-        Panel_funcoesLayout.setHorizontalGroup(
-            Panel_funcoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 160, Short.MAX_VALUE)
-        );
-        Panel_funcoesLayout.setVerticalGroup(
-            Panel_funcoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 450, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(Panel_funcoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 160, 450));
-
         jPanel2.setBackground(new java.awt.Color(73, 128, 242));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -328,19 +318,29 @@ public class PaginaValidar extends javax.swing.JFrame {
 
         JTable1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         JTable1.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
-        ValidarDAO validarDAO = new ValidarDAO();
-        Object[][] listValidar;
-        try{
-            listValidar = validarDAO.getMateriais();
-            JTable1.setModel(new javax.swing.table.DefaultTableModel(
-                listValidar,
-                new String [] {
-                    "Nome", "R.A", "Material"
-                }
-            ));
-        } catch (Exception exception) {
-            JOptionPane.showMessageDialog(null, "FeedbackDAO: " + exception);
-        }
+        JTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"Pietro", "22.01046-7", "Kit sinuca"},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "Nome", "R.A", "Material"
+            }
+        ));
         JTable1.setFocusable(false);
         JTable1.setGridColor(new java.awt.Color(0, 0, 0));
         JTable1.setRowHeight(25);
@@ -351,7 +351,7 @@ public class PaginaValidar extends javax.swing.JFrame {
         JTable1.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(JTable1);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 540, 320));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 550, 320));
 
         Panel_button_sair.setBackground(new java.awt.Color(73, 128, 242));
         Panel_button_sair.setLayout(new java.awt.BorderLayout());
@@ -380,6 +380,115 @@ public class PaginaValidar extends javax.swing.JFrame {
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 50, 740, 450));
 
+        Panel_botoes_CRUD.setBackground(new java.awt.Color(0, 0, 0));
+        Panel_botoes_CRUD.setPreferredSize(new java.awt.Dimension(160, 360));
+
+        Panel_button_criar.setBackground(new java.awt.Color(230, 230, 230));
+        Panel_button_criar.setPreferredSize(new java.awt.Dimension(135, 60));
+        Panel_button_criar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Panel_button_criarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Panel_button_criarMouseExited(evt);
+            }
+        });
+
+        button_criar.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
+        button_criar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        button_criar.setText("Criar");
+        button_criar.setPreferredSize(new java.awt.Dimension(60, 135));
+
+        javax.swing.GroupLayout Panel_button_criarLayout = new javax.swing.GroupLayout(Panel_button_criar);
+        Panel_button_criar.setLayout(Panel_button_criarLayout);
+        Panel_button_criarLayout.setHorizontalGroup(
+            Panel_button_criarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(button_criar, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+        );
+        Panel_button_criarLayout.setVerticalGroup(
+            Panel_button_criarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(button_criar, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+        );
+
+        Panel_button_atualizar.setBackground(new java.awt.Color(230, 230, 230));
+        Panel_button_atualizar.setPreferredSize(new java.awt.Dimension(135, 60));
+        Panel_button_atualizar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Panel_button_atualizarMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Panel_button_atualizarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Panel_button_atualizarMouseExited(evt);
+            }
+        });
+
+        button_atualizar.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
+        button_atualizar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        button_atualizar.setText("Atualizar");
+
+        javax.swing.GroupLayout Panel_button_atualizarLayout = new javax.swing.GroupLayout(Panel_button_atualizar);
+        Panel_button_atualizar.setLayout(Panel_button_atualizarLayout);
+        Panel_button_atualizarLayout.setHorizontalGroup(
+            Panel_button_atualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(button_atualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        Panel_button_atualizarLayout.setVerticalGroup(
+            Panel_button_atualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(button_atualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+
+        Panel_button_deletar.setBackground(new java.awt.Color(230, 230, 230));
+        Panel_button_deletar.setPreferredSize(new java.awt.Dimension(135, 60));
+        Panel_button_deletar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Panel_button_deletarMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Panel_button_deletarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Panel_button_deletarMouseExited(evt);
+            }
+        });
+
+        button_deletar.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
+        button_deletar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        button_deletar.setText("Deletar");
+
+        javax.swing.GroupLayout Panel_button_deletarLayout = new javax.swing.GroupLayout(Panel_button_deletar);
+        Panel_button_deletar.setLayout(Panel_button_deletarLayout);
+        Panel_button_deletarLayout.setHorizontalGroup(
+            Panel_button_deletarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(button_deletar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        Panel_button_deletarLayout.setVerticalGroup(
+            Panel_button_deletarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(button_deletar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+
+        javax.swing.GroupLayout Panel_botoes_CRUDLayout = new javax.swing.GroupLayout(Panel_botoes_CRUD);
+        Panel_botoes_CRUD.setLayout(Panel_botoes_CRUDLayout);
+        Panel_botoes_CRUDLayout.setHorizontalGroup(
+            Panel_botoes_CRUDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Panel_button_criar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Panel_button_atualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Panel_button_deletar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        Panel_botoes_CRUDLayout.setVerticalGroup(
+            Panel_botoes_CRUDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_botoes_CRUDLayout.createSequentialGroup()
+                .addGap(80, 80, 80)
+                .addComponent(Panel_button_criar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50)
+                .addComponent(Panel_button_atualizar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50)
+                .addComponent(Panel_button_deletar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        getContentPane().add(Panel_botoes_CRUD, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, -1, 450));
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
@@ -400,12 +509,27 @@ public class PaginaValidar extends javax.swing.JFrame {
     public void hideshow(JPanel menushowhide,boolean dashboard){
       if (dashboard == true){  
          Panel_Menu_Extendido.setPreferredSize(new Dimension(0, Panel_Menu_Extendido.getHeight()));
+         Panel_Menu_Extendido.setPreferredSize(new Dimension(0, Panel_Menu_Extendido.getHeight()));
+         Panel_button_materiais.setVisible(false);
+         Panel_button_autorizacao.setVisible(false);
+         Panel_button_feedbacks.setVisible(false);
+         Panel_botoes_CRUD.setPreferredSize(new Dimension(160, Panel_botoes_CRUD.getHeight()));
+         Panel_button_atualizar.setVisible(true);
+         Panel_button_criar.setVisible(true);
+         Panel_button_deletar.setVisible(true);
          //int x , int y , width , height
          jScrollPane1.setBounds(540,320,460,400);
          changeimage(button_hide_menu,"/icons/right_arrow_icon.png");
       }
       else{
          Panel_Menu_Extendido.setPreferredSize(new Dimension(160, Panel_Menu_Extendido.getHeight()));
+         Panel_button_materiais.setVisible(true);
+         Panel_button_autorizacao.setVisible(true);
+         Panel_button_feedbacks.setVisible(true);
+         Panel_botoes_CRUD.setPreferredSize(new Dimension(0, Panel_botoes_CRUD.getHeight()));
+         Panel_button_atualizar.setVisible(false);
+         Panel_button_criar.setVisible(false);
+         Panel_button_deletar.setVisible(false);
          changeimage(button_hide_menu,"/icons/left_arrow_icon.png");
       }  jScrollPane1.setBounds(540,320,460,400);
     }
@@ -529,6 +653,38 @@ public class PaginaValidar extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_Panel_button_feedbacksMouseClicked
 
+    private void Panel_button_criarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_criarMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel_button_criarMouseEntered
+
+    private void Panel_button_criarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_criarMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel_button_criarMouseExited
+
+    private void Panel_button_atualizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_atualizarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel_button_atualizarMouseClicked
+
+    private void Panel_button_atualizarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_atualizarMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel_button_atualizarMouseEntered
+
+    private void Panel_button_atualizarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_atualizarMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel_button_atualizarMouseExited
+
+    private void Panel_button_deletarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_deletarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel_button_deletarMouseClicked
+
+    private void Panel_button_deletarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_deletarMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel_button_deletarMouseEntered
+
+    private void Panel_button_deletarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_deletarMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Panel_button_deletarMouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -579,12 +735,18 @@ public class PaginaValidar extends javax.swing.JFrame {
     private javax.swing.JPanel Header;
     public javax.swing.JTable JTable1;
     private javax.swing.JPanel Panel_Menu_Extendido;
+    private javax.swing.JPanel Panel_botoes_CRUD;
+    private javax.swing.JPanel Panel_button_atualizar;
     private javax.swing.JPanel Panel_button_autorizacao;
+    private javax.swing.JPanel Panel_button_criar;
+    private javax.swing.JPanel Panel_button_deletar;
     private javax.swing.JPanel Panel_button_feedbacks;
     private javax.swing.JPanel Panel_button_materiais;
     private javax.swing.JPanel Panel_button_sair;
-    private javax.swing.JPanel Panel_funcoes;
+    private javax.swing.JLabel button_atualizar;
     private javax.swing.JLabel button_autorizacao;
+    private javax.swing.JLabel button_criar;
+    private javax.swing.JLabel button_deletar;
     private javax.swing.JLabel button_feedbacks;
     private javax.swing.JLabel button_hide_menu;
     private javax.swing.JLabel button_materiais;
