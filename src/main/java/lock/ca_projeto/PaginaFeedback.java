@@ -31,6 +31,10 @@ public class PaginaFeedback extends javax.swing.JFrame {
     public PaginaFeedback() {
         initComponents();
         setBackground(new Color(0,0,0,0));
+        int c,e,f = 0;
+        Panel_criar.setVisible(false);
+        Panel_atualizar.setVisible(false);
+        Panel_deletar.setVisible(false);
         JTable1.getTableHeader().setFont(new Font("Microsoft Yahei UI Light",Font.BOLD , 14));
         JTable1.getTableHeader().setOpaque(false);
         JTable1.getTableHeader().setBackground(new Color(0,0,0));
@@ -75,13 +79,47 @@ public class PaginaFeedback extends javax.swing.JFrame {
         button_autorizacao = new javax.swing.JLabel();
         Panel_button_feedbacks = new javax.swing.JPanel();
         button_feedbacks = new javax.swing.JLabel();
-        Panel_funcoes = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         JTable1 = new javax.swing.JTable();
         Panel_button_sair = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         button_voltar = new javax.swing.JLabel();
+        Panel_criar = new javax.swing.JPanel();
+        textfield_IDMaterial = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        textfield_NomeMaterial = new javax.swing.JTextField();
+        textfield_Quantidade = new javax.swing.JTextField();
+        button_confirmarcriar = new javax.swing.JButton();
+        Label_IDMaterial = new javax.swing.JLabel();
+        Label_NomeMaterial = new javax.swing.JLabel();
+        Label_Quantidade = new javax.swing.JLabel();
+        button_voltarcriar = new javax.swing.JButton();
+        Panel_atualizar = new javax.swing.JPanel();
+        textfield_IDMaterial1 = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        textfield_NomeMaterial1 = new javax.swing.JTextField();
+        textfield_Quantidade1 = new javax.swing.JTextField();
+        button_confirmarcriar1 = new javax.swing.JButton();
+        Label_IDMaterial1 = new javax.swing.JLabel();
+        Label_NomeMaterial1 = new javax.swing.JLabel();
+        Label_Quantidade1 = new javax.swing.JLabel();
+        button_voltaratualizar = new javax.swing.JButton();
+        Panel_deletar = new javax.swing.JPanel();
+        textfield_IDMaterialDeletar = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        button_confirmarcriar2 = new javax.swing.JButton();
+        Label_IDMaterial2 = new javax.swing.JLabel();
+        button_voltardeletar = new javax.swing.JButton();
+        textfield_IDMaterialDeletar2 = new javax.swing.JTextField();
+        Label_IDMaterial3 = new javax.swing.JLabel();
+        Panel_botoes_CRUD = new javax.swing.JPanel();
+        Panel_button_criar = new javax.swing.JPanel();
+        button_criar = new javax.swing.JLabel();
+        Panel_button_atualizar = new javax.swing.JPanel();
+        button_atualizar = new javax.swing.JLabel();
+        Panel_button_deletar = new javax.swing.JPanel();
+        button_deletar = new javax.swing.JLabel();
 
         menu1.setLabel("File");
         menuBar1.add(menu1);
@@ -211,9 +249,10 @@ public class PaginaFeedback extends javax.swing.JFrame {
 
         getContentPane().add(panel_barra_menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 50, 450));
 
-        Panel_Menu_Extendido.setBackground(new java.awt.Color(19, 19, 19));
+        Panel_Menu_Extendido.setBackground(new java.awt.Color(0, 0, 0));
         Panel_Menu_Extendido.setPreferredSize(new java.awt.Dimension(160, 360));
 
+        Panel_button_materiais.setBackground(new java.awt.Color(230, 230, 230));
         Panel_button_materiais.setPreferredSize(new java.awt.Dimension(135, 60));
         Panel_button_materiais.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -250,12 +289,15 @@ public class PaginaFeedback extends javax.swing.JFrame {
                 Panel_button_autorizacaoMouseClicked(evt);
             }
         });
+        Panel_button_autorizacao.setLayout(new java.awt.BorderLayout());
 
-        button_autorizacao.setBackground(new java.awt.Color(200, 200, 200));
         button_autorizacao.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
         button_autorizacao.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        button_autorizacao.setText("Validar");
+        button_autorizacao.setText("Empréstimo");
         button_autorizacao.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                button_autorizacaoMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 button_autorizacaoMouseEntered(evt);
             }
@@ -263,19 +305,9 @@ public class PaginaFeedback extends javax.swing.JFrame {
                 button_autorizacaoMouseExited(evt);
             }
         });
+        Panel_button_autorizacao.add(button_autorizacao, java.awt.BorderLayout.CENTER);
 
-        javax.swing.GroupLayout Panel_button_autorizacaoLayout = new javax.swing.GroupLayout(Panel_button_autorizacao);
-        Panel_button_autorizacao.setLayout(Panel_button_autorizacaoLayout);
-        Panel_button_autorizacaoLayout.setHorizontalGroup(
-            Panel_button_autorizacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(button_autorizacao, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-        );
-        Panel_button_autorizacaoLayout.setVerticalGroup(
-            Panel_button_autorizacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(button_autorizacao, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-
-        Panel_button_feedbacks.setBackground(new java.awt.Color(230, 230, 230));
+        Panel_button_feedbacks.setBackground(new java.awt.Color(200, 200, 200));
         Panel_button_feedbacks.setPreferredSize(new java.awt.Dimension(135, 60));
         Panel_button_feedbacks.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -326,43 +358,37 @@ public class PaginaFeedback extends javax.swing.JFrame {
 
         getContentPane().add(Panel_Menu_Extendido, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, -1, 450));
 
-        Panel_funcoes.setBackground(new java.awt.Color(73, 128, 242));
-
-        javax.swing.GroupLayout Panel_funcoesLayout = new javax.swing.GroupLayout(Panel_funcoes);
-        Panel_funcoes.setLayout(Panel_funcoesLayout);
-        Panel_funcoesLayout.setHorizontalGroup(
-            Panel_funcoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 160, Short.MAX_VALUE)
-        );
-        Panel_funcoesLayout.setVerticalGroup(
-            Panel_funcoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 450, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(Panel_funcoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 160, 450));
-
         jPanel2.setBackground(new java.awt.Color(73, 128, 242));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jScrollPane1.setBackground(new java.awt.Color(0, 0, 0));
         jScrollPane1.setBorder(null);
 
-
-        FeedbackDAO feedbackDAO = new FeedbackDAO();
-        Object[][] listFeedback;
-        try{
-            listFeedback = feedbackDAO.getFeedbacks();
-            JTable1.setModel(new javax.swing.table.DefaultTableModel(
-                listFeedback,
-                new String [] {
-                    "Material", "R.A", "Feedback"
-                }
-            ));
-        } catch (Exception exception) {
-            JOptionPane.showMessageDialog(null, "FeedbackDAO: " + exception);
-        }
         JTable1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         JTable1.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        JTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"Pietro", "22.01046-7", "Estava Faltando uma bolinha"},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "Material", "R.A", "Feedback"
+            }
+        ));
         JTable1.setFocusable(false);
         JTable1.setGridColor(new java.awt.Color(0, 0, 0));
         JTable1.setRowHeight(25);
@@ -378,7 +404,7 @@ public class PaginaFeedback extends javax.swing.JFrame {
             JTable1.getColumnModel().getColumn(2).setPreferredWidth(30);
         }
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, 550, 320));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 550, 320));
 
         Panel_button_sair.setBackground(new java.awt.Color(73, 128, 242));
         Panel_button_sair.setLayout(new java.awt.BorderLayout());
@@ -405,7 +431,391 @@ public class PaginaFeedback extends javax.swing.JFrame {
         });
         jPanel2.add(button_voltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 410, 60, -1));
 
+        Panel_criar.setBackground(new java.awt.Color(0, 0, 0));
+
+        textfield_IDMaterial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textfield_IDMaterialActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("CRIAR FEEDBACK");
+
+        textfield_NomeMaterial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textfield_NomeMaterialActionPerformed(evt);
+            }
+        });
+
+        button_confirmarcriar.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 14)); // NOI18N
+        button_confirmarcriar.setText("CONFIRMAR");
+        button_confirmarcriar.setBorderPainted(false);
+
+        Label_IDMaterial.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 14)); // NOI18N
+        Label_IDMaterial.setForeground(new java.awt.Color(255, 255, 255));
+        Label_IDMaterial.setText("ID FEEDBACK");
+
+        Label_NomeMaterial.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        Label_NomeMaterial.setForeground(new java.awt.Color(255, 255, 255));
+        Label_NomeMaterial.setText("ID USUÁRIO");
+
+        Label_Quantidade.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        Label_Quantidade.setForeground(new java.awt.Color(255, 255, 255));
+        Label_Quantidade.setText("FEEDBACK");
+
+        button_voltarcriar.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        button_voltarcriar.setText("VOLTAR");
+        button_voltarcriar.setBorderPainted(false);
+        button_voltarcriar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                button_voltarcriarMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Panel_criarLayout = new javax.swing.GroupLayout(Panel_criar);
+        Panel_criar.setLayout(Panel_criarLayout);
+        Panel_criarLayout.setHorizontalGroup(
+            Panel_criarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_criarLayout.createSequentialGroup()
+                .addGroup(Panel_criarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Panel_criarLayout.createSequentialGroup()
+                        .addGap(199, 199, 199)
+                        .addComponent(jLabel2))
+                    .addGroup(Panel_criarLayout.createSequentialGroup()
+                        .addGap(131, 131, 131)
+                        .addGroup(Panel_criarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Label_Quantidade, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(Panel_criarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, Panel_criarLayout.createSequentialGroup()
+                                    .addComponent(button_voltarcriar, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                                    .addComponent(button_confirmarcriar))
+                                .addComponent(textfield_NomeMaterial, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(textfield_IDMaterial, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(textfield_Quantidade, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(Label_NomeMaterial, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(Label_IDMaterial, javax.swing.GroupLayout.Alignment.LEADING)))))
+                .addContainerGap(149, Short.MAX_VALUE))
+        );
+        Panel_criarLayout.setVerticalGroup(
+            Panel_criarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_criarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(11, 11, 11)
+                .addComponent(Label_IDMaterial)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(textfield_IDMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(7, 7, 7)
+                .addComponent(Label_NomeMaterial)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(textfield_NomeMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addComponent(Label_Quantidade, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(textfield_Quantidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(Panel_criarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(button_confirmarcriar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button_voltarcriar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(61, Short.MAX_VALUE))
+        );
+
+        jPanel2.add(Panel_criar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 550, 320));
+
+        Panel_atualizar.setBackground(new java.awt.Color(0, 0, 0));
+
+        textfield_IDMaterial1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textfield_IDMaterial1ActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("ATUALIZAR  FEEDBACK");
+
+        textfield_NomeMaterial1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textfield_NomeMaterial1ActionPerformed(evt);
+            }
+        });
+
+        button_confirmarcriar1.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 14)); // NOI18N
+        button_confirmarcriar1.setText("CONFIRMAR");
+        button_confirmarcriar1.setBorderPainted(false);
+
+        Label_IDMaterial1.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 14)); // NOI18N
+        Label_IDMaterial1.setForeground(new java.awt.Color(255, 255, 255));
+        Label_IDMaterial1.setText("ID FEEDBACK");
+
+        Label_NomeMaterial1.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        Label_NomeMaterial1.setForeground(new java.awt.Color(255, 255, 255));
+        Label_NomeMaterial1.setText("ID USUÁRIO");
+
+        Label_Quantidade1.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        Label_Quantidade1.setForeground(new java.awt.Color(255, 255, 255));
+        Label_Quantidade1.setText("FEEDBACK");
+
+        button_voltaratualizar.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        button_voltaratualizar.setText("VOLTAR");
+        button_voltaratualizar.setBorderPainted(false);
+        button_voltaratualizar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                button_voltaratualizarMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Panel_atualizarLayout = new javax.swing.GroupLayout(Panel_atualizar);
+        Panel_atualizar.setLayout(Panel_atualizarLayout);
+        Panel_atualizarLayout.setHorizontalGroup(
+            Panel_atualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_atualizarLayout.createSequentialGroup()
+                .addGroup(Panel_atualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Panel_atualizarLayout.createSequentialGroup()
+                        .addGap(132, 132, 132)
+                        .addGroup(Panel_atualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Label_Quantidade1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(Panel_atualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, Panel_atualizarLayout.createSequentialGroup()
+                                    .addComponent(button_voltaratualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                                    .addComponent(button_confirmarcriar1))
+                                .addComponent(textfield_NomeMaterial1, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(textfield_IDMaterial1, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(textfield_Quantidade1, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(Label_NomeMaterial1, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(Label_IDMaterial1, javax.swing.GroupLayout.Alignment.LEADING))))
+                    .addGroup(Panel_atualizarLayout.createSequentialGroup()
+                        .addGap(162, 162, 162)
+                        .addComponent(jLabel3)))
+                .addGap(32, 148, Short.MAX_VALUE))
+        );
+        Panel_atualizarLayout.setVerticalGroup(
+            Panel_atualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_atualizarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Label_IDMaterial1)
+                .addGap(10, 10, 10)
+                .addComponent(textfield_IDMaterial1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(7, 7, 7)
+                .addComponent(Label_NomeMaterial1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(textfield_NomeMaterial1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Label_Quantidade1, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(textfield_Quantidade1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(Panel_atualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(button_voltaratualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button_confirmarcriar1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(62, Short.MAX_VALUE))
+        );
+
+        jPanel2.add(Panel_atualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 550, 320));
+
+        Panel_deletar.setBackground(new java.awt.Color(0, 0, 0));
+
+        textfield_IDMaterialDeletar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textfield_IDMaterialDeletarActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("DELETAR FEEDBACK");
+
+        button_confirmarcriar2.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 14)); // NOI18N
+        button_confirmarcriar2.setText("CONFIRMAR");
+        button_confirmarcriar2.setBorderPainted(false);
+
+        Label_IDMaterial2.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 14)); // NOI18N
+        Label_IDMaterial2.setForeground(new java.awt.Color(255, 255, 255));
+        Label_IDMaterial2.setText("ID FEEDBACK NOVAMENTE");
+
+        button_voltardeletar.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        button_voltardeletar.setText("VOLTAR");
+        button_voltardeletar.setBorderPainted(false);
+        button_voltardeletar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                button_voltardeletarMouseClicked(evt);
+            }
+        });
+
+        textfield_IDMaterialDeletar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textfield_IDMaterialDeletar2ActionPerformed(evt);
+            }
+        });
+
+        Label_IDMaterial3.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 14)); // NOI18N
+        Label_IDMaterial3.setForeground(new java.awt.Color(255, 255, 255));
+        Label_IDMaterial3.setText("ID FEEDBACK");
+
+        javax.swing.GroupLayout Panel_deletarLayout = new javax.swing.GroupLayout(Panel_deletar);
+        Panel_deletar.setLayout(Panel_deletarLayout);
+        Panel_deletarLayout.setHorizontalGroup(
+            Panel_deletarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_deletarLayout.createSequentialGroup()
+                .addGroup(Panel_deletarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Panel_deletarLayout.createSequentialGroup()
+                        .addGap(177, 177, 177)
+                        .addComponent(jLabel4))
+                    .addGroup(Panel_deletarLayout.createSequentialGroup()
+                        .addGap(132, 132, 132)
+                        .addGroup(Panel_deletarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Label_IDMaterial3)
+                            .addGroup(Panel_deletarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, Panel_deletarLayout.createSequentialGroup()
+                                    .addComponent(button_voltardeletar, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                                    .addComponent(button_confirmarcriar2))
+                                .addComponent(textfield_IDMaterialDeletar, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(Label_IDMaterial2, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(textfield_IDMaterialDeletar2)))))
+                .addGap(32, 148, Short.MAX_VALUE))
+        );
+        Panel_deletarLayout.setVerticalGroup(
+            Panel_deletarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_deletarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(Label_IDMaterial3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(textfield_IDMaterialDeletar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(Label_IDMaterial2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(textfield_IDMaterialDeletar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addGroup(Panel_deletarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(button_confirmarcriar2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button_voltardeletar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(82, Short.MAX_VALUE))
+        );
+
+        jPanel2.add(Panel_deletar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 550, 320));
+
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 50, 740, 450));
+
+        Panel_botoes_CRUD.setBackground(new java.awt.Color(0, 0, 0));
+        Panel_botoes_CRUD.setPreferredSize(new java.awt.Dimension(160, 360));
+
+        Panel_button_criar.setBackground(new java.awt.Color(230, 230, 230));
+        Panel_button_criar.setPreferredSize(new java.awt.Dimension(135, 60));
+        Panel_button_criar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Panel_button_criarMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Panel_button_criarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Panel_button_criarMouseExited(evt);
+            }
+        });
+
+        button_criar.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
+        button_criar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        button_criar.setText("Criar");
+        button_criar.setPreferredSize(new java.awt.Dimension(60, 135));
+
+        javax.swing.GroupLayout Panel_button_criarLayout = new javax.swing.GroupLayout(Panel_button_criar);
+        Panel_button_criar.setLayout(Panel_button_criarLayout);
+        Panel_button_criarLayout.setHorizontalGroup(
+            Panel_button_criarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(button_criar, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+        );
+        Panel_button_criarLayout.setVerticalGroup(
+            Panel_button_criarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(button_criar, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+        );
+
+        Panel_button_atualizar.setBackground(new java.awt.Color(230, 230, 230));
+        Panel_button_atualizar.setPreferredSize(new java.awt.Dimension(135, 60));
+        Panel_button_atualizar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Panel_button_atualizarMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Panel_button_atualizarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Panel_button_atualizarMouseExited(evt);
+            }
+        });
+
+        button_atualizar.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
+        button_atualizar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        button_atualizar.setText("Atualizar");
+
+        javax.swing.GroupLayout Panel_button_atualizarLayout = new javax.swing.GroupLayout(Panel_button_atualizar);
+        Panel_button_atualizar.setLayout(Panel_button_atualizarLayout);
+        Panel_button_atualizarLayout.setHorizontalGroup(
+            Panel_button_atualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(button_atualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        Panel_button_atualizarLayout.setVerticalGroup(
+            Panel_button_atualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(button_atualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+
+        Panel_button_deletar.setBackground(new java.awt.Color(230, 230, 230));
+        Panel_button_deletar.setPreferredSize(new java.awt.Dimension(135, 60));
+        Panel_button_deletar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Panel_button_deletarMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Panel_button_deletarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Panel_button_deletarMouseExited(evt);
+            }
+        });
+
+        button_deletar.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
+        button_deletar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        button_deletar.setText("Deletar");
+
+        javax.swing.GroupLayout Panel_button_deletarLayout = new javax.swing.GroupLayout(Panel_button_deletar);
+        Panel_button_deletar.setLayout(Panel_button_deletarLayout);
+        Panel_button_deletarLayout.setHorizontalGroup(
+            Panel_button_deletarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(button_deletar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        Panel_button_deletarLayout.setVerticalGroup(
+            Panel_button_deletarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(button_deletar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+
+        javax.swing.GroupLayout Panel_botoes_CRUDLayout = new javax.swing.GroupLayout(Panel_botoes_CRUD);
+        Panel_botoes_CRUD.setLayout(Panel_botoes_CRUDLayout);
+        Panel_botoes_CRUDLayout.setHorizontalGroup(
+            Panel_botoes_CRUDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Panel_button_criar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Panel_button_atualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Panel_button_deletar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        Panel_botoes_CRUDLayout.setVerticalGroup(
+            Panel_botoes_CRUDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_botoes_CRUDLayout.createSequentialGroup()
+                .addGap(80, 80, 80)
+                .addComponent(Panel_button_criar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50)
+                .addComponent(Panel_button_atualizar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50)
+                .addComponent(Panel_button_deletar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        getContentPane().add(Panel_botoes_CRUD, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, -1, 450));
 
         pack();
         setLocationRelativeTo(null);
@@ -427,12 +837,26 @@ public class PaginaFeedback extends javax.swing.JFrame {
     public void hideshow(JPanel menushowhide,boolean dashboard){
       if (dashboard == true){  
          Panel_Menu_Extendido.setPreferredSize(new Dimension(0, Panel_Menu_Extendido.getHeight()));
+         Panel_button_materiais.setVisible(false);
+         Panel_button_autorizacao.setVisible(false);
+         Panel_button_feedbacks.setVisible(false);
+         Panel_botoes_CRUD.setPreferredSize(new Dimension(160, Panel_botoes_CRUD.getHeight()));
+         Panel_button_atualizar.setVisible(true);
+         Panel_button_criar.setVisible(true);
+         Panel_button_deletar.setVisible(true);
          //int x , int y , width , height
          jScrollPane1.setBounds(540,320,460,400);
          changeimage(button_hide_menu,"/icons/right_arrow_icon.png");
       }
       else{
          Panel_Menu_Extendido.setPreferredSize(new Dimension(160, Panel_Menu_Extendido.getHeight()));
+         Panel_button_materiais.setVisible(true);
+         Panel_button_autorizacao.setVisible(true);
+         Panel_button_feedbacks.setVisible(true);
+         Panel_botoes_CRUD.setPreferredSize(new Dimension(0, Panel_botoes_CRUD.getHeight()));
+         Panel_button_atualizar.setVisible(false);
+         Panel_button_criar.setVisible(false);
+         Panel_button_deletar.setVisible(false);
          changeimage(button_hide_menu,"/icons/left_arrow_icon.png");
       }  jScrollPane1.setBounds(540,320,460,400);
     }
@@ -551,16 +975,114 @@ public class PaginaFeedback extends javax.swing.JFrame {
     }//GEN-LAST:event_Panel_button_feedbacksMouseExited
 
     private void Panel_button_feedbacksMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_feedbacksMouseClicked
-       PaginaFeedback PF = new PaginaFeedback();
-       PF.setVisible(true);
-       this.dispose();
+
     }//GEN-LAST:event_Panel_button_feedbacksMouseClicked
 
     private void Panel_button_autorizacaoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_autorizacaoMouseClicked
+    
+    }//GEN-LAST:event_Panel_button_autorizacaoMouseClicked
+
+    private void Panel_button_criarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_criarMouseEntered
+        changecolor(Panel_button_criar, new Color(200,200,200));
+    }//GEN-LAST:event_Panel_button_criarMouseEntered
+
+    private void Panel_button_criarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_criarMouseExited
+        changecolor(Panel_button_criar, new Color(242,242,242));
+    }//GEN-LAST:event_Panel_button_criarMouseExited
+
+    private void Panel_button_atualizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_atualizarMouseClicked
+        jScrollPane1.setVisible(false);
+        jLabel1.setVisible(false);
+        Panel_deletar.setVisible(false);
+        Panel_criar.setVisible(false);
+        Panel_atualizar.setVisible(true);
+        changecolor(Panel_button_atualizar, new Color(200,200,200));
+    }//GEN-LAST:event_Panel_button_atualizarMouseClicked
+
+    private void Panel_button_atualizarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_atualizarMouseEntered
+       changecolor(Panel_button_atualizar, new Color(200,200,200));
+    }//GEN-LAST:event_Panel_button_atualizarMouseEntered
+
+    private void Panel_button_atualizarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_atualizarMouseExited
+       changecolor(Panel_button_atualizar, new Color(242,242,242));
+    }//GEN-LAST:event_Panel_button_atualizarMouseExited
+
+    private void Panel_button_deletarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_deletarMouseClicked
+        jScrollPane1.setVisible(false);
+        jLabel1.setVisible(false); 
+        Panel_criar.setVisible(false);
+        Panel_atualizar.setVisible(false);
+        Panel_deletar.setVisible(true);
+        changecolor(Panel_button_deletar, new Color(200,200,200));
+    }//GEN-LAST:event_Panel_button_deletarMouseClicked
+
+    private void Panel_button_deletarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_deletarMouseEntered
+       changecolor(Panel_button_deletar, new Color(200,200,200));
+    }//GEN-LAST:event_Panel_button_deletarMouseEntered
+
+    private void Panel_button_deletarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_deletarMouseExited
+        changecolor(Panel_button_deletar, new Color(242,242,242));
+    }//GEN-LAST:event_Panel_button_deletarMouseExited
+
+    private void button_autorizacaoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_autorizacaoMouseClicked
         PaginaValidar VF = new PaginaValidar();
         VF.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_Panel_button_autorizacaoMouseClicked
+    }//GEN-LAST:event_button_autorizacaoMouseClicked
+
+    private void textfield_IDMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfield_IDMaterialActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textfield_IDMaterialActionPerformed
+
+    private void textfield_NomeMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfield_NomeMaterialActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textfield_NomeMaterialActionPerformed
+
+    private void button_voltarcriarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_voltarcriarMouseClicked
+        jScrollPane1.setVisible(true);
+        jLabel1.setVisible(true);
+        Panel_criar.setVisible(false);
+        changecolor(Panel_button_criar,new Color(242,242,242));
+    }//GEN-LAST:event_button_voltarcriarMouseClicked
+
+    private void textfield_IDMaterial1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfield_IDMaterial1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textfield_IDMaterial1ActionPerformed
+
+    private void textfield_NomeMaterial1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfield_NomeMaterial1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textfield_NomeMaterial1ActionPerformed
+
+    private void button_voltaratualizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_voltaratualizarMouseClicked
+        jScrollPane1.setVisible(true);
+        jLabel1.setVisible(true);
+        Panel_criar.setVisible(false);
+        changecolor(Panel_button_criar,new Color(242,242,242));
+    }//GEN-LAST:event_button_voltaratualizarMouseClicked
+
+    private void textfield_IDMaterialDeletarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfield_IDMaterialDeletarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textfield_IDMaterialDeletarActionPerformed
+
+    private void button_voltardeletarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_voltardeletarMouseClicked
+        jScrollPane1.setVisible(true);
+        jLabel1.setVisible(true);
+        Panel_criar.setVisible(false);
+        changecolor(Panel_button_criar,new Color(242,242,242));
+    }//GEN-LAST:event_button_voltardeletarMouseClicked
+
+    private void textfield_IDMaterialDeletar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfield_IDMaterialDeletar2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textfield_IDMaterialDeletar2ActionPerformed
+
+    private void Panel_button_criarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_criarMouseClicked
+        jScrollPane1.setVisible(false);
+        jLabel1.setVisible(false);
+        Panel_atualizar.setVisible(false);
+        Panel_deletar.setVisible(false);
+        Panel_criar.setVisible(true);
+        changecolor(Panel_button_criar, new Color(200,200,200));
+    }//GEN-LAST:event_Panel_button_criarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -619,13 +1141,33 @@ public class PaginaFeedback extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Header;
     public javax.swing.JTable JTable1;
+    private javax.swing.JLabel Label_IDMaterial;
+    private javax.swing.JLabel Label_IDMaterial1;
+    private javax.swing.JLabel Label_IDMaterial2;
+    private javax.swing.JLabel Label_IDMaterial3;
+    private javax.swing.JLabel Label_NomeMaterial;
+    private javax.swing.JLabel Label_NomeMaterial1;
+    private javax.swing.JLabel Label_Quantidade;
+    private javax.swing.JLabel Label_Quantidade1;
     private javax.swing.JPanel Panel_Menu_Extendido;
+    private javax.swing.JPanel Panel_atualizar;
+    private javax.swing.JPanel Panel_botoes_CRUD;
+    private javax.swing.JPanel Panel_button_atualizar;
     private javax.swing.JPanel Panel_button_autorizacao;
+    private javax.swing.JPanel Panel_button_criar;
+    private javax.swing.JPanel Panel_button_deletar;
     private javax.swing.JPanel Panel_button_feedbacks;
     private javax.swing.JPanel Panel_button_materiais;
     private javax.swing.JPanel Panel_button_sair;
-    private javax.swing.JPanel Panel_funcoes;
+    private javax.swing.JPanel Panel_criar;
+    private javax.swing.JPanel Panel_deletar;
+    private javax.swing.JLabel button_atualizar;
     private javax.swing.JLabel button_autorizacao;
+    private javax.swing.JButton button_confirmarcriar;
+    private javax.swing.JButton button_confirmarcriar1;
+    private javax.swing.JButton button_confirmarcriar2;
+    private javax.swing.JLabel button_criar;
+    private javax.swing.JLabel button_deletar;
     private javax.swing.JLabel button_feedbacks;
     private javax.swing.JLabel button_hide_menu;
     private javax.swing.JLabel button_materiais;
@@ -633,11 +1175,17 @@ public class PaginaFeedback extends javax.swing.JFrame {
     private javax.swing.JPanel button_min;
     private javax.swing.JLabel button_sair;
     private javax.swing.JLabel button_voltar;
+    private javax.swing.JButton button_voltaratualizar;
+    private javax.swing.JButton button_voltarcriar;
+    private javax.swing.JButton button_voltardeletar;
     private javax.swing.JPanel close_panel;
     private javax.swing.JPanel header_icon;
     private javax.swing.JLabel icon_label_maua;
     private javax.swing.JPanel icone_min_max_close;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
@@ -648,5 +1196,13 @@ public class PaginaFeedback extends javax.swing.JFrame {
     private javax.swing.JPanel panel_barra_menu;
     private javax.swing.JPanel panel_hide_menu;
     private java.awt.TextArea textArea1;
+    private javax.swing.JTextField textfield_IDMaterial;
+    private javax.swing.JTextField textfield_IDMaterial1;
+    private javax.swing.JTextField textfield_IDMaterialDeletar;
+    private javax.swing.JTextField textfield_IDMaterialDeletar2;
+    private javax.swing.JTextField textfield_NomeMaterial;
+    private javax.swing.JTextField textfield_NomeMaterial1;
+    private javax.swing.JTextField textfield_Quantidade;
+    private javax.swing.JTextField textfield_Quantidade1;
     // End of variables declaration//GEN-END:variables
 }
