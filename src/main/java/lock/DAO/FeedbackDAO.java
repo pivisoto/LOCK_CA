@@ -37,6 +37,7 @@ public class FeedbackDAO {
             while(i<16) {
                 listaFeedback[i] = new Object[3];
                 i++;
+                Object lista[][] = listaFeedback; 
             }
             return listaFeedback;
             

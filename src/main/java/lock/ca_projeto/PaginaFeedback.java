@@ -3,21 +3,26 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package lock.ca_projeto;
-
+import lock.DAO.FeedbackDAO;
 import java.util.Map;
 import java.awt.font.TextAttribute;
 import java.sql.ResultSet;
-
 import javax.swing.*;
 import java.awt.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
-
 import lock.DAO.FeedbackDAO;
 import lock.DTO.FeedbackDTO;
-
 import javax.swing.table.DefaultTableModel;
+import lock.Database.ConnectionFactory;
 
 /**
  *
@@ -31,7 +36,6 @@ public class PaginaFeedback extends javax.swing.JFrame {
     public PaginaFeedback() {
         initComponents();
         setBackground(new Color(0,0,0,0));
-        int c,e,f = 0;
         Panel_criar.setVisible(false);
         Panel_atualizar.setVisible(false);
         Panel_deletar.setVisible(false);
@@ -42,9 +46,9 @@ public class PaginaFeedback extends javax.swing.JFrame {
         JTable1.setForeground(new Color(0,0,0));
         JTable1.setRowHeight(25);
         JTable1.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
-        JTable1.getColumnModel().getColumn(0).setPreferredWidth(70);
-        JTable1.getColumnModel().getColumn(1).setPreferredWidth(100);
-        JTable1.getColumnModel().getColumn(2).setPreferredWidth(360);
+        JTable1.getColumnModel().getColumn(0).setPreferredWidth(100);
+        JTable1.getColumnModel().getColumn(1).setPreferredWidth(105);
+        JTable1.getColumnModel().getColumn(2).setPreferredWidth(343);
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -129,6 +133,16 @@ public class PaginaFeedback extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
+        addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                formMouseEntered(evt);
+            }
+        });
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Header.setBackground(new java.awt.Color(0, 0, 0));
@@ -368,27 +382,20 @@ public class PaginaFeedback extends javax.swing.JFrame {
         JTable1.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
         JTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Pietro", "22.01046-7", "Estava Faltando uma bolinha"},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
-                "Material", "R.A", "Feedback"
+                "idfeedback", "idemprestimo", "feedback"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
         JTable1.setFocusable(false);
         JTable1.setGridColor(new java.awt.Color(0, 0, 0));
         JTable1.setRowHeight(25);
@@ -399,9 +406,8 @@ public class PaginaFeedback extends javax.swing.JFrame {
         JTable1.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(JTable1);
         if (JTable1.getColumnModel().getColumnCount() > 0) {
-            JTable1.getColumnModel().getColumn(0).setPreferredWidth(20);
+            JTable1.getColumnModel().getColumn(0).setPreferredWidth(30);
             JTable1.getColumnModel().getColumn(1).setPreferredWidth(30);
-            JTable1.getColumnModel().getColumn(2).setPreferredWidth(30);
         }
 
         jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 550, 320));
@@ -1083,6 +1089,34 @@ public class PaginaFeedback extends javax.swing.JFrame {
         Panel_criar.setVisible(true);
         changecolor(Panel_button_criar, new Color(200,200,200));
     }//GEN-LAST:event_Panel_button_criarMouseClicked
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        //insira sua senha no lugar de "senha"
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","senha");
+            Statement st = conn.createStatement();
+            String sql = "select * from feedback";
+            ResultSet rs = st.executeQuery(sql);
+            
+            while(rs.next()){
+                String idfeedback = String.valueOf(rs.getInt("idFeedback"));
+                String idemprestimo = String.valueOf(rs.getInt("idEmprestimo"));
+                String feedback = rs.getString("feedback");
+                String feedbackData[] = {idfeedback,idemprestimo,feedback};
+                    DefaultTableModel feedbackModel = (DefaultTableModel)JTable1.getModel();
+                    feedbackModel.addRow(feedbackData); 
+            }
+        conn.close();
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+    }
+    }//GEN-LAST:event_formWindowOpened
+
+    private void formMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseEntered
+       
+    }//GEN-LAST:event_formMouseEntered
 
     /**
      * @param args the command line arguments

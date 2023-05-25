@@ -8,7 +8,6 @@ import java.util.Properties;
 public class ConnectionFactory {
     
     public static Connection getConnection() throws Exception {
-
         Properties properties = new Properties();
         properties.load(new FileInputStream("./nbproject/private/config.properties"));
         String DATABASE_USERNAME = properties.getProperty("DATABASE_USERNAME");

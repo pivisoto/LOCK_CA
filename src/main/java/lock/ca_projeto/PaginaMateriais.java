@@ -3,11 +3,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package lock.ca_projeto;
-
+import lock.Database.ConnectionFactory;
 import java.util.Map;
 import java.awt.font.TextAttribute;
 import javax.swing.*;
 import java.awt.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
@@ -137,6 +141,11 @@ public class PaginaMateriais extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Header.setBackground(new java.awt.Color(0, 0, 0));
@@ -228,29 +237,20 @@ public class PaginaMateriais extends javax.swing.JFrame {
         JTable1.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
         JTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Kit sinuca", "23", null},
-                {"", null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
-                "Materiais", "Quantidade", "Status"
+                "idMaterial", "Material", "Quantidade", "Disponibilidade"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
         JTable1.setFocusable(false);
         JTable1.setGridColor(new java.awt.Color(0, 0, 0));
         JTable1.setRowHeight(25);
@@ -711,21 +711,12 @@ public class PaginaMateriais extends javax.swing.JFrame {
                 Panel_button_feedbacksMouseExited(evt);
             }
         });
+        Panel_button_feedbacks.setLayout(new java.awt.BorderLayout());
 
         button_feedbacks.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
         button_feedbacks.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         button_feedbacks.setText("Feedback");
-
-        javax.swing.GroupLayout Panel_button_feedbacksLayout = new javax.swing.GroupLayout(Panel_button_feedbacks);
-        Panel_button_feedbacks.setLayout(Panel_button_feedbacksLayout);
-        Panel_button_feedbacksLayout.setHorizontalGroup(
-            Panel_button_feedbacksLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(button_feedbacks, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        Panel_button_feedbacksLayout.setVerticalGroup(
-            Panel_button_feedbacksLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(button_feedbacks, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
+        Panel_button_feedbacks.add(button_feedbacks, java.awt.BorderLayout.CENTER);
 
         javax.swing.GroupLayout Panel_Menu_ExtendidoLayout = new javax.swing.GroupLayout(Panel_Menu_Extendido);
         Panel_Menu_Extendido.setLayout(Panel_Menu_ExtendidoLayout);
@@ -1138,6 +1129,30 @@ public class PaginaMateriais extends javax.swing.JFrame {
     private void textfield_IDMaterialDeletar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfield_IDMaterialDeletar2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textfield_IDMaterialDeletar2ActionPerformed
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        try{
+            //insira sua senha no "senha"
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","senha");
+            Statement st = conn.createStatement();
+            String sql = "select * from material";
+            ResultSet rs = st.executeQuery(sql);
+            
+            while(rs.next()){
+                String idMaterial = String.valueOf(rs.getInt("idMaterial"));
+                String material = rs.getString("material");
+                String quantidade = String.valueOf(rs.getInt("quantidadeTotal"));
+                String disponibilidade = String.valueOf(rs.getInt("quantidadeDisponivel"));
+                String materialData[] = {idMaterial,material,quantidade,disponibilidade};
+                    DefaultTableModel materialModel = (DefaultTableModel)JTable1.getModel();
+                    materialModel.addRow(materialData); 
+            }
+        conn.close();
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+    }
+    }//GEN-LAST:event_formWindowOpened
 
     /**
      * @param args the command line arguments

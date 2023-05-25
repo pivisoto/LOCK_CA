@@ -8,6 +8,10 @@ import java.util.Map;
 import java.awt.font.TextAttribute;
 import javax.swing.*;
 import java.awt.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
@@ -37,6 +41,13 @@ public class PaginaValidar extends javax.swing.JFrame {
         JTable1.getTableHeader().setForeground(new Color(255,255,255));
         JTable1.setForeground(new Color(0,0,0));
         JTable1.setRowHeight(25);
+        JTable1.getColumnModel().getColumn(0).setPreferredWidth(60);
+        JTable1.getColumnModel().getColumn(1).setPreferredWidth(40);
+        JTable1.getColumnModel().getColumn(2).setPreferredWidth(40);
+        JTable1.getColumnModel().getColumn(3).setPreferredWidth(25);
+        JTable1.getColumnModel().getColumn(4).setPreferredWidth(50);
+        JTable1.getColumnModel().getColumn(5).setPreferredWidth(50);
+        JTable1.getColumnModel().getColumn(6).setPreferredWidth(30);
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -112,6 +123,11 @@ public class PaginaValidar extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Header.setBackground(new java.awt.Color(0, 0, 0));
@@ -351,27 +367,20 @@ public class PaginaValidar extends javax.swing.JFrame {
         JTable1.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
         JTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Pietro", "22.01046-7", "Kit sinuca"},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
-                "Nome", "R.A", "Material"
+                "idemprestimo", "idMaterial", "idUsuario", "codigo", "dia", "horario", "retorno"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
         JTable1.setFocusable(false);
         JTable1.setGridColor(new java.awt.Color(0, 0, 0));
         JTable1.setRowHeight(25);
@@ -1053,6 +1062,33 @@ public class PaginaValidar extends javax.swing.JFrame {
         Panel_criar.setVisible(true);
         changecolor(Panel_button_criar, new Color(200,200,200));
     }//GEN-LAST:event_Panel_button_criarMouseClicked
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+         try{
+            //coloque sua senha no lugar de "senha"
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","senha");
+            Statement st = conn.createStatement();
+            String sql = "select * from emprestimo";
+            ResultSet rs = st.executeQuery(sql);
+            
+            while(rs.next()){
+                String idemprestimo = String.valueOf(rs.getInt("idEmprestimo"));
+                String idMaterial = String.valueOf(rs.getInt("idMaterial"));
+                String idUsuario = String.valueOf(rs.getInt("idUsuario"));
+                String codigo = String.valueOf(rs.getInt("codigo"));
+                String dia = String.valueOf(rs.getDate("dia"));
+                String horario = String.valueOf(rs.getTime("horario"));
+                String retorno = String.valueOf(rs.getBoolean("retorno"));
+                String validarData[] = {idemprestimo,idMaterial,idUsuario,codigo,dia,horario,retorno};
+                    DefaultTableModel validarModel = (DefaultTableModel)JTable1.getModel();
+                    validarModel.addRow(validarData); 
+            }
+        conn.close();
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+    }
+    }//GEN-LAST:event_formWindowOpened
 
     /**
      * @param args the command line arguments
