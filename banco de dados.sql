@@ -19,8 +19,8 @@ CREATE TABLE IF NOT EXISTS material(
 
 CREATE TABLE emprestimo(
 	idEmprestimo integer not null unique auto_increment,
-	idMaterial INTEGER UNIQUE,
-    idUsuario INTEGER NOT NULL unique,
+	idMaterial INTEGER ,
+    idUsuario INTEGER NOT NULL,
     codigo integer not null unique,
     dia datetime default now() not null,
     horario time not null,
@@ -33,13 +33,14 @@ CREATE TABLE emprestimo(
 
 CREATE TABLE IF NOT EXISTS feedback(
     idFeedback INTEGER NOT NULL unique AUTO_INCREMENT,	
-    idEmprestimo INTEGER NOT NULL unique,
+    idEmprestimo INTEGER NOT NULL UNIQUE,
     feedback VARCHAR(100) NOT NULL,
     FOREIGN KEY (idEmprestimo)
         REFERENCES emprestimo (idEmprestimo),
     CONSTRAINT PK_Feedback PRIMARY KEY (idFeedback)
 );
-insert into usuario values (null,"22.00865-9", "123@gmail.com","senha");
+insert into usuario values (1,"22.00865-9", "123@gmail.com","senha");
 insert into material values (null, "kit sinuca", "1", True);
-insert into emprestimo values(null,null,1,1,default,current_time(),true);
+insert into emprestimo values(null,1,1,1,default,current_time(),true);
+insert into emprestimo values(null,1,1,2,default,current_time(),true);
 insert into feedback values (null, 1,"uma bolinha faltando");
