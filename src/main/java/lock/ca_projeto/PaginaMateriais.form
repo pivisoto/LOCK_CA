@@ -432,10 +432,10 @@
                                   <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="button_voltarcriar" min="-2" pref="109" max="-2" attributes="0"/>
-                                          <EmptySpace pref="50" max="32767" attributes="0"/>
-                                          <Component id="button_confirmarcriar" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="button_confirmarcriar3" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <Component id="textfield_NomeMaterial" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="textfield_NomeMaterial" alignment="0" pref="270" max="32767" attributes="0"/>
                                       <Component id="textfield_IDMaterial" alignment="0" max="32767" attributes="0"/>
                                       <Component id="textfield_Quantidade" alignment="0" max="32767" attributes="0"/>
                                       <Component id="Label_NomeMaterial" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -472,11 +472,11 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="textfield_QuantidadeDisp" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="button_confirmarcriar" pref="31" max="32767" attributes="0"/>
-                          <Component id="button_voltarcriar" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="button_confirmarcriar3" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="button_voltarcriar" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -504,15 +504,6 @@
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="textfield_Quantidade">
-            </Component>
-            <Component class="javax.swing.JButton" name="button_confirmarcriar">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Microsoft YaHei Light" size="14" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="CONFIRMAR"/>
-                <Property name="borderPainted" type="boolean" value="false"/>
-              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="Label_IDMaterial">
               <Properties>
@@ -572,6 +563,18 @@
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="button_voltarcriarMouseClicked"/>
               </Events>
             </Component>
+            <Component class="javax.swing.JButton" name="button_confirmarcriar3">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Microsoft YaHei Light" size="14" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="CONFIRMAR"/>
+                <Property name="borderPainted" type="boolean" value="false"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="button_confirmarcriar3MouseClicked"/>
+              </Events>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="Panel_atualizar">
@@ -598,10 +601,10 @@
                                   <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="button_voltaratualizar" min="-2" pref="109" max="-2" attributes="0"/>
-                                          <EmptySpace pref="50" max="32767" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
                                           <Component id="button_confirmarcriar1" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <Component id="textfield_NomeMaterial1" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="textfield_NomeMaterial1" alignment="0" pref="270" max="32767" attributes="0"/>
                                       <Component id="textfield_IDMaterial1" alignment="0" max="32767" attributes="0"/>
                                       <Component id="textfield_Quantidade1" alignment="0" max="32767" attributes="0"/>
                                       <Component id="Label_NomeMaterial1" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -627,9 +630,9 @@
                       <Component id="jLabel3" min="-2" pref="39" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="Label_IDMaterial1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
                       <Component id="textfield_IDMaterial1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="Label_NomeMaterial1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="textfield_NomeMaterial1" min="-2" max="-2" attributes="0"/>
@@ -637,14 +640,14 @@
                       <Component id="Label_Quantidade1" min="-2" pref="12" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="textfield_Quantidade1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="Label_QuantidadeDisp1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="textfield_QuantidadeDisp1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="button_confirmarcriar1" alignment="0" pref="31" max="32767" attributes="0"/>
-                          <Component id="button_voltaratualizar" alignment="0" max="32767" attributes="0"/>
+                      <EmptySpace pref="16" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="button_voltaratualizar" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                          <Component id="button_confirmarcriar1" alignment="3" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                   </Group>
@@ -683,6 +686,10 @@
                 <Property name="text" type="java.lang.String" value="CONFIRMAR"/>
                 <Property name="borderPainted" type="boolean" value="false"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="button_confirmarcriar1MouseClicked"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button_confirmarcriar1ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="Label_IDMaterial1">
               <Properties>
@@ -760,29 +767,34 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="177" max="-2" attributes="0"/>
+                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="177" max="-2" attributes="0"/>
-                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="132" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="Label_IDMaterial3" min="-2" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
+                                  <Component id="Label_IDMaterial2" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                      <Group type="102" attributes="0">
                                           <Component id="button_voltardeletar" min="-2" pref="109" max="-2" attributes="0"/>
-                                          <EmptySpace pref="50" max="32767" attributes="0"/>
-                                          <Component id="button_confirmarcriar2" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace pref="71" max="32767" attributes="0"/>
+                                          <Component id="button_confirmarcriar2" min="-2" pref="103" max="-2" attributes="0"/>
                                       </Group>
-                                      <Component id="textfield_IDMaterialDeletar" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="Label_IDMaterial2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="textfield_IDMaterialDeletar2" max="32767" attributes="0"/>
+                                      <Component id="textfield_IDMaterial2" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="textfield_IDMaterial3" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
+                              <Component id="Label_aviso" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace min="32" pref="148" max="32767" attributes="0"/>
+                      <EmptySpace pref="95" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -791,30 +803,27 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel4" min="-2" pref="39" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="Label_IDMaterial3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="textfield_IDMaterialDeletar" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                       <Component id="Label_IDMaterial2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="textfield_IDMaterialDeletar2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="button_confirmarcriar2" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
-                          <Component id="button_voltardeletar" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="textfield_IDMaterial2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                      <Component id="Label_IDMaterial3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="textfield_IDMaterial3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="button_confirmarcriar2" alignment="1" min="-2" pref="31" max="-2" attributes="0"/>
+                          <Component id="button_voltardeletar" min="-2" pref="31" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="82" max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="Label_aviso" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="22" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JTextField" name="textfield_IDMaterialDeletar">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textfield_IDMaterialDeletarActionPerformed"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -831,9 +840,44 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Microsoft YaHei Light" size="14" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="CONFIRMAR"/>
+                <Property name="text" type="java.lang.String" value="DELETAR"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
                 <Property name="borderPainted" type="boolean" value="false"/>
+                <Property name="focusPainted" type="boolean" value="false"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="button_confirmarcriar2MouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="button_voltardeletar">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Microsoft YaHei UI Light" size="14" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="VOLTAR"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder/>
+                  </Border>
+                </Property>
+                <Property name="borderPainted" type="boolean" value="false"/>
+                <Property name="focusCycleRoot" type="boolean" value="true"/>
+                <Property name="focusable" type="boolean" value="false"/>
+                <Property name="requestFocusEnabled" type="boolean" value="false"/>
+                <Property name="rolloverEnabled" type="boolean" value="false"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="button_voltardeletarMouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="textfield_IDMaterial2">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textfield_IDMaterial2ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="Label_IDMaterial2">
               <Properties>
@@ -843,24 +887,12 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="ID MATERIAL NOVAMENTE"/>
+                <Property name="text" type="java.lang.String" value="ID MATERIAL"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="button_voltardeletar">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Microsoft YaHei UI Light" size="14" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="VOLTAR"/>
-                <Property name="borderPainted" type="boolean" value="false"/>
-              </Properties>
+            <Component class="javax.swing.JTextField" name="textfield_IDMaterial3">
               <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="button_voltardeletarMouseClicked"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JTextField" name="textfield_IDMaterialDeletar2">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textfield_IDMaterialDeletar2ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textfield_IDMaterial3ActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="Label_IDMaterial3">
@@ -871,7 +903,18 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="ID MATERIAL"/>
+                <Property name="text" type="java.lang.String" value="ID MATERIAL NOVAMENTE"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="Label_aviso">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Microsoft YaHei Light" size="14" style="0"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="IDs DIFERENTES , CUIDADO ESSA A&#xc7;&#xc3;O &#xc9; IRREVERS&#xcd;VEL"/>
               </Properties>
             </Component>
           </SubComponents>

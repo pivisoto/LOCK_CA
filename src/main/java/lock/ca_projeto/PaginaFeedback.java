@@ -39,6 +39,7 @@ public class PaginaFeedback extends javax.swing.JFrame {
         Panel_criar.setVisible(false);
         Panel_atualizar.setVisible(false);
         Panel_deletar.setVisible(false);
+        Label_aviso.setVisible(false);
         JTable1.getTableHeader().setFont(new Font("Microsoft Yahei UI Light",Font.BOLD , 14));
         JTable1.getTableHeader().setOpaque(false);
         JTable1.getTableHeader().setBackground(new Color(0,0,0));
@@ -90,33 +91,34 @@ public class PaginaFeedback extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         button_voltar = new javax.swing.JLabel();
         Panel_criar = new javax.swing.JPanel();
-        textfield_IDMaterial = new javax.swing.JTextField();
+        textfield_idfeedback = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        textfield_NomeMaterial = new javax.swing.JTextField();
-        textfield_Quantidade = new javax.swing.JTextField();
+        textfield_idemprestimo = new javax.swing.JTextField();
+        textfield_feedback = new javax.swing.JTextField();
         button_confirmarcriar = new javax.swing.JButton();
         Label_IDMaterial = new javax.swing.JLabel();
         Label_NomeMaterial = new javax.swing.JLabel();
         Label_Quantidade = new javax.swing.JLabel();
         button_voltarcriar = new javax.swing.JButton();
         Panel_atualizar = new javax.swing.JPanel();
-        textfield_IDMaterial1 = new javax.swing.JTextField();
+        textfield_IDFeedback1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        textfield_NomeMaterial1 = new javax.swing.JTextField();
-        textfield_Quantidade1 = new javax.swing.JTextField();
+        textfield_IDEmprestimo1 = new javax.swing.JTextField();
+        textfield_feedback1 = new javax.swing.JTextField();
         button_confirmarcriar1 = new javax.swing.JButton();
         Label_IDMaterial1 = new javax.swing.JLabel();
         Label_NomeMaterial1 = new javax.swing.JLabel();
         Label_Quantidade1 = new javax.swing.JLabel();
         button_voltaratualizar = new javax.swing.JButton();
         Panel_deletar = new javax.swing.JPanel();
-        textfield_IDMaterialDeletar = new javax.swing.JTextField();
+        textfield_IDFeedbackDeletar = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         button_confirmarcriar2 = new javax.swing.JButton();
         Label_IDMaterial2 = new javax.swing.JLabel();
         button_voltardeletar = new javax.swing.JButton();
-        textfield_IDMaterialDeletar2 = new javax.swing.JTextField();
+        textfield_IDFeedbackDeletar2 = new javax.swing.JTextField();
         Label_IDMaterial3 = new javax.swing.JLabel();
+        Label_aviso = new javax.swing.JLabel();
         Panel_botoes_CRUD = new javax.swing.JPanel();
         Panel_button_criar = new javax.swing.JPanel();
         button_criar = new javax.swing.JLabel();
@@ -439,9 +441,9 @@ public class PaginaFeedback extends javax.swing.JFrame {
 
         Panel_criar.setBackground(new java.awt.Color(0, 0, 0));
 
-        textfield_IDMaterial.addActionListener(new java.awt.event.ActionListener() {
+        textfield_idfeedback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textfield_IDMaterialActionPerformed(evt);
+                textfield_idfeedbackActionPerformed(evt);
             }
         });
 
@@ -449,15 +451,20 @@ public class PaginaFeedback extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("CRIAR FEEDBACK");
 
-        textfield_NomeMaterial.addActionListener(new java.awt.event.ActionListener() {
+        textfield_idemprestimo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textfield_NomeMaterialActionPerformed(evt);
+                textfield_idemprestimoActionPerformed(evt);
             }
         });
 
         button_confirmarcriar.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 14)); // NOI18N
         button_confirmarcriar.setText("CONFIRMAR");
         button_confirmarcriar.setBorderPainted(false);
+        button_confirmarcriar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                button_confirmarcriarMouseClicked(evt);
+            }
+        });
 
         Label_IDMaterial.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 14)); // NOI18N
         Label_IDMaterial.setForeground(new java.awt.Color(255, 255, 255));
@@ -465,7 +472,7 @@ public class PaginaFeedback extends javax.swing.JFrame {
 
         Label_NomeMaterial.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
         Label_NomeMaterial.setForeground(new java.awt.Color(255, 255, 255));
-        Label_NomeMaterial.setText("ID USUÁRIO");
+        Label_NomeMaterial.setText("ID EMPRESTIMO");
 
         Label_Quantidade.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
         Label_Quantidade.setForeground(new java.awt.Color(255, 255, 255));
@@ -498,9 +505,9 @@ public class PaginaFeedback extends javax.swing.JFrame {
                                     .addComponent(button_voltarcriar, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                                     .addComponent(button_confirmarcriar))
-                                .addComponent(textfield_NomeMaterial, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(textfield_IDMaterial, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(textfield_Quantidade, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(textfield_idemprestimo, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(textfield_idfeedback, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(textfield_feedback, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(Label_NomeMaterial, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(Label_IDMaterial, javax.swing.GroupLayout.Alignment.LEADING)))))
                 .addContainerGap(149, Short.MAX_VALUE))
@@ -513,15 +520,15 @@ public class PaginaFeedback extends javax.swing.JFrame {
                 .addGap(11, 11, 11)
                 .addComponent(Label_IDMaterial)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(textfield_IDMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(textfield_idfeedback, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(7, 7, 7)
                 .addComponent(Label_NomeMaterial)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(textfield_NomeMaterial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(textfield_idemprestimo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
                 .addComponent(Label_Quantidade, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(textfield_Quantidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(textfield_feedback, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(Panel_criarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(button_confirmarcriar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -533,9 +540,9 @@ public class PaginaFeedback extends javax.swing.JFrame {
 
         Panel_atualizar.setBackground(new java.awt.Color(0, 0, 0));
 
-        textfield_IDMaterial1.addActionListener(new java.awt.event.ActionListener() {
+        textfield_IDFeedback1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textfield_IDMaterial1ActionPerformed(evt);
+                textfield_IDFeedback1ActionPerformed(evt);
             }
         });
 
@@ -543,15 +550,20 @@ public class PaginaFeedback extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("ATUALIZAR  FEEDBACK");
 
-        textfield_NomeMaterial1.addActionListener(new java.awt.event.ActionListener() {
+        textfield_IDEmprestimo1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textfield_NomeMaterial1ActionPerformed(evt);
+                textfield_IDEmprestimo1ActionPerformed(evt);
             }
         });
 
         button_confirmarcriar1.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 14)); // NOI18N
         button_confirmarcriar1.setText("CONFIRMAR");
         button_confirmarcriar1.setBorderPainted(false);
+        button_confirmarcriar1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                button_confirmarcriar1MouseClicked(evt);
+            }
+        });
 
         Label_IDMaterial1.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 14)); // NOI18N
         Label_IDMaterial1.setForeground(new java.awt.Color(255, 255, 255));
@@ -559,7 +571,7 @@ public class PaginaFeedback extends javax.swing.JFrame {
 
         Label_NomeMaterial1.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
         Label_NomeMaterial1.setForeground(new java.awt.Color(255, 255, 255));
-        Label_NomeMaterial1.setText("ID USUÁRIO");
+        Label_NomeMaterial1.setText("ID EMPRESTIMO");
 
         Label_Quantidade1.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
         Label_Quantidade1.setForeground(new java.awt.Color(255, 255, 255));
@@ -589,9 +601,9 @@ public class PaginaFeedback extends javax.swing.JFrame {
                                     .addComponent(button_voltaratualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                                     .addComponent(button_confirmarcriar1))
-                                .addComponent(textfield_NomeMaterial1, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(textfield_IDMaterial1, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(textfield_Quantidade1, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(textfield_IDEmprestimo1, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(textfield_IDFeedback1, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(textfield_feedback1, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(Label_NomeMaterial1, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(Label_IDMaterial1, javax.swing.GroupLayout.Alignment.LEADING))))
                     .addGroup(Panel_atualizarLayout.createSequentialGroup()
@@ -607,15 +619,15 @@ public class PaginaFeedback extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Label_IDMaterial1)
                 .addGap(10, 10, 10)
-                .addComponent(textfield_IDMaterial1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(textfield_IDFeedback1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(7, 7, 7)
                 .addComponent(Label_NomeMaterial1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(textfield_NomeMaterial1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(textfield_IDEmprestimo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Label_Quantidade1, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(textfield_Quantidade1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(textfield_feedback1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(Panel_atualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(button_voltaratualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -627,9 +639,14 @@ public class PaginaFeedback extends javax.swing.JFrame {
 
         Panel_deletar.setBackground(new java.awt.Color(0, 0, 0));
 
-        textfield_IDMaterialDeletar.addActionListener(new java.awt.event.ActionListener() {
+        textfield_IDFeedbackDeletar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                textfield_IDFeedbackDeletarMouseClicked(evt);
+            }
+        });
+        textfield_IDFeedbackDeletar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textfield_IDMaterialDeletarActionPerformed(evt);
+                textfield_IDFeedbackDeletarActionPerformed(evt);
             }
         });
 
@@ -640,6 +657,11 @@ public class PaginaFeedback extends javax.swing.JFrame {
         button_confirmarcriar2.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 14)); // NOI18N
         button_confirmarcriar2.setText("CONFIRMAR");
         button_confirmarcriar2.setBorderPainted(false);
+        button_confirmarcriar2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                button_confirmarcriar2MouseClicked(evt);
+            }
+        });
 
         Label_IDMaterial2.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 14)); // NOI18N
         Label_IDMaterial2.setForeground(new java.awt.Color(255, 255, 255));
@@ -654,15 +676,19 @@ public class PaginaFeedback extends javax.swing.JFrame {
             }
         });
 
-        textfield_IDMaterialDeletar2.addActionListener(new java.awt.event.ActionListener() {
+        textfield_IDFeedbackDeletar2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textfield_IDMaterialDeletar2ActionPerformed(evt);
+                textfield_IDFeedbackDeletar2ActionPerformed(evt);
             }
         });
 
         Label_IDMaterial3.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 14)); // NOI18N
         Label_IDMaterial3.setForeground(new java.awt.Color(255, 255, 255));
         Label_IDMaterial3.setText("ID FEEDBACK");
+
+        Label_aviso.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 14)); // NOI18N
+        Label_aviso.setForeground(new java.awt.Color(255, 0, 0));
+        Label_aviso.setText("IDs DIFERENTES , CUIDADO ESSA AÇÃO É IRREVERSÍVEL");
 
         javax.swing.GroupLayout Panel_deletarLayout = new javax.swing.GroupLayout(Panel_deletar);
         Panel_deletar.setLayout(Panel_deletarLayout);
@@ -682,10 +708,13 @@ public class PaginaFeedback extends javax.swing.JFrame {
                                     .addComponent(button_voltardeletar, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                                     .addComponent(button_confirmarcriar2))
-                                .addComponent(textfield_IDMaterialDeletar, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(textfield_IDFeedbackDeletar, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(Label_IDMaterial2, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(textfield_IDMaterialDeletar2)))))
-                .addGap(32, 148, Short.MAX_VALUE))
+                                .addComponent(textfield_IDFeedbackDeletar2))))
+                    .addGroup(Panel_deletarLayout.createSequentialGroup()
+                        .addGap(90, 90, 90)
+                        .addComponent(Label_aviso)))
+                .addGap(32, 97, Short.MAX_VALUE))
         );
         Panel_deletarLayout.setVerticalGroup(
             Panel_deletarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -695,16 +724,18 @@ public class PaginaFeedback extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(Label_IDMaterial3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(textfield_IDMaterialDeletar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(textfield_IDFeedbackDeletar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(Label_IDMaterial2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(textfield_IDMaterialDeletar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(textfield_IDFeedbackDeletar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addGroup(Panel_deletarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(button_confirmarcriar2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(button_voltardeletar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(82, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(Label_aviso)
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         jPanel2.add(Panel_deletar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 550, 320));
@@ -1036,50 +1067,116 @@ public class PaginaFeedback extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_button_autorizacaoMouseClicked
 
-    private void textfield_IDMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfield_IDMaterialActionPerformed
+    private void textfield_idfeedbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfield_idfeedbackActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textfield_IDMaterialActionPerformed
+    }//GEN-LAST:event_textfield_idfeedbackActionPerformed
 
-    private void textfield_NomeMaterialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfield_NomeMaterialActionPerformed
+    private void textfield_idemprestimoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfield_idemprestimoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textfield_NomeMaterialActionPerformed
+    }//GEN-LAST:event_textfield_idemprestimoActionPerformed
 
     private void button_voltarcriarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_voltarcriarMouseClicked
         jScrollPane1.setVisible(true);
         jLabel1.setVisible(true);
         Panel_criar.setVisible(false);
         changecolor(Panel_button_criar,new Color(242,242,242));
+        DefaultTableModel feedbackreset = (DefaultTableModel) JTable1.getModel();
+        feedbackreset.setRowCount(0);
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","Bobvisoto17");
+            Statement st = conn.createStatement();
+            String sql = "select * from feedback";
+            ResultSet rs = st.executeQuery(sql);
+            
+            while(rs.next()){
+                String idfeedback = String.valueOf(rs.getInt("idFeedback"));
+                String idemprestimo = String.valueOf(rs.getInt("idEmprestimo"));
+                String feedback = rs.getString("feedback");
+                String feedbackData[] = {idfeedback,idemprestimo,feedback};
+                    DefaultTableModel feedbackModel = (DefaultTableModel)JTable1.getModel();
+                    feedbackModel.addRow(feedbackData); 
+            }
+        conn.close();
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+    }
     }//GEN-LAST:event_button_voltarcriarMouseClicked
 
-    private void textfield_IDMaterial1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfield_IDMaterial1ActionPerformed
+    private void textfield_IDFeedback1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfield_IDFeedback1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textfield_IDMaterial1ActionPerformed
+    }//GEN-LAST:event_textfield_IDFeedback1ActionPerformed
 
-    private void textfield_NomeMaterial1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfield_NomeMaterial1ActionPerformed
+    private void textfield_IDEmprestimo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfield_IDEmprestimo1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textfield_NomeMaterial1ActionPerformed
+    }//GEN-LAST:event_textfield_IDEmprestimo1ActionPerformed
 
     private void button_voltaratualizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_voltaratualizarMouseClicked
         jScrollPane1.setVisible(true);
         jLabel1.setVisible(true);
         Panel_criar.setVisible(false);
         changecolor(Panel_button_criar,new Color(242,242,242));
+        DefaultTableModel feedbackreset = (DefaultTableModel) JTable1.getModel();
+        feedbackreset.setRowCount(0);
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","Bobvisoto17");
+            Statement st = conn.createStatement();
+            String sql = "select * from feedback";
+            ResultSet rs = st.executeQuery(sql);
+            
+            while(rs.next()){
+                String idfeedback = String.valueOf(rs.getInt("idFeedback"));
+                String idemprestimo = String.valueOf(rs.getInt("idEmprestimo"));
+                String feedback = rs.getString("feedback");
+                String feedbackData[] = {idfeedback,idemprestimo,feedback};
+                    DefaultTableModel feedbackModel = (DefaultTableModel)JTable1.getModel();
+                    feedbackModel.addRow(feedbackData); 
+            }
+        conn.close();
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+    }
     }//GEN-LAST:event_button_voltaratualizarMouseClicked
 
-    private void textfield_IDMaterialDeletarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfield_IDMaterialDeletarActionPerformed
+    private void textfield_IDFeedbackDeletarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfield_IDFeedbackDeletarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textfield_IDMaterialDeletarActionPerformed
+    }//GEN-LAST:event_textfield_IDFeedbackDeletarActionPerformed
 
     private void button_voltardeletarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_voltardeletarMouseClicked
         jScrollPane1.setVisible(true);
         jLabel1.setVisible(true);
         Panel_criar.setVisible(false);
         changecolor(Panel_button_criar,new Color(242,242,242));
+        DefaultTableModel feedbackreset = (DefaultTableModel) JTable1.getModel();
+        feedbackreset.setRowCount(0);
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","Bobvisoto17");
+            Statement st = conn.createStatement();
+            String sql = "select * from feedback";
+            ResultSet rs = st.executeQuery(sql);
+            
+            while(rs.next()){
+                String idfeedback = String.valueOf(rs.getInt("idFeedback"));
+                String idemprestimo = String.valueOf(rs.getInt("idEmprestimo"));
+                String feedback = rs.getString("feedback");
+                String feedbackData[] = {idfeedback,idemprestimo,feedback};
+                    DefaultTableModel feedbackModel = (DefaultTableModel)JTable1.getModel();
+                    feedbackModel.addRow(feedbackData); 
+            }
+        conn.close();
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+    }
     }//GEN-LAST:event_button_voltardeletarMouseClicked
 
-    private void textfield_IDMaterialDeletar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfield_IDMaterialDeletar2ActionPerformed
+    private void textfield_IDFeedbackDeletar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfield_IDFeedbackDeletar2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textfield_IDMaterialDeletar2ActionPerformed
+    }//GEN-LAST:event_textfield_IDFeedbackDeletar2ActionPerformed
 
     private void Panel_button_criarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_criarMouseClicked
         jScrollPane1.setVisible(false);
@@ -1094,7 +1191,7 @@ public class PaginaFeedback extends javax.swing.JFrame {
         //insira sua senha no lugar de "senha"
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","senha");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","Bobvisoto17");
             Statement st = conn.createStatement();
             String sql = "select * from feedback";
             ResultSet rs = st.executeQuery(sql);
@@ -1117,6 +1214,71 @@ public class PaginaFeedback extends javax.swing.JFrame {
     private void formMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseEntered
        
     }//GEN-LAST:event_formMouseEntered
+
+    private void button_confirmarcriarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_confirmarcriarMouseClicked
+        String idFeedback = textfield_idfeedback.getText();
+        String idEmprestimo = textfield_idemprestimo.getText();
+        String feedback = textfield_feedback.getText();
+         try{    
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","Bobvisoto17");
+            Statement st = conn.createStatement();
+            String sql = "insert into feedback (idFeedback,idEmprestimo,feedback) values (?,?,?)";
+            PreparedStatement prst = conn.prepareStatement(sql);
+            prst.setString(1,idFeedback);
+            prst.setString(2,idEmprestimo);
+            prst.setString(3,feedback);
+            prst.execute();
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+    }//GEN-LAST:event_button_confirmarcriarMouseClicked
+
+    private void button_confirmarcriar2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_confirmarcriar2MouseClicked
+    String id = textfield_IDFeedbackDeletar.getText();
+    String id2 = textfield_IDFeedbackDeletar2.getText();
+    if(id2.equals(id)){
+        try{
+            Label_aviso.setVisible(false);
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","Bobvisoto17");
+            Statement st = conn.createStatement();
+            String sql = "DELETE FROM feedback WHERE idFeedback=?";
+            PreparedStatement prst = conn.prepareStatement(sql);
+            prst.setString(1,id);
+            prst.execute();
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
+    else{
+        Label_aviso.setVisible(true);
+    }
+    }//GEN-LAST:event_button_confirmarcriar2MouseClicked
+
+    private void button_confirmarcriar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_confirmarcriar1MouseClicked
+    
+        String idFeedback = textfield_IDFeedback1.getText();
+        String idEmprestimo = textfield_IDEmprestimo1.getText();
+        String feedback = textfield_feedback1.getText();
+        try{    
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","Bobvisoto17");
+            Statement st = conn.createStatement();
+            String sql = "UPDATE feedback SET idEmprestimo=?,feedback=? where idFeedback=?";
+            PreparedStatement prst = conn.prepareStatement(sql);
+            prst.setString(1,idEmprestimo);
+            prst.setString(2,feedback);
+            prst.setString(3,idFeedback);
+            prst.executeUpdate();
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+    }//GEN-LAST:event_button_confirmarcriar1MouseClicked
+
+    private void textfield_IDFeedbackDeletarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_textfield_IDFeedbackDeletarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textfield_IDFeedbackDeletarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -1183,6 +1345,7 @@ public class PaginaFeedback extends javax.swing.JFrame {
     private javax.swing.JLabel Label_NomeMaterial1;
     private javax.swing.JLabel Label_Quantidade;
     private javax.swing.JLabel Label_Quantidade1;
+    private javax.swing.JLabel Label_aviso;
     private javax.swing.JPanel Panel_Menu_Extendido;
     private javax.swing.JPanel Panel_atualizar;
     private javax.swing.JPanel Panel_botoes_CRUD;
@@ -1230,13 +1393,13 @@ public class PaginaFeedback extends javax.swing.JFrame {
     private javax.swing.JPanel panel_barra_menu;
     private javax.swing.JPanel panel_hide_menu;
     private java.awt.TextArea textArea1;
-    private javax.swing.JTextField textfield_IDMaterial;
-    private javax.swing.JTextField textfield_IDMaterial1;
-    private javax.swing.JTextField textfield_IDMaterialDeletar;
-    private javax.swing.JTextField textfield_IDMaterialDeletar2;
-    private javax.swing.JTextField textfield_NomeMaterial;
-    private javax.swing.JTextField textfield_NomeMaterial1;
-    private javax.swing.JTextField textfield_Quantidade;
-    private javax.swing.JTextField textfield_Quantidade1;
+    private javax.swing.JTextField textfield_IDEmprestimo1;
+    private javax.swing.JTextField textfield_IDFeedback1;
+    private javax.swing.JTextField textfield_IDFeedbackDeletar;
+    private javax.swing.JTextField textfield_IDFeedbackDeletar2;
+    private javax.swing.JTextField textfield_feedback;
+    private javax.swing.JTextField textfield_feedback1;
+    private javax.swing.JTextField textfield_idemprestimo;
+    private javax.swing.JTextField textfield_idfeedback;
     // End of variables declaration//GEN-END:variables
 }
