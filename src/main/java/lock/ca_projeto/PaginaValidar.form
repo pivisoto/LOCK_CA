@@ -627,11 +627,11 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="Label_Quantidade3" min="-2" pref="136" max="-2" attributes="0"/>
                                   <Component id="Label_Quantidade" alignment="0" min="-2" pref="136" max="-2" attributes="0"/>
-                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                  <Group type="103" alignment="1" groupAlignment="1" max="-2" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="button_voltarcriar" min="-2" pref="109" max="-2" attributes="0"/>
-                                          <EmptySpace pref="50" max="32767" attributes="0"/>
-                                          <Component id="button_confirmarcriar" min="-2" max="-2" attributes="0"/>
+                                          <Component id="Panel_button_voltar_emprestimo" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="Panel_button_confirmar_emprestimo" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Component id="textfield_IDEmprestimo" alignment="0" max="32767" attributes="0"/>
                                       <Component id="textfield_IDMaterial" alignment="0" max="32767" attributes="0"/>
@@ -645,7 +645,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="149" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="166" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -667,19 +667,21 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="textfield_IDUsuario" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="Label_Quantidade3" min="-2" pref="13" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                      <Component id="textfield_codigo" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="Label_Quantidade4" min="-2" pref="13" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="textfield_retorno" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="button_voltarcriar" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="button_confirmarcriar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="Label_Quantidade3" min="-2" pref="13" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                              <Component id="textfield_codigo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Label_Quantidade4" min="-2" pref="13" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="textfield_retorno" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                              <Component id="Panel_button_voltar_emprestimo" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="Panel_button_confirmar_emprestimo" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="26" max="32767" attributes="0"/>
+                      <EmptySpace pref="13" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -703,18 +705,6 @@
             </Component>
             <Component class="javax.swing.JTextField" name="textfield_IDMaterial">
             </Component>
-            <Component class="javax.swing.JButton" name="button_confirmarcriar">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Microsoft YaHei Light" size="14" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="CONFIRMAR"/>
-                <Property name="borderPainted" type="boolean" value="false"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="button_confirmarcriarMouseClicked"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JLabel" name="Label_IDUsuario">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -736,18 +726,6 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="ID MATERIAL"/>
               </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="button_voltarcriar">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Microsoft YaHei UI Light" size="14" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="VOLTAR"/>
-                <Property name="borderPainted" type="boolean" value="false"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="button_voltarcriarMouseClicked"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="Label_Quantidade2">
               <Properties>
@@ -788,6 +766,76 @@
             </Component>
             <Component class="javax.swing.JTextField" name="textfield_retorno">
             </Component>
+            <Container class="javax.swing.JPanel" name="Panel_button_voltar_emprestimo">
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Panel_button_voltar_emprestimoMouseClicked"/>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Panel_button_voltar_emprestimoMouseEntered"/>
+                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Panel_button_voltar_emprestimoMouseExited"/>
+              </Events>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jLabel5" min="-2" pref="117" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jLabel5" alignment="0" pref="31" max="32767" attributes="0"/>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="jLabel5">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Microsoft YaHei UI Light" size="14" style="0"/>
+                    </Property>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="text" type="java.lang.String" value="VOLTAR"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="Panel_button_confirmar_emprestimo">
+              <Properties>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[117, 31]"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Panel_button_confirmar_emprestimoMouseClicked"/>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Panel_button_confirmar_emprestimoMouseEntered"/>
+                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Panel_button_confirmar_emprestimoMouseExited"/>
+              </Events>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jLabel6" alignment="0" pref="117" max="32767" attributes="0"/>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jLabel6" alignment="0" pref="31" max="32767" attributes="0"/>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="jLabel6">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Microsoft YaHei Light" size="14" style="0"/>
+                    </Property>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="text" type="java.lang.String" value="CONFIRMAR"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="Panel_atualizar">
@@ -807,14 +855,15 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="132" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace pref="132" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Component id="button_voltaratualizar" min="-2" pref="109" max="-2" attributes="0"/>
+                                  <Component id="Label_IDMaterial1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="Panel_voltar_atualizar_emprestimo" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="button_confirmarcriar1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="Panel_confirmar_atualizar_emprestimo" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Component id="textfield_IDMaterial1" alignment="0" pref="270" max="32767" attributes="0"/>
                                       <Component id="textfield_IDEmprestimo1" alignment="0" max="32767" attributes="0"/>
@@ -826,7 +875,6 @@
                                       <Component id="Label_Quantidade5" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="textfield_retorno1" alignment="0" max="32767" attributes="0"/>
                                   </Group>
-                                  <Component id="Label_IDMaterial1" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
@@ -843,7 +891,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="Label_IDMaterial1" min="-2" pref="12" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="textfield_IDEmprestimo1" min="-2" max="-2" attributes="0"/>
@@ -856,19 +904,21 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="textfield_IDUsuario1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="Label_QuantidadeDisp1" min="-2" pref="13" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="textfield_codigo1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="Label_Quantidade5" min="-2" pref="13" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="textfield_retorno1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="button_voltaratualizar" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="button_confirmarcriar1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="Label_QuantidadeDisp1" min="-2" pref="13" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="textfield_codigo1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Label_Quantidade5" min="-2" pref="13" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="textfield_retorno1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="Panel_voltar_atualizar_emprestimo" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="Panel_confirmar_atualizar_emprestimo" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="24" max="32767" attributes="0"/>
+                      <EmptySpace pref="20" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -896,18 +946,6 @@
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="textfield_IDUsuario1">
-            </Component>
-            <Component class="javax.swing.JButton" name="button_confirmarcriar1">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Microsoft YaHei Light" size="14" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="CONFIRMAR"/>
-                <Property name="borderPainted" type="boolean" value="false"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="button_confirmarcriar1MouseClicked"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="Label_IDMaterial1">
               <Properties>
@@ -955,18 +993,6 @@
                 <Property name="text" type="java.lang.String" value="CODIGO"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="button_voltaratualizar">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Microsoft YaHei UI Light" size="14" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="VOLTAR"/>
-                <Property name="borderPainted" type="boolean" value="false"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="button_voltaratualizarMouseClicked"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JLabel" name="Label_Quantidade5">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -980,6 +1006,66 @@
             </Component>
             <Component class="javax.swing.JTextField" name="textfield_retorno1">
             </Component>
+            <Container class="javax.swing.JPanel" name="Panel_voltar_atualizar_emprestimo">
+              <Properties>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[117, 31]"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Panel_voltar_atualizar_emprestimoMouseClicked"/>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Panel_voltar_atualizar_emprestimoMouseEntered"/>
+                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Panel_voltar_atualizar_emprestimoMouseExited"/>
+              </Events>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="jLabel7">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Microsoft YaHei UI Light" size="14" style="0"/>
+                    </Property>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="text" type="java.lang.String" value="VOLTAR"/>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                      <BorderConstraints direction="Center"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="Panel_confirmar_atualizar_emprestimo">
+              <Properties>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[117, 31]"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Panel_confirmar_atualizar_emprestimoMouseClicked"/>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Panel_confirmar_atualizar_emprestimoMouseEntered"/>
+                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Panel_confirmar_atualizar_emprestimoMouseExited"/>
+              </Events>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="jLabel8">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Microsoft YaHei UI Light" size="14" style="0"/>
+                    </Property>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="text" type="java.lang.String" value="CONFIRMAR"/>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                      <BorderConstraints direction="Center"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
+              </SubComponents>
+            </Container>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="Panel_deletar">
@@ -998,31 +1084,28 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="177" max="-2" attributes="0"/>
-                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="132" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="Label_IDMaterial3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="button_voltardeletar" min="-2" pref="109" max="-2" attributes="0"/>
-                                      <EmptySpace pref="50" max="32767" attributes="0"/>
-                                      <Component id="button_confirmarcriar2" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Component id="textfield_EmprestimoDeletar" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="Label_IDMaterial2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="textfield_EmprestimoDeletar2" alignment="1" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <EmptySpace pref="148" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="177" max="-2" attributes="0"/>
+                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="180" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       <Component id="Label_aviso" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="132" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="Label_IDMaterial3" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="Panel_voltar_deletar_emprestimo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="Panel_deletar_confirmar_emprestimo" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="textfield_EmprestimoDeletar" alignment="0" pref="270" max="32767" attributes="0"/>
+                          <Component id="Label_IDMaterial2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="textfield_EmprestimoDeletar2" alignment="1" max="32767" attributes="0"/>
+                      </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -1041,13 +1124,15 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="textfield_EmprestimoDeletar2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="button_confirmarcriar2" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
-                          <Component id="button_voltardeletar" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="Panel_voltar_deletar_emprestimo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                              <Component id="Label_aviso" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="Panel_deletar_confirmar_emprestimo" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="Label_aviso" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="44" max="32767" attributes="0"/>
+                      <EmptySpace pref="36" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1069,18 +1154,6 @@
                 <Property name="text" type="java.lang.String" value="DELETAR EMPR&#xc9;STIMO"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="button_confirmarcriar2">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Microsoft YaHei Light" size="14" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="CONFIRMAR"/>
-                <Property name="borderPainted" type="boolean" value="false"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="button_confirmarcriar2MouseClicked"/>
-              </Events>
-            </Component>
             <Component class="javax.swing.JLabel" name="Label_IDMaterial2">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -1091,18 +1164,6 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="ID EMPR&#xc9;STIMO NOVAMENTE"/>
               </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="button_voltardeletar">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Microsoft YaHei UI Light" size="14" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="VOLTAR"/>
-                <Property name="borderPainted" type="boolean" value="false"/>
-              </Properties>
-              <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="button_voltardeletarMouseClicked"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="textfield_EmprestimoDeletar2">
               <Events>
@@ -1131,6 +1192,66 @@
                 <Property name="text" type="java.lang.String" value="IDs DIFERENTES , CUIDADO ESSA A&#xc7;&#xc3;O &#xc9; IRREVERS&#xcd;VEL"/>
               </Properties>
             </Component>
+            <Container class="javax.swing.JPanel" name="Panel_voltar_deletar_emprestimo">
+              <Properties>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[117, 31]"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Panel_voltar_deletar_emprestimoMouseClicked"/>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Panel_voltar_deletar_emprestimoMouseEntered"/>
+                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Panel_voltar_deletar_emprestimoMouseExited"/>
+              </Events>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="jLabel9">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Microsoft YaHei UI Light" size="14" style="0"/>
+                    </Property>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="text" type="java.lang.String" value="VOLTAR"/>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                      <BorderConstraints direction="Center"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="Panel_deletar_confirmar_emprestimo">
+              <Properties>
+                <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                  <Dimension value="[117, 31]"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Panel_deletar_confirmar_emprestimoMouseClicked"/>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Panel_deletar_confirmar_emprestimoMouseEntered"/>
+                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Panel_deletar_confirmar_emprestimoMouseExited"/>
+              </Events>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="jLabel10">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Microsoft YaHei UI Light" size="14" style="0"/>
+                    </Property>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="text" type="java.lang.String" value="CONFIRMAR"/>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+                      <BorderConstraints direction="Center"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
+              </SubComponents>
+            </Container>
           </SubComponents>
         </Container>
       </SubComponents>

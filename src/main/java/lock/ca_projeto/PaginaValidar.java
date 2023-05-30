@@ -91,39 +91,45 @@ public class PaginaValidar extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         textfield_IDEmprestimo = new javax.swing.JTextField();
         textfield_IDMaterial = new javax.swing.JTextField();
-        button_confirmarcriar = new javax.swing.JButton();
         Label_IDUsuario = new javax.swing.JLabel();
         Label_Quantidade = new javax.swing.JLabel();
-        button_voltarcriar = new javax.swing.JButton();
         Label_Quantidade2 = new javax.swing.JLabel();
         textfield_IDUsuario = new javax.swing.JTextField();
         Label_Quantidade3 = new javax.swing.JLabel();
         textfield_codigo = new javax.swing.JTextField();
         Label_Quantidade4 = new javax.swing.JLabel();
         textfield_retorno = new javax.swing.JTextField();
+        Panel_button_voltar_emprestimo = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        Panel_button_confirmar_emprestimo = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
         Panel_atualizar = new javax.swing.JPanel();
         textfield_IDEmprestimo1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         textfield_IDMaterial1 = new javax.swing.JTextField();
         textfield_IDUsuario1 = new javax.swing.JTextField();
-        button_confirmarcriar1 = new javax.swing.JButton();
         Label_IDMaterial1 = new javax.swing.JLabel();
         Label_NomeMaterial1 = new javax.swing.JLabel();
         textfield_codigo1 = new javax.swing.JTextField();
         Label_Quantidade1 = new javax.swing.JLabel();
         Label_QuantidadeDisp1 = new javax.swing.JLabel();
-        button_voltaratualizar = new javax.swing.JButton();
         Label_Quantidade5 = new javax.swing.JLabel();
         textfield_retorno1 = new javax.swing.JTextField();
+        Panel_voltar_atualizar_emprestimo = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        Panel_confirmar_atualizar_emprestimo = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
         Panel_deletar = new javax.swing.JPanel();
         textfield_EmprestimoDeletar = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        button_confirmarcriar2 = new javax.swing.JButton();
         Label_IDMaterial2 = new javax.swing.JLabel();
-        button_voltardeletar = new javax.swing.JButton();
         textfield_EmprestimoDeletar2 = new javax.swing.JTextField();
         Label_IDMaterial3 = new javax.swing.JLabel();
         Label_aviso = new javax.swing.JLabel();
+        Panel_voltar_deletar_emprestimo = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        Panel_deletar_confirmar_emprestimo = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
         Panel_botoes_CRUD = new javax.swing.JPanel();
         Panel_button_criar = new javax.swing.JPanel();
         button_criar = new javax.swing.JLabel();
@@ -446,15 +452,6 @@ public class PaginaValidar extends javax.swing.JFrame {
             }
         });
 
-        button_confirmarcriar.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 14)); // NOI18N
-        button_confirmarcriar.setText("CONFIRMAR");
-        button_confirmarcriar.setBorderPainted(false);
-        button_confirmarcriar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                button_confirmarcriarMouseClicked(evt);
-            }
-        });
-
         Label_IDUsuario.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
         Label_IDUsuario.setForeground(new java.awt.Color(255, 255, 255));
         Label_IDUsuario.setText("ID EMPRESTIMO");
@@ -462,15 +459,6 @@ public class PaginaValidar extends javax.swing.JFrame {
         Label_Quantidade.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
         Label_Quantidade.setForeground(new java.awt.Color(255, 255, 255));
         Label_Quantidade.setText("ID MATERIAL");
-
-        button_voltarcriar.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
-        button_voltarcriar.setText("VOLTAR");
-        button_voltarcriar.setBorderPainted(false);
-        button_voltarcriar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                button_voltarcriarMouseClicked(evt);
-            }
-        });
 
         Label_Quantidade2.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
         Label_Quantidade2.setForeground(new java.awt.Color(255, 255, 255));
@@ -483,6 +471,63 @@ public class PaginaValidar extends javax.swing.JFrame {
         Label_Quantidade4.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
         Label_Quantidade4.setForeground(new java.awt.Color(255, 255, 255));
         Label_Quantidade4.setText("RETORNO (TRUE = 1 OR FALSE = 0)");
+
+        Panel_button_voltar_emprestimo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Panel_button_voltar_emprestimoMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Panel_button_voltar_emprestimoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Panel_button_voltar_emprestimoMouseExited(evt);
+            }
+        });
+
+        jLabel5.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("VOLTAR");
+
+        javax.swing.GroupLayout Panel_button_voltar_emprestimoLayout = new javax.swing.GroupLayout(Panel_button_voltar_emprestimo);
+        Panel_button_voltar_emprestimo.setLayout(Panel_button_voltar_emprestimoLayout);
+        Panel_button_voltar_emprestimoLayout.setHorizontalGroup(
+            Panel_button_voltar_emprestimoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_button_voltar_emprestimoLayout.createSequentialGroup()
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        Panel_button_voltar_emprestimoLayout.setVerticalGroup(
+            Panel_button_voltar_emprestimoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+        );
+
+        Panel_button_confirmar_emprestimo.setPreferredSize(new java.awt.Dimension(117, 31));
+        Panel_button_confirmar_emprestimo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Panel_button_confirmar_emprestimoMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Panel_button_confirmar_emprestimoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Panel_button_confirmar_emprestimoMouseExited(evt);
+            }
+        });
+
+        jLabel6.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 14)); // NOI18N
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("CONFIRMAR");
+
+        javax.swing.GroupLayout Panel_button_confirmar_emprestimoLayout = new javax.swing.GroupLayout(Panel_button_confirmar_emprestimo);
+        Panel_button_confirmar_emprestimo.setLayout(Panel_button_confirmar_emprestimoLayout);
+        Panel_button_confirmar_emprestimoLayout.setHorizontalGroup(
+            Panel_button_confirmar_emprestimoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
+        );
+        Panel_button_confirmar_emprestimoLayout.setVerticalGroup(
+            Panel_button_confirmar_emprestimoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout Panel_criarLayout = new javax.swing.GroupLayout(Panel_criar);
         Panel_criar.setLayout(Panel_criarLayout);
@@ -498,11 +543,11 @@ public class PaginaValidar extends javax.swing.JFrame {
                         .addGroup(Panel_criarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Label_Quantidade3, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Label_Quantidade, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(Panel_criarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Panel_criarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, Panel_criarLayout.createSequentialGroup()
-                                    .addComponent(button_voltarcriar, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                                    .addComponent(button_confirmarcriar))
+                                    .addComponent(Panel_button_voltar_emprestimo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(Panel_button_confirmar_emprestimo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addComponent(textfield_IDEmprestimo, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(textfield_IDMaterial, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(Label_IDUsuario, javax.swing.GroupLayout.Alignment.LEADING)
@@ -511,7 +556,7 @@ public class PaginaValidar extends javax.swing.JFrame {
                             .addComponent(Label_Quantidade4)
                             .addComponent(textfield_IDUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE)
                             .addComponent(textfield_retorno, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE))))
-                .addContainerGap(149, Short.MAX_VALUE))
+                .addGap(166, 166, 166))
         );
         Panel_criarLayout.setVerticalGroup(
             Panel_criarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -531,18 +576,19 @@ public class PaginaValidar extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(textfield_IDUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Label_Quantidade3, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(3, 3, 3)
-                .addComponent(textfield_codigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Label_Quantidade4, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(textfield_retorno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(Panel_criarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(button_voltarcriar)
-                    .addComponent(button_confirmarcriar))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addGroup(Panel_criarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(Panel_criarLayout.createSequentialGroup()
+                        .addComponent(Label_Quantidade3, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(3, 3, 3)
+                        .addComponent(textfield_codigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Label_Quantidade4, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(textfield_retorno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(15, 15, 15)
+                        .addComponent(Panel_button_voltar_emprestimo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Panel_button_confirmar_emprestimo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
         jPanel2.add(Panel_criar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 550, 320));
@@ -565,15 +611,6 @@ public class PaginaValidar extends javax.swing.JFrame {
             }
         });
 
-        button_confirmarcriar1.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 14)); // NOI18N
-        button_confirmarcriar1.setText("CONFIRMAR");
-        button_confirmarcriar1.setBorderPainted(false);
-        button_confirmarcriar1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                button_confirmarcriar1MouseClicked(evt);
-            }
-        });
-
         Label_IDMaterial1.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 14)); // NOI18N
         Label_IDMaterial1.setForeground(new java.awt.Color(255, 255, 255));
         Label_IDMaterial1.setText("ID EMPRESTIMO");
@@ -590,18 +627,47 @@ public class PaginaValidar extends javax.swing.JFrame {
         Label_QuantidadeDisp1.setForeground(new java.awt.Color(255, 255, 255));
         Label_QuantidadeDisp1.setText("CODIGO");
 
-        button_voltaratualizar.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
-        button_voltaratualizar.setText("VOLTAR");
-        button_voltaratualizar.setBorderPainted(false);
-        button_voltaratualizar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                button_voltaratualizarMouseClicked(evt);
-            }
-        });
-
         Label_Quantidade5.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
         Label_Quantidade5.setForeground(new java.awt.Color(255, 255, 255));
         Label_Quantidade5.setText("RETORNO (TRUE = 1 OR FALSE = 0)");
+
+        Panel_voltar_atualizar_emprestimo.setPreferredSize(new java.awt.Dimension(117, 31));
+        Panel_voltar_atualizar_emprestimo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Panel_voltar_atualizar_emprestimoMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Panel_voltar_atualizar_emprestimoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Panel_voltar_atualizar_emprestimoMouseExited(evt);
+            }
+        });
+        Panel_voltar_atualizar_emprestimo.setLayout(new java.awt.BorderLayout());
+
+        jLabel7.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText("VOLTAR");
+        Panel_voltar_atualizar_emprestimo.add(jLabel7, java.awt.BorderLayout.CENTER);
+
+        Panel_confirmar_atualizar_emprestimo.setPreferredSize(new java.awt.Dimension(117, 31));
+        Panel_confirmar_atualizar_emprestimo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Panel_confirmar_atualizar_emprestimoMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Panel_confirmar_atualizar_emprestimoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Panel_confirmar_atualizar_emprestimoMouseExited(evt);
+            }
+        });
+        Panel_confirmar_atualizar_emprestimo.setLayout(new java.awt.BorderLayout());
+
+        jLabel8.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText("CONFIRMAR");
+        Panel_confirmar_atualizar_emprestimo.add(jLabel8, java.awt.BorderLayout.CENTER);
 
         javax.swing.GroupLayout Panel_atualizarLayout = new javax.swing.GroupLayout(Panel_atualizar);
         Panel_atualizar.setLayout(Panel_atualizarLayout);
@@ -610,13 +676,14 @@ public class PaginaValidar extends javax.swing.JFrame {
             .addGroup(Panel_atualizarLayout.createSequentialGroup()
                 .addGroup(Panel_atualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(Panel_atualizarLayout.createSequentialGroup()
-                        .addGap(132, 132, 132)
+                        .addContainerGap(132, Short.MAX_VALUE)
                         .addGroup(Panel_atualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Label_IDMaterial1)
                             .addGroup(Panel_atualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Panel_atualizarLayout.createSequentialGroup()
-                                    .addComponent(button_voltaratualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(Panel_atualizarLayout.createSequentialGroup()
+                                    .addComponent(Panel_voltar_atualizar_emprestimo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(button_confirmarcriar1))
+                                    .addComponent(Panel_confirmar_atualizar_emprestimo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addComponent(textfield_IDMaterial1, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE)
                                 .addComponent(textfield_IDEmprestimo1)
                                 .addComponent(textfield_IDUsuario1)
@@ -625,8 +692,7 @@ public class PaginaValidar extends javax.swing.JFrame {
                                 .addComponent(Label_QuantidadeDisp1)
                                 .addComponent(Label_Quantidade1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(Label_Quantidade5)
-                                .addComponent(textfield_retorno1))
-                            .addComponent(Label_IDMaterial1)))
+                                .addComponent(textfield_retorno1))))
                     .addGroup(Panel_atualizarLayout.createSequentialGroup()
                         .addGap(165, 165, 165)
                         .addComponent(jLabel3)))
@@ -637,7 +703,7 @@ public class PaginaValidar extends javax.swing.JFrame {
             .addGroup(Panel_atualizarLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Label_IDMaterial1, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(textfield_IDEmprestimo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -650,18 +716,19 @@ public class PaginaValidar extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(textfield_IDUsuario1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Label_QuantidadeDisp1, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(textfield_codigo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Label_Quantidade5, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(textfield_retorno1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(Panel_atualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(button_voltaratualizar)
-                    .addComponent(button_confirmarcriar1))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addGroup(Panel_atualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(Panel_atualizarLayout.createSequentialGroup()
+                        .addComponent(Label_QuantidadeDisp1, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(textfield_codigo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Label_Quantidade5, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(textfield_retorno1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(Panel_voltar_atualizar_emprestimo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Panel_confirmar_atualizar_emprestimo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         jPanel2.add(Panel_atualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 550, 320));
@@ -678,27 +745,9 @@ public class PaginaValidar extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("DELETAR EMPRÉSTIMO");
 
-        button_confirmarcriar2.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 14)); // NOI18N
-        button_confirmarcriar2.setText("CONFIRMAR");
-        button_confirmarcriar2.setBorderPainted(false);
-        button_confirmarcriar2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                button_confirmarcriar2MouseClicked(evt);
-            }
-        });
-
         Label_IDMaterial2.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 14)); // NOI18N
         Label_IDMaterial2.setForeground(new java.awt.Color(255, 255, 255));
         Label_IDMaterial2.setText("ID EMPRÉSTIMO NOVAMENTE");
-
-        button_voltardeletar.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
-        button_voltardeletar.setText("VOLTAR");
-        button_voltardeletar.setBorderPainted(false);
-        button_voltardeletar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                button_voltardeletarMouseClicked(evt);
-            }
-        });
 
         textfield_EmprestimoDeletar2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -714,30 +763,67 @@ public class PaginaValidar extends javax.swing.JFrame {
         Label_aviso.setForeground(new java.awt.Color(255, 0, 0));
         Label_aviso.setText("IDs DIFERENTES , CUIDADO ESSA AÇÃO É IRREVERSÍVEL");
 
+        Panel_voltar_deletar_emprestimo.setPreferredSize(new java.awt.Dimension(117, 31));
+        Panel_voltar_deletar_emprestimo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Panel_voltar_deletar_emprestimoMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Panel_voltar_deletar_emprestimoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Panel_voltar_deletar_emprestimoMouseExited(evt);
+            }
+        });
+        Panel_voltar_deletar_emprestimo.setLayout(new java.awt.BorderLayout());
+
+        jLabel9.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setText("VOLTAR");
+        Panel_voltar_deletar_emprestimo.add(jLabel9, java.awt.BorderLayout.CENTER);
+
+        Panel_deletar_confirmar_emprestimo.setPreferredSize(new java.awt.Dimension(117, 31));
+        Panel_deletar_confirmar_emprestimo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Panel_deletar_confirmar_emprestimoMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Panel_deletar_confirmar_emprestimoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Panel_deletar_confirmar_emprestimoMouseExited(evt);
+            }
+        });
+        Panel_deletar_confirmar_emprestimo.setLayout(new java.awt.BorderLayout());
+
+        jLabel10.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setText("CONFIRMAR");
+        Panel_deletar_confirmar_emprestimo.add(jLabel10, java.awt.BorderLayout.CENTER);
+
         javax.swing.GroupLayout Panel_deletarLayout = new javax.swing.GroupLayout(Panel_deletar);
         Panel_deletar.setLayout(Panel_deletarLayout);
         Panel_deletarLayout.setHorizontalGroup(
             Panel_deletarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(Panel_deletarLayout.createSequentialGroup()
-                .addGroup(Panel_deletarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(Panel_deletarLayout.createSequentialGroup()
-                        .addGap(177, 177, 177)
-                        .addComponent(jLabel4))
-                    .addGroup(Panel_deletarLayout.createSequentialGroup()
-                        .addGap(132, 132, 132)
-                        .addGroup(Panel_deletarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(Label_IDMaterial3)
-                            .addGroup(Panel_deletarLayout.createSequentialGroup()
-                                .addComponent(button_voltardeletar, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                                .addComponent(button_confirmarcriar2))
-                            .addComponent(textfield_EmprestimoDeletar)
-                            .addComponent(Label_IDMaterial2)
-                            .addComponent(textfield_EmprestimoDeletar2, javax.swing.GroupLayout.Alignment.TRAILING))))
-                .addContainerGap(148, Short.MAX_VALUE))
+                .addGap(177, 177, 177)
+                .addComponent(jLabel4)
+                .addContainerGap(180, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Panel_deletarLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(Label_aviso)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(Panel_deletarLayout.createSequentialGroup()
+                .addGap(132, 132, 132)
+                .addGroup(Panel_deletarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Label_IDMaterial3)
+                    .addGroup(Panel_deletarLayout.createSequentialGroup()
+                        .addComponent(Panel_voltar_deletar_emprestimo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Panel_deletar_confirmar_emprestimo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(textfield_EmprestimoDeletar, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE)
+                    .addComponent(Label_IDMaterial2)
+                    .addComponent(textfield_EmprestimoDeletar2, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         Panel_deletarLayout.setVerticalGroup(
@@ -754,12 +840,13 @@ public class PaginaValidar extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(textfield_EmprestimoDeletar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
-                .addGroup(Panel_deletarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(button_confirmarcriar2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(button_voltardeletar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(Label_aviso)
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addGroup(Panel_deletarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Panel_deletarLayout.createSequentialGroup()
+                        .addComponent(Panel_voltar_deletar_emprestimo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26)
+                        .addComponent(Label_aviso))
+                    .addComponent(Panel_deletar_confirmar_emprestimo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         jPanel2.add(Panel_deletar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 550, 320));
@@ -1056,6 +1143,7 @@ public class PaginaValidar extends javax.swing.JFrame {
         Panel_criar.setVisible(false);
         Panel_deletar.setVisible(false);
         Panel_atualizar.setVisible(true);
+        Panel_voltar_atualizar_emprestimo.setVisible(true);
         changecolor(Panel_button_atualizar, new Color(200,200,200));
     }//GEN-LAST:event_Panel_button_atualizarMouseClicked
 
@@ -1073,6 +1161,7 @@ public class PaginaValidar extends javax.swing.JFrame {
         Panel_criar.setVisible(false);
         Panel_atualizar.setVisible(false);
         Panel_deletar.setVisible(true);
+        Panel_voltar_deletar_emprestimo.setVisible(true);
         changecolor(Panel_button_deletar, new Color(200,200,200));
     }//GEN-LAST:event_Panel_button_deletarMouseClicked
 
@@ -1084,39 +1173,6 @@ public class PaginaValidar extends javax.swing.JFrame {
          changecolor(Panel_button_deletar, new Color(242,242,242));
     }//GEN-LAST:event_Panel_button_deletarMouseExited
 
-    private void button_voltarcriarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_voltarcriarMouseClicked
-        jScrollPane1.setVisible(true);
-        jLabel1.setVisible(true);
-        Panel_criar.setVisible(false);
-        changecolor(Panel_button_criar,new Color(242,242,242));
-        DefaultTableModel feedbackreset = (DefaultTableModel) JTable1.getModel();
-        feedbackreset.setRowCount(0);
-        try{
-            //coloque sua senha no lugar de "senha"
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","Bobvisoto17");
-            Statement st = conn.createStatement();
-            String sql = "select * from emprestimo";
-            ResultSet rs = st.executeQuery(sql);
-            
-            while(rs.next()){
-                String idemprestimo = String.valueOf(rs.getInt("idEmprestimo"));
-                String idMaterial = String.valueOf(rs.getInt("idMaterial"));
-                String idUsuario = String.valueOf(rs.getInt("idUsuario"));
-                String codigo = String.valueOf(rs.getInt("codigo"));
-                String dia = String.valueOf(rs.getDate("dia"));
-                String horario = String.valueOf(rs.getTime("horario"));
-                String retorno = String.valueOf(rs.getBoolean("retorno"));
-                String validarData[] = {idemprestimo,idMaterial,idUsuario,codigo,dia,horario,retorno};
-                    DefaultTableModel validarModel = (DefaultTableModel)JTable1.getModel();
-                    validarModel.addRow(validarData); 
-            }
-        conn.close();
-        }
-        catch(Exception e){
-            System.out.println(e.getMessage());
-    }
-    }//GEN-LAST:event_button_voltarcriarMouseClicked
-
     private void textfield_IDEmprestimo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfield_IDEmprestimo1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textfield_IDEmprestimo1ActionPerformed
@@ -1125,75 +1181,9 @@ public class PaginaValidar extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_textfield_IDMaterial1ActionPerformed
 
-    private void button_voltaratualizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_voltaratualizarMouseClicked
-        jScrollPane1.setVisible(true);
-        jLabel1.setVisible(true);
-        Panel_criar.setVisible(false);
-        changecolor(Panel_button_criar,new Color(242,242,242));
-        DefaultTableModel feedbackreset = (DefaultTableModel) JTable1.getModel();
-        feedbackreset.setRowCount(0);
-        try{
-            //coloque sua senha no lugar de "senha"
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","Bobvisoto17");
-            Statement st = conn.createStatement();
-            String sql = "select * from emprestimo";
-            ResultSet rs = st.executeQuery(sql);
-            
-            while(rs.next()){
-                String idemprestimo = String.valueOf(rs.getInt("idEmprestimo"));
-                String idMaterial = String.valueOf(rs.getInt("idMaterial"));
-                String idUsuario = String.valueOf(rs.getInt("idUsuario"));
-                String codigo = String.valueOf(rs.getInt("codigo"));
-                String dia = String.valueOf(rs.getDate("dia"));
-                String horario = String.valueOf(rs.getTime("horario"));
-                String retorno = String.valueOf(rs.getBoolean("retorno"));
-                String validarData[] = {idemprestimo,idMaterial,idUsuario,codigo,dia,horario,retorno};
-                    DefaultTableModel validarModel = (DefaultTableModel)JTable1.getModel();
-                    validarModel.addRow(validarData); 
-            }
-        conn.close();
-        }
-        catch(Exception e){
-            System.out.println(e.getMessage());
-    }
-    }//GEN-LAST:event_button_voltaratualizarMouseClicked
-
     private void textfield_EmprestimoDeletarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfield_EmprestimoDeletarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textfield_EmprestimoDeletarActionPerformed
-
-    private void button_voltardeletarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_voltardeletarMouseClicked
-        jScrollPane1.setVisible(true);
-        jLabel1.setVisible(true);
-        Panel_criar.setVisible(false);
-        changecolor(Panel_button_criar,new Color(242,242,242));
-         DefaultTableModel feedbackreset = (DefaultTableModel) JTable1.getModel();
-        feedbackreset.setRowCount(0);
-        try{
-            //coloque sua senha no lugar de "senha"
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","Bobvisoto17");
-            Statement st = conn.createStatement();
-            String sql = "select * from emprestimo";
-            ResultSet rs = st.executeQuery(sql);
-            
-            while(rs.next()){
-                String idemprestimo = String.valueOf(rs.getInt("idEmprestimo"));
-                String idMaterial = String.valueOf(rs.getInt("idMaterial"));
-                String idUsuario = String.valueOf(rs.getInt("idUsuario"));
-                String codigo = String.valueOf(rs.getInt("codigo"));
-                String dia = String.valueOf(rs.getDate("dia"));
-                String horario = String.valueOf(rs.getTime("horario"));
-                String retorno = String.valueOf(rs.getBoolean("retorno"));
-                String validarData[] = {idemprestimo,idMaterial,idUsuario,codigo,dia,horario,retorno};
-                    DefaultTableModel validarModel = (DefaultTableModel)JTable1.getModel();
-                    validarModel.addRow(validarData); 
-            }
-        conn.close();
-        }
-        catch(Exception e){
-            System.out.println(e.getMessage());
-    }
-    }//GEN-LAST:event_button_voltardeletarMouseClicked
 
     private void textfield_EmprestimoDeletar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfield_EmprestimoDeletar2ActionPerformed
         // TODO add your handling code here:
@@ -1239,7 +1229,45 @@ public class PaginaValidar extends javax.swing.JFrame {
     }
     }//GEN-LAST:event_formWindowOpened
 
-    private void button_confirmarcriarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_confirmarcriarMouseClicked
+    private void textfield_IDEmprestimoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfield_IDEmprestimoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textfield_IDEmprestimoActionPerformed
+
+    private void Panel_button_voltar_emprestimoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_voltar_emprestimoMouseClicked
+        jScrollPane1.setVisible(true);
+        jLabel1.setVisible(true);
+        Panel_criar.setVisible(false);
+        changecolor(Panel_button_criar,new Color(242,242,242));
+        DefaultTableModel feedbackreset = (DefaultTableModel) JTable1.getModel();
+        feedbackreset.setRowCount(0);
+        try{
+            //coloque sua senha no lugar de "senha"
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","Bobvisoto17");
+            Statement st = conn.createStatement();
+            String sql = "select * from emprestimo";
+            ResultSet rs = st.executeQuery(sql);
+            
+            while(rs.next()){
+                String idemprestimo = String.valueOf(rs.getInt("idEmprestimo"));
+                String idMaterial = String.valueOf(rs.getInt("idMaterial"));
+                String idUsuario = String.valueOf(rs.getInt("idUsuario"));
+                String codigo = String.valueOf(rs.getInt("codigo"));
+                String dia = String.valueOf(rs.getDate("dia"));
+                String horario = String.valueOf(rs.getTime("horario"));
+                String retorno = String.valueOf(rs.getBoolean("retorno"));
+                String validarData[] = {idemprestimo,idMaterial,idUsuario,codigo,dia,horario,retorno};
+                    DefaultTableModel validarModel = (DefaultTableModel)JTable1.getModel();
+                    validarModel.addRow(validarData); 
+            }
+        conn.close();
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+    }
+        
+    }//GEN-LAST:event_Panel_button_voltar_emprestimoMouseClicked
+
+    private void Panel_button_confirmar_emprestimoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_confirmar_emprestimoMouseClicked
         String idEmprestimo = textfield_IDEmprestimo.getText();
         String idMaterial = textfield_IDMaterial.getText();
         String idUsuario = textfield_IDUsuario.getText();
@@ -1261,13 +1289,67 @@ public class PaginaValidar extends javax.swing.JFrame {
         catch(Exception e){
             System.out.println(e.getMessage());
         }
-    }//GEN-LAST:event_button_confirmarcriarMouseClicked
+    }//GEN-LAST:event_Panel_button_confirmar_emprestimoMouseClicked
 
-    private void textfield_IDEmprestimoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfield_IDEmprestimoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textfield_IDEmprestimoActionPerformed
+    private void Panel_button_voltar_emprestimoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_voltar_emprestimoMouseEntered
+        changecolor(Panel_button_voltar_emprestimo,new Color(200,200,200));
+    }//GEN-LAST:event_Panel_button_voltar_emprestimoMouseEntered
 
-    private void button_confirmarcriar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_confirmarcriar1MouseClicked
+    private void Panel_button_voltar_emprestimoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_voltar_emprestimoMouseExited
+        changecolor(Panel_button_voltar_emprestimo,new Color(242,242,242));
+    }//GEN-LAST:event_Panel_button_voltar_emprestimoMouseExited
+
+    private void Panel_button_confirmar_emprestimoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_confirmar_emprestimoMouseEntered
+       changecolor(Panel_button_confirmar_emprestimo,new Color(200,200,200));
+    }//GEN-LAST:event_Panel_button_confirmar_emprestimoMouseEntered
+
+    private void Panel_button_confirmar_emprestimoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_confirmar_emprestimoMouseExited
+       changecolor(Panel_button_confirmar_emprestimo,new Color(242,242,242));
+    }//GEN-LAST:event_Panel_button_confirmar_emprestimoMouseExited
+
+    private void Panel_voltar_atualizar_emprestimoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_voltar_atualizar_emprestimoMouseClicked
+        jScrollPane1.setVisible(true);
+        jLabel1.setVisible(true);
+        Panel_criar.setVisible(false);
+        Panel_voltar_atualizar_emprestimo.setVisible(false);
+        changecolor(Panel_button_criar,new Color(242,242,242));
+        DefaultTableModel feedbackreset = (DefaultTableModel) JTable1.getModel();
+        feedbackreset.setRowCount(0);
+        try{
+            //coloque sua senha no lugar de "senha"
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","Bobvisoto17");
+            Statement st = conn.createStatement();
+            String sql = "select * from emprestimo";
+            ResultSet rs = st.executeQuery(sql);
+
+            while(rs.next()){
+                String idemprestimo = String.valueOf(rs.getInt("idEmprestimo"));
+                String idMaterial = String.valueOf(rs.getInt("idMaterial"));
+                String idUsuario = String.valueOf(rs.getInt("idUsuario"));
+                String codigo = String.valueOf(rs.getInt("codigo"));
+                String dia = String.valueOf(rs.getDate("dia"));
+                String horario = String.valueOf(rs.getTime("horario"));
+                String retorno = String.valueOf(rs.getBoolean("retorno"));
+                String validarData[] = {idemprestimo,idMaterial,idUsuario,codigo,dia,horario,retorno};
+                DefaultTableModel validarModel = (DefaultTableModel)JTable1.getModel();
+                validarModel.addRow(validarData);
+            }
+            conn.close();
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+    }//GEN-LAST:event_Panel_voltar_atualizar_emprestimoMouseClicked
+
+    private void Panel_voltar_atualizar_emprestimoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_voltar_atualizar_emprestimoMouseEntered
+        changecolor(Panel_voltar_atualizar_emprestimo,new Color(200,200,200));
+    }//GEN-LAST:event_Panel_voltar_atualizar_emprestimoMouseEntered
+
+    private void Panel_voltar_atualizar_emprestimoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_voltar_atualizar_emprestimoMouseExited
+        changecolor(Panel_voltar_atualizar_emprestimo,new Color(242,242,242));
+    }//GEN-LAST:event_Panel_voltar_atualizar_emprestimoMouseExited
+
+    private void Panel_confirmar_atualizar_emprestimoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_confirmar_atualizar_emprestimoMouseClicked
         String idEmprestimo = textfield_IDEmprestimo1.getText();
         String idMaterial = textfield_IDMaterial1.getText();
         String idUsuario = textfield_IDUsuario1.getText();
@@ -1288,9 +1370,59 @@ public class PaginaValidar extends javax.swing.JFrame {
         catch(Exception e){
             System.out.println(e.getMessage());
         }
-    }//GEN-LAST:event_button_confirmarcriar1MouseClicked
+    }//GEN-LAST:event_Panel_confirmar_atualizar_emprestimoMouseClicked
 
-    private void button_confirmarcriar2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_confirmarcriar2MouseClicked
+    private void Panel_confirmar_atualizar_emprestimoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_confirmar_atualizar_emprestimoMouseEntered
+        changecolor(Panel_confirmar_atualizar_emprestimo,new Color(200,200,200));
+    }//GEN-LAST:event_Panel_confirmar_atualizar_emprestimoMouseEntered
+
+    private void Panel_confirmar_atualizar_emprestimoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_confirmar_atualizar_emprestimoMouseExited
+        changecolor(Panel_confirmar_atualizar_emprestimo,new Color(242,242,242));
+    }//GEN-LAST:event_Panel_confirmar_atualizar_emprestimoMouseExited
+
+    private void Panel_voltar_deletar_emprestimoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_voltar_deletar_emprestimoMouseClicked
+        jScrollPane1.setVisible(true);
+        jLabel1.setVisible(true);
+        Panel_criar.setVisible(false);
+        Panel_voltar_deletar_emprestimo.setVisible(false);
+        changecolor(Panel_button_criar,new Color(242,242,242));
+         DefaultTableModel feedbackreset = (DefaultTableModel) JTable1.getModel();
+        feedbackreset.setRowCount(0);
+        try{
+            //coloque sua senha no lugar de "senha"
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","Bobvisoto17");
+            Statement st = conn.createStatement();
+            String sql = "select * from emprestimo";
+            ResultSet rs = st.executeQuery(sql);
+            
+            while(rs.next()){
+                String idemprestimo = String.valueOf(rs.getInt("idEmprestimo"));
+                String idMaterial = String.valueOf(rs.getInt("idMaterial"));
+                String idUsuario = String.valueOf(rs.getInt("idUsuario"));
+                String codigo = String.valueOf(rs.getInt("codigo"));
+                String dia = String.valueOf(rs.getDate("dia"));
+                String horario = String.valueOf(rs.getTime("horario"));
+                String retorno = String.valueOf(rs.getBoolean("retorno"));
+                String validarData[] = {idemprestimo,idMaterial,idUsuario,codigo,dia,horario,retorno};
+                    DefaultTableModel validarModel = (DefaultTableModel)JTable1.getModel();
+                    validarModel.addRow(validarData); 
+            }
+        conn.close();
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+    }
+    }//GEN-LAST:event_Panel_voltar_deletar_emprestimoMouseClicked
+
+    private void Panel_voltar_deletar_emprestimoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_voltar_deletar_emprestimoMouseEntered
+       changecolor(Panel_voltar_deletar_emprestimo,new Color(200,200,200));
+    }//GEN-LAST:event_Panel_voltar_deletar_emprestimoMouseEntered
+
+    private void Panel_voltar_deletar_emprestimoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_voltar_deletar_emprestimoMouseExited
+        changecolor(Panel_voltar_deletar_emprestimo,new Color(242,242,242));
+    }//GEN-LAST:event_Panel_voltar_deletar_emprestimoMouseExited
+
+    private void Panel_deletar_confirmar_emprestimoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_deletar_confirmar_emprestimoMouseClicked
         String id = textfield_EmprestimoDeletar.getText();
         String id2 = textfield_EmprestimoDeletar2.getText();
     if(id2.equals(id)){
@@ -1310,7 +1442,15 @@ public class PaginaValidar extends javax.swing.JFrame {
     else{
         Label_aviso.setVisible(true);
     }
-    }//GEN-LAST:event_button_confirmarcriar2MouseClicked
+    }//GEN-LAST:event_Panel_deletar_confirmar_emprestimoMouseClicked
+
+    private void Panel_deletar_confirmar_emprestimoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_deletar_confirmar_emprestimoMouseEntered
+        changecolor(Panel_deletar_confirmar_emprestimo,new Color(200,200,200));
+    }//GEN-LAST:event_Panel_deletar_confirmar_emprestimoMouseEntered
+
+    private void Panel_deletar_confirmar_emprestimoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_deletar_confirmar_emprestimoMouseExited
+        changecolor(Panel_deletar_confirmar_emprestimo,new Color(242,242,242));
+    }//GEN-LAST:event_Panel_deletar_confirmar_emprestimoMouseExited
 
     /**
      * @param args the command line arguments
@@ -1379,18 +1519,21 @@ public class PaginaValidar extends javax.swing.JFrame {
     private javax.swing.JPanel Panel_botoes_CRUD;
     private javax.swing.JPanel Panel_button_atualizar;
     private javax.swing.JPanel Panel_button_autorizacao;
+    private javax.swing.JPanel Panel_button_confirmar_emprestimo;
     private javax.swing.JPanel Panel_button_criar;
     private javax.swing.JPanel Panel_button_deletar;
     private javax.swing.JPanel Panel_button_feedbacks;
     private javax.swing.JPanel Panel_button_materiais;
     private javax.swing.JPanel Panel_button_sair;
+    private javax.swing.JPanel Panel_button_voltar_emprestimo;
+    private javax.swing.JPanel Panel_confirmar_atualizar_emprestimo;
     private javax.swing.JPanel Panel_criar;
     private javax.swing.JPanel Panel_deletar;
+    private javax.swing.JPanel Panel_deletar_confirmar_emprestimo;
+    private javax.swing.JPanel Panel_voltar_atualizar_emprestimo;
+    private javax.swing.JPanel Panel_voltar_deletar_emprestimo;
     private javax.swing.JLabel button_atualizar;
     private javax.swing.JLabel button_autorizacao;
-    private javax.swing.JButton button_confirmarcriar;
-    private javax.swing.JButton button_confirmarcriar1;
-    private javax.swing.JButton button_confirmarcriar2;
     private javax.swing.JLabel button_criar;
     private javax.swing.JLabel button_deletar;
     private javax.swing.JLabel button_feedbacks;
@@ -1400,17 +1543,20 @@ public class PaginaValidar extends javax.swing.JFrame {
     private javax.swing.JPanel button_min;
     private javax.swing.JLabel button_sair;
     private javax.swing.JLabel button_voltar;
-    private javax.swing.JButton button_voltaratualizar;
-    private javax.swing.JButton button_voltarcriar;
-    private javax.swing.JButton button_voltardeletar;
     private javax.swing.JPanel close_panel;
     private javax.swing.JPanel header_icon;
     private javax.swing.JLabel icon_label_maua;
     private javax.swing.JPanel icone_min_max_close;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;

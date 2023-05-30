@@ -95,30 +95,36 @@ public class PaginaFeedback extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         textfield_idemprestimo = new javax.swing.JTextField();
         textfield_feedback = new javax.swing.JTextField();
-        button_confirmarcriar = new javax.swing.JButton();
         Label_IDMaterial = new javax.swing.JLabel();
         Label_NomeMaterial = new javax.swing.JLabel();
         Label_Quantidade = new javax.swing.JLabel();
-        button_voltarcriar = new javax.swing.JButton();
+        Panel_voltar_criar_feedback = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        Panel_confirmar_criar_feedback = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
         Panel_atualizar = new javax.swing.JPanel();
         textfield_IDFeedback1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         textfield_IDEmprestimo1 = new javax.swing.JTextField();
         textfield_feedback1 = new javax.swing.JTextField();
-        button_confirmarcriar1 = new javax.swing.JButton();
         Label_IDMaterial1 = new javax.swing.JLabel();
         Label_NomeMaterial1 = new javax.swing.JLabel();
         Label_Quantidade1 = new javax.swing.JLabel();
-        button_voltaratualizar = new javax.swing.JButton();
+        Panel_voltar_atualizar_feedback = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        Panel_confirmar_atualizar_feedback = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
         Panel_deletar = new javax.swing.JPanel();
         textfield_IDFeedbackDeletar = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        button_confirmarcriar2 = new javax.swing.JButton();
         Label_IDMaterial2 = new javax.swing.JLabel();
-        button_voltardeletar = new javax.swing.JButton();
         textfield_IDFeedbackDeletar2 = new javax.swing.JTextField();
         Label_IDMaterial3 = new javax.swing.JLabel();
         Label_aviso = new javax.swing.JLabel();
+        Panel_voltar_deletar_feedback = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        Panel_confirmar_deletar_feedback = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
         Panel_botoes_CRUD = new javax.swing.JPanel();
         Panel_button_criar = new javax.swing.JPanel();
         button_criar = new javax.swing.JLabel();
@@ -457,15 +463,6 @@ public class PaginaFeedback extends javax.swing.JFrame {
             }
         });
 
-        button_confirmarcriar.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 14)); // NOI18N
-        button_confirmarcriar.setText("CONFIRMAR");
-        button_confirmarcriar.setBorderPainted(false);
-        button_confirmarcriar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                button_confirmarcriarMouseClicked(evt);
-            }
-        });
-
         Label_IDMaterial.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 14)); // NOI18N
         Label_IDMaterial.setForeground(new java.awt.Color(255, 255, 255));
         Label_IDMaterial.setText("ID FEEDBACK");
@@ -478,14 +475,43 @@ public class PaginaFeedback extends javax.swing.JFrame {
         Label_Quantidade.setForeground(new java.awt.Color(255, 255, 255));
         Label_Quantidade.setText("FEEDBACK");
 
-        button_voltarcriar.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
-        button_voltarcriar.setText("VOLTAR");
-        button_voltarcriar.setBorderPainted(false);
-        button_voltarcriar.addMouseListener(new java.awt.event.MouseAdapter() {
+        Panel_voltar_criar_feedback.setPreferredSize(new java.awt.Dimension(117, 31));
+        Panel_voltar_criar_feedback.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                button_voltarcriarMouseClicked(evt);
+                Panel_voltar_criar_feedbackMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Panel_voltar_criar_feedbackMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Panel_voltar_criar_feedbackMouseExited(evt);
             }
         });
+        Panel_voltar_criar_feedback.setLayout(new java.awt.BorderLayout());
+
+        jLabel5.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("VOLTAR");
+        Panel_voltar_criar_feedback.add(jLabel5, java.awt.BorderLayout.CENTER);
+
+        Panel_confirmar_criar_feedback.setPreferredSize(new java.awt.Dimension(117, 31));
+        Panel_confirmar_criar_feedback.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Panel_confirmar_criar_feedbackMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Panel_confirmar_criar_feedbackMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Panel_confirmar_criar_feedbackMouseExited(evt);
+            }
+        });
+        Panel_confirmar_criar_feedback.setLayout(new java.awt.BorderLayout());
+
+        jLabel6.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("CONFIRMAR");
+        Panel_confirmar_criar_feedback.add(jLabel6, java.awt.BorderLayout.CENTER);
 
         javax.swing.GroupLayout Panel_criarLayout = new javax.swing.GroupLayout(Panel_criar);
         Panel_criar.setLayout(Panel_criarLayout);
@@ -502,10 +528,10 @@ public class PaginaFeedback extends javax.swing.JFrame {
                             .addComponent(Label_Quantidade, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(Panel_criarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, Panel_criarLayout.createSequentialGroup()
-                                    .addComponent(button_voltarcriar, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                                    .addComponent(button_confirmarcriar))
-                                .addComponent(textfield_idemprestimo, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Panel_voltar_criar_feedback, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(Panel_confirmar_criar_feedback, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(textfield_idemprestimo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE)
                                 .addComponent(textfield_idfeedback, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(textfield_feedback, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(Label_NomeMaterial, javax.swing.GroupLayout.Alignment.LEADING)
@@ -529,11 +555,11 @@ public class PaginaFeedback extends javax.swing.JFrame {
                 .addComponent(Label_Quantidade, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(textfield_feedback, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(Panel_criarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(button_confirmarcriar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(button_voltarcriar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addGap(29, 29, 29)
+                .addGroup(Panel_criarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Panel_voltar_criar_feedback, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Panel_confirmar_criar_feedback, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
 
         jPanel2.add(Panel_criar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 550, 320));
@@ -556,15 +582,6 @@ public class PaginaFeedback extends javax.swing.JFrame {
             }
         });
 
-        button_confirmarcriar1.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 14)); // NOI18N
-        button_confirmarcriar1.setText("CONFIRMAR");
-        button_confirmarcriar1.setBorderPainted(false);
-        button_confirmarcriar1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                button_confirmarcriar1MouseClicked(evt);
-            }
-        });
-
         Label_IDMaterial1.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 14)); // NOI18N
         Label_IDMaterial1.setForeground(new java.awt.Color(255, 255, 255));
         Label_IDMaterial1.setText("ID FEEDBACK");
@@ -577,14 +594,53 @@ public class PaginaFeedback extends javax.swing.JFrame {
         Label_Quantidade1.setForeground(new java.awt.Color(255, 255, 255));
         Label_Quantidade1.setText("FEEDBACK");
 
-        button_voltaratualizar.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
-        button_voltaratualizar.setText("VOLTAR");
-        button_voltaratualizar.setBorderPainted(false);
-        button_voltaratualizar.addMouseListener(new java.awt.event.MouseAdapter() {
+        Panel_voltar_atualizar_feedback.setPreferredSize(new java.awt.Dimension(117, 31));
+        Panel_voltar_atualizar_feedback.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                button_voltaratualizarMouseClicked(evt);
+                Panel_voltar_atualizar_feedbackMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Panel_voltar_atualizar_feedbackMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Panel_voltar_atualizar_feedbackMouseExited(evt);
             }
         });
+        Panel_voltar_atualizar_feedback.setLayout(new java.awt.BorderLayout());
+
+        jLabel7.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText("VOLTAR");
+        Panel_voltar_atualizar_feedback.add(jLabel7, java.awt.BorderLayout.CENTER);
+
+        Panel_confirmar_atualizar_feedback.setPreferredSize(new java.awt.Dimension(117, 31));
+        Panel_confirmar_atualizar_feedback.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Panel_confirmar_atualizar_feedbackMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Panel_confirmar_atualizar_feedbackMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Panel_confirmar_atualizar_feedbackMouseExited(evt);
+            }
+        });
+
+        jLabel8.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText("CONFIRMAR");
+        jLabel8.setPreferredSize(new java.awt.Dimension(31, 117));
+
+        javax.swing.GroupLayout Panel_confirmar_atualizar_feedbackLayout = new javax.swing.GroupLayout(Panel_confirmar_atualizar_feedback);
+        Panel_confirmar_atualizar_feedback.setLayout(Panel_confirmar_atualizar_feedbackLayout);
+        Panel_confirmar_atualizar_feedbackLayout.setHorizontalGroup(
+            Panel_confirmar_atualizar_feedbackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
+        );
+        Panel_confirmar_atualizar_feedbackLayout.setVerticalGroup(
+            Panel_confirmar_atualizar_feedbackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout Panel_atualizarLayout = new javax.swing.GroupLayout(Panel_atualizar);
         Panel_atualizar.setLayout(Panel_atualizarLayout);
@@ -593,15 +649,15 @@ public class PaginaFeedback extends javax.swing.JFrame {
             .addGroup(Panel_atualizarLayout.createSequentialGroup()
                 .addGroup(Panel_atualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(Panel_atualizarLayout.createSequentialGroup()
-                        .addGap(132, 132, 132)
+                        .addGap(149, 149, 149)
                         .addGroup(Panel_atualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Label_Quantidade1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(Panel_atualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, Panel_atualizarLayout.createSequentialGroup()
-                                    .addComponent(button_voltaratualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                                    .addComponent(button_confirmarcriar1))
-                                .addComponent(textfield_IDEmprestimo1, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Panel_voltar_atualizar_feedback, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(Panel_confirmar_atualizar_feedback, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(textfield_IDEmprestimo1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE)
                                 .addComponent(textfield_IDFeedback1, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(textfield_feedback1, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(Label_NomeMaterial1, javax.swing.GroupLayout.Alignment.LEADING)
@@ -609,7 +665,7 @@ public class PaginaFeedback extends javax.swing.JFrame {
                     .addGroup(Panel_atualizarLayout.createSequentialGroup()
                         .addGap(162, 162, 162)
                         .addComponent(jLabel3)))
-                .addGap(32, 148, Short.MAX_VALUE))
+                .addContainerGap(131, Short.MAX_VALUE))
         );
         Panel_atualizarLayout.setVerticalGroup(
             Panel_atualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -625,14 +681,15 @@ public class PaginaFeedback extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(textfield_IDEmprestimo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Label_Quantidade1, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(textfield_feedback1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(Panel_atualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(button_voltaratualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(button_confirmarcriar1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(62, Short.MAX_VALUE))
+                .addGroup(Panel_atualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(Panel_atualizarLayout.createSequentialGroup()
+                        .addComponent(Label_Quantidade1, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(textfield_feedback1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(33, 33, 33)
+                        .addComponent(Panel_voltar_atualizar_feedback, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Panel_confirmar_atualizar_feedback, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel2.add(Panel_atualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 550, 320));
@@ -654,27 +711,9 @@ public class PaginaFeedback extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("DELETAR FEEDBACK");
 
-        button_confirmarcriar2.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 14)); // NOI18N
-        button_confirmarcriar2.setText("CONFIRMAR");
-        button_confirmarcriar2.setBorderPainted(false);
-        button_confirmarcriar2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                button_confirmarcriar2MouseClicked(evt);
-            }
-        });
-
         Label_IDMaterial2.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 14)); // NOI18N
         Label_IDMaterial2.setForeground(new java.awt.Color(255, 255, 255));
         Label_IDMaterial2.setText("ID FEEDBACK NOVAMENTE");
-
-        button_voltardeletar.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
-        button_voltardeletar.setText("VOLTAR");
-        button_voltardeletar.setBorderPainted(false);
-        button_voltardeletar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                button_voltardeletarMouseClicked(evt);
-            }
-        });
 
         textfield_IDFeedbackDeletar2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -689,6 +728,44 @@ public class PaginaFeedback extends javax.swing.JFrame {
         Label_aviso.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 14)); // NOI18N
         Label_aviso.setForeground(new java.awt.Color(255, 0, 0));
         Label_aviso.setText("IDs DIFERENTES , CUIDADO ESSA AÇÃO É IRREVERSÍVEL");
+
+        Panel_voltar_deletar_feedback.setPreferredSize(new java.awt.Dimension(117, 31));
+        Panel_voltar_deletar_feedback.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Panel_voltar_deletar_feedbackMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Panel_voltar_deletar_feedbackMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Panel_voltar_deletar_feedbackMouseExited(evt);
+            }
+        });
+        Panel_voltar_deletar_feedback.setLayout(new java.awt.BorderLayout());
+
+        jLabel9.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setText("VOLTAR");
+        Panel_voltar_deletar_feedback.add(jLabel9, java.awt.BorderLayout.CENTER);
+
+        Panel_confirmar_deletar_feedback.setPreferredSize(new java.awt.Dimension(117, 31));
+        Panel_confirmar_deletar_feedback.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Panel_confirmar_deletar_feedbackMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Panel_confirmar_deletar_feedbackMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Panel_confirmar_deletar_feedbackMouseExited(evt);
+            }
+        });
+        Panel_confirmar_deletar_feedback.setLayout(new java.awt.BorderLayout());
+
+        jLabel10.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setText("CONFIRMAR");
+        Panel_confirmar_deletar_feedback.add(jLabel10, java.awt.BorderLayout.CENTER);
 
         javax.swing.GroupLayout Panel_deletarLayout = new javax.swing.GroupLayout(Panel_deletar);
         Panel_deletar.setLayout(Panel_deletarLayout);
@@ -705,16 +782,16 @@ public class PaginaFeedback extends javax.swing.JFrame {
                             .addComponent(Label_IDMaterial3)
                             .addGroup(Panel_deletarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, Panel_deletarLayout.createSequentialGroup()
-                                    .addComponent(button_voltardeletar, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                                    .addComponent(button_confirmarcriar2))
-                                .addComponent(textfield_IDFeedbackDeletar, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Panel_voltar_deletar_feedback, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(Panel_confirmar_deletar_feedback, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(textfield_IDFeedbackDeletar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE)
                                 .addComponent(Label_IDMaterial2, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(textfield_IDFeedbackDeletar2))))
                     .addGroup(Panel_deletarLayout.createSequentialGroup()
                         .addGap(90, 90, 90)
                         .addComponent(Label_aviso)))
-                .addGap(32, 97, Short.MAX_VALUE))
+                .addContainerGap(97, Short.MAX_VALUE))
         );
         Panel_deletarLayout.setVerticalGroup(
             Panel_deletarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -724,15 +801,16 @@ public class PaginaFeedback extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(Label_IDMaterial3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(textfield_IDFeedbackDeletar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(Label_IDMaterial2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(textfield_IDFeedbackDeletar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addGroup(Panel_deletarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(button_confirmarcriar2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(button_voltardeletar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(Panel_deletarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(Panel_deletarLayout.createSequentialGroup()
+                        .addComponent(textfield_IDFeedbackDeletar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Label_IDMaterial2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(textfield_IDFeedbackDeletar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(Panel_voltar_deletar_feedback, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Panel_confirmar_deletar_feedback, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(Label_aviso)
                 .addContainerGap(44, Short.MAX_VALUE))
@@ -1075,35 +1153,6 @@ public class PaginaFeedback extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_textfield_idemprestimoActionPerformed
 
-    private void button_voltarcriarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_voltarcriarMouseClicked
-        jScrollPane1.setVisible(true);
-        jLabel1.setVisible(true);
-        Panel_criar.setVisible(false);
-        changecolor(Panel_button_criar,new Color(242,242,242));
-        DefaultTableModel feedbackreset = (DefaultTableModel) JTable1.getModel();
-        feedbackreset.setRowCount(0);
-        try{
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","Bobvisoto17");
-            Statement st = conn.createStatement();
-            String sql = "select * from feedback";
-            ResultSet rs = st.executeQuery(sql);
-            
-            while(rs.next()){
-                String idfeedback = String.valueOf(rs.getInt("idFeedback"));
-                String idemprestimo = String.valueOf(rs.getInt("idEmprestimo"));
-                String feedback = rs.getString("feedback");
-                String feedbackData[] = {idfeedback,idemprestimo,feedback};
-                    DefaultTableModel feedbackModel = (DefaultTableModel)JTable1.getModel();
-                    feedbackModel.addRow(feedbackData); 
-            }
-        conn.close();
-        }
-        catch(Exception e){
-            System.out.println(e.getMessage());
-    }
-    }//GEN-LAST:event_button_voltarcriarMouseClicked
-
     private void textfield_IDFeedback1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfield_IDFeedback1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textfield_IDFeedback1ActionPerformed
@@ -1112,67 +1161,9 @@ public class PaginaFeedback extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_textfield_IDEmprestimo1ActionPerformed
 
-    private void button_voltaratualizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_voltaratualizarMouseClicked
-        jScrollPane1.setVisible(true);
-        jLabel1.setVisible(true);
-        Panel_criar.setVisible(false);
-        changecolor(Panel_button_criar,new Color(242,242,242));
-        DefaultTableModel feedbackreset = (DefaultTableModel) JTable1.getModel();
-        feedbackreset.setRowCount(0);
-        try{
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","Bobvisoto17");
-            Statement st = conn.createStatement();
-            String sql = "select * from feedback";
-            ResultSet rs = st.executeQuery(sql);
-            
-            while(rs.next()){
-                String idfeedback = String.valueOf(rs.getInt("idFeedback"));
-                String idemprestimo = String.valueOf(rs.getInt("idEmprestimo"));
-                String feedback = rs.getString("feedback");
-                String feedbackData[] = {idfeedback,idemprestimo,feedback};
-                    DefaultTableModel feedbackModel = (DefaultTableModel)JTable1.getModel();
-                    feedbackModel.addRow(feedbackData); 
-            }
-        conn.close();
-        }
-        catch(Exception e){
-            System.out.println(e.getMessage());
-    }
-    }//GEN-LAST:event_button_voltaratualizarMouseClicked
-
     private void textfield_IDFeedbackDeletarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfield_IDFeedbackDeletarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textfield_IDFeedbackDeletarActionPerformed
-
-    private void button_voltardeletarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_voltardeletarMouseClicked
-        jScrollPane1.setVisible(true);
-        jLabel1.setVisible(true);
-        Panel_criar.setVisible(false);
-        changecolor(Panel_button_criar,new Color(242,242,242));
-        DefaultTableModel feedbackreset = (DefaultTableModel) JTable1.getModel();
-        feedbackreset.setRowCount(0);
-        try{
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","Bobvisoto17");
-            Statement st = conn.createStatement();
-            String sql = "select * from feedback";
-            ResultSet rs = st.executeQuery(sql);
-            
-            while(rs.next()){
-                String idfeedback = String.valueOf(rs.getInt("idFeedback"));
-                String idemprestimo = String.valueOf(rs.getInt("idEmprestimo"));
-                String feedback = rs.getString("feedback");
-                String feedbackData[] = {idfeedback,idemprestimo,feedback};
-                    DefaultTableModel feedbackModel = (DefaultTableModel)JTable1.getModel();
-                    feedbackModel.addRow(feedbackData); 
-            }
-        conn.close();
-        }
-        catch(Exception e){
-            System.out.println(e.getMessage());
-    }
-    }//GEN-LAST:event_button_voltardeletarMouseClicked
 
     private void textfield_IDFeedbackDeletar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfield_IDFeedbackDeletar2ActionPerformed
         // TODO add your handling code here:
@@ -1215,7 +1206,48 @@ public class PaginaFeedback extends javax.swing.JFrame {
        
     }//GEN-LAST:event_formMouseEntered
 
-    private void button_confirmarcriarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_confirmarcriarMouseClicked
+    private void textfield_IDFeedbackDeletarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_textfield_IDFeedbackDeletarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textfield_IDFeedbackDeletarMouseClicked
+
+    private void Panel_voltar_criar_feedbackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_voltar_criar_feedbackMouseClicked
+        jScrollPane1.setVisible(true);
+        jLabel1.setVisible(true);
+        Panel_criar.setVisible(false);
+        changecolor(Panel_button_criar,new Color(242,242,242));
+        DefaultTableModel feedbackreset = (DefaultTableModel) JTable1.getModel();
+        feedbackreset.setRowCount(0);
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","Bobvisoto17");
+            Statement st = conn.createStatement();
+            String sql = "select * from feedback";
+            ResultSet rs = st.executeQuery(sql);
+            
+            while(rs.next()){
+                String idfeedback = String.valueOf(rs.getInt("idFeedback"));
+                String idemprestimo = String.valueOf(rs.getInt("idEmprestimo"));
+                String feedback = rs.getString("feedback");
+                String feedbackData[] = {idfeedback,idemprestimo,feedback};
+                    DefaultTableModel feedbackModel = (DefaultTableModel)JTable1.getModel();
+                    feedbackModel.addRow(feedbackData); 
+            }
+        conn.close();
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+    }
+    }//GEN-LAST:event_Panel_voltar_criar_feedbackMouseClicked
+
+    private void Panel_voltar_criar_feedbackMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_voltar_criar_feedbackMouseEntered
+        changecolor(Panel_voltar_criar_feedback ,new Color(200,200,200));
+    }//GEN-LAST:event_Panel_voltar_criar_feedbackMouseEntered
+
+    private void Panel_voltar_criar_feedbackMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_voltar_criar_feedbackMouseExited
+        changecolor(Panel_voltar_criar_feedback,new Color(242,242,242));
+    }//GEN-LAST:event_Panel_voltar_criar_feedbackMouseExited
+
+    private void Panel_confirmar_criar_feedbackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_confirmar_criar_feedbackMouseClicked
         String idFeedback = textfield_idfeedback.getText();
         String idEmprestimo = textfield_idemprestimo.getText();
         String feedback = textfield_feedback.getText();
@@ -1232,9 +1264,118 @@ public class PaginaFeedback extends javax.swing.JFrame {
         catch(Exception e){
             System.out.println(e.getMessage());
         }
-    }//GEN-LAST:event_button_confirmarcriarMouseClicked
+    }//GEN-LAST:event_Panel_confirmar_criar_feedbackMouseClicked
 
-    private void button_confirmarcriar2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_confirmarcriar2MouseClicked
+    private void Panel_confirmar_criar_feedbackMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_confirmar_criar_feedbackMouseEntered
+        changecolor(Panel_confirmar_criar_feedback,new Color(200,200,200));
+    }//GEN-LAST:event_Panel_confirmar_criar_feedbackMouseEntered
+
+    private void Panel_confirmar_criar_feedbackMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_confirmar_criar_feedbackMouseExited
+        changecolor(Panel_voltar_criar_feedback,new Color(242,242,242));
+    }//GEN-LAST:event_Panel_confirmar_criar_feedbackMouseExited
+
+    private void Panel_voltar_atualizar_feedbackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_voltar_atualizar_feedbackMouseClicked
+        jScrollPane1.setVisible(true);
+        jLabel1.setVisible(true);
+        Panel_atualizar.setVisible(false);
+        changecolor(Panel_button_criar,new Color(242,242,242));
+        DefaultTableModel feedbackreset = (DefaultTableModel) JTable1.getModel();
+        feedbackreset.setRowCount(0);
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","Bobvisoto17");
+            Statement st = conn.createStatement();
+            String sql = "select * from feedback";
+            ResultSet rs = st.executeQuery(sql);
+            
+            while(rs.next()){
+                String idfeedback = String.valueOf(rs.getInt("idFeedback"));
+                String idemprestimo = String.valueOf(rs.getInt("idEmprestimo"));
+                String feedback = rs.getString("feedback");
+                String feedbackData[] = {idfeedback,idemprestimo,feedback};
+                    DefaultTableModel feedbackModel = (DefaultTableModel)JTable1.getModel();
+                    feedbackModel.addRow(feedbackData); 
+            }
+        conn.close();
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+    }
+    }//GEN-LAST:event_Panel_voltar_atualizar_feedbackMouseClicked
+
+    private void Panel_voltar_atualizar_feedbackMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_voltar_atualizar_feedbackMouseEntered
+        changecolor(Panel_voltar_atualizar_feedback,new Color(200,200,200));
+    }//GEN-LAST:event_Panel_voltar_atualizar_feedbackMouseEntered
+
+    private void Panel_voltar_atualizar_feedbackMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_voltar_atualizar_feedbackMouseExited
+        changecolor(Panel_voltar_atualizar_feedback,new Color(242,242,242));
+    }//GEN-LAST:event_Panel_voltar_atualizar_feedbackMouseExited
+
+    private void Panel_confirmar_atualizar_feedbackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_confirmar_atualizar_feedbackMouseClicked
+        String idFeedback = textfield_IDFeedback1.getText();
+        String idEmprestimo = textfield_IDEmprestimo1.getText();
+        String feedback = textfield_feedback1.getText();
+        try{    
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","Bobvisoto17");
+            Statement st = conn.createStatement();
+            String sql = "UPDATE feedback SET idEmprestimo=?,feedback=? where idFeedback=?";
+            PreparedStatement prst = conn.prepareStatement(sql);
+            prst.setString(1,idEmprestimo);
+            prst.setString(2,feedback);
+            prst.setString(3,idFeedback);
+            prst.executeUpdate();
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+    }//GEN-LAST:event_Panel_confirmar_atualizar_feedbackMouseClicked
+
+    private void Panel_confirmar_atualizar_feedbackMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_confirmar_atualizar_feedbackMouseEntered
+        changecolor(Panel_confirmar_atualizar_feedback,new Color(200,200,200));
+    }//GEN-LAST:event_Panel_confirmar_atualizar_feedbackMouseEntered
+
+    private void Panel_confirmar_atualizar_feedbackMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_confirmar_atualizar_feedbackMouseExited
+        changecolor(Panel_confirmar_atualizar_feedback,new Color(242,242,242));
+    }//GEN-LAST:event_Panel_confirmar_atualizar_feedbackMouseExited
+
+    private void Panel_voltar_deletar_feedbackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_voltar_deletar_feedbackMouseClicked
+        jScrollPane1.setVisible(true);
+        jLabel1.setVisible(true);
+        Panel_deletar.setVisible(false);
+        changecolor(Panel_button_criar,new Color(242,242,242));
+        DefaultTableModel feedbackreset = (DefaultTableModel) JTable1.getModel();
+        feedbackreset.setRowCount(0);
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","Bobvisoto17");
+            Statement st = conn.createStatement();
+            String sql = "select * from feedback";
+            ResultSet rs = st.executeQuery(sql);
+            
+            while(rs.next()){
+                String idfeedback = String.valueOf(rs.getInt("idFeedback"));
+                String idemprestimo = String.valueOf(rs.getInt("idEmprestimo"));
+                String feedback = rs.getString("feedback");
+                String feedbackData[] = {idfeedback,idemprestimo,feedback};
+                    DefaultTableModel feedbackModel = (DefaultTableModel)JTable1.getModel();
+                    feedbackModel.addRow(feedbackData); 
+            }
+        conn.close();
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+    }
+    }//GEN-LAST:event_Panel_voltar_deletar_feedbackMouseClicked
+
+    private void Panel_voltar_deletar_feedbackMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_voltar_deletar_feedbackMouseEntered
+        changecolor(Panel_voltar_deletar_feedback,new Color(200,200,200));
+    }//GEN-LAST:event_Panel_voltar_deletar_feedbackMouseEntered
+
+    private void Panel_voltar_deletar_feedbackMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_voltar_deletar_feedbackMouseExited
+        changecolor(Panel_voltar_deletar_feedback,new Color(242,242,242));
+    }//GEN-LAST:event_Panel_voltar_deletar_feedbackMouseExited
+
+    private void Panel_confirmar_deletar_feedbackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_confirmar_deletar_feedbackMouseClicked
     String id = textfield_IDFeedbackDeletar.getText();
     String id2 = textfield_IDFeedbackDeletar2.getText();
     if(id2.equals(id)){
@@ -1254,31 +1395,15 @@ public class PaginaFeedback extends javax.swing.JFrame {
     else{
         Label_aviso.setVisible(true);
     }
-    }//GEN-LAST:event_button_confirmarcriar2MouseClicked
+    }//GEN-LAST:event_Panel_confirmar_deletar_feedbackMouseClicked
 
-    private void button_confirmarcriar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_confirmarcriar1MouseClicked
-    
-        String idFeedback = textfield_IDFeedback1.getText();
-        String idEmprestimo = textfield_IDEmprestimo1.getText();
-        String feedback = textfield_feedback1.getText();
-        try{    
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","Bobvisoto17");
-            Statement st = conn.createStatement();
-            String sql = "UPDATE feedback SET idEmprestimo=?,feedback=? where idFeedback=?";
-            PreparedStatement prst = conn.prepareStatement(sql);
-            prst.setString(1,idEmprestimo);
-            prst.setString(2,feedback);
-            prst.setString(3,idFeedback);
-            prst.executeUpdate();
-        }
-        catch(Exception e){
-            System.out.println(e.getMessage());
-        }
-    }//GEN-LAST:event_button_confirmarcriar1MouseClicked
+    private void Panel_confirmar_deletar_feedbackMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_confirmar_deletar_feedbackMouseEntered
+        changecolor(Panel_confirmar_deletar_feedback,new Color(200,200,200));
+    }//GEN-LAST:event_Panel_confirmar_deletar_feedbackMouseEntered
 
-    private void textfield_IDFeedbackDeletarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_textfield_IDFeedbackDeletarMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textfield_IDFeedbackDeletarMouseClicked
+    private void Panel_confirmar_deletar_feedbackMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_confirmar_deletar_feedbackMouseExited
+        changecolor(Panel_confirmar_deletar_feedback,new Color(242,242,242));
+    }//GEN-LAST:event_Panel_confirmar_deletar_feedbackMouseExited
 
     /**
      * @param args the command line arguments
@@ -1356,13 +1481,16 @@ public class PaginaFeedback extends javax.swing.JFrame {
     private javax.swing.JPanel Panel_button_feedbacks;
     private javax.swing.JPanel Panel_button_materiais;
     private javax.swing.JPanel Panel_button_sair;
+    private javax.swing.JPanel Panel_confirmar_atualizar_feedback;
+    private javax.swing.JPanel Panel_confirmar_criar_feedback;
+    private javax.swing.JPanel Panel_confirmar_deletar_feedback;
     private javax.swing.JPanel Panel_criar;
     private javax.swing.JPanel Panel_deletar;
+    private javax.swing.JPanel Panel_voltar_atualizar_feedback;
+    private javax.swing.JPanel Panel_voltar_criar_feedback;
+    private javax.swing.JPanel Panel_voltar_deletar_feedback;
     private javax.swing.JLabel button_atualizar;
     private javax.swing.JLabel button_autorizacao;
-    private javax.swing.JButton button_confirmarcriar;
-    private javax.swing.JButton button_confirmarcriar1;
-    private javax.swing.JButton button_confirmarcriar2;
     private javax.swing.JLabel button_criar;
     private javax.swing.JLabel button_deletar;
     private javax.swing.JLabel button_feedbacks;
@@ -1372,17 +1500,20 @@ public class PaginaFeedback extends javax.swing.JFrame {
     private javax.swing.JPanel button_min;
     private javax.swing.JLabel button_sair;
     private javax.swing.JLabel button_voltar;
-    private javax.swing.JButton button_voltaratualizar;
-    private javax.swing.JButton button_voltarcriar;
-    private javax.swing.JButton button_voltardeletar;
     private javax.swing.JPanel close_panel;
     private javax.swing.JPanel header_icon;
     private javax.swing.JLabel icon_label_maua;
     private javax.swing.JPanel icone_min_max_close;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;

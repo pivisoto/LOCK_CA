@@ -79,29 +79,35 @@ public class PaginaMateriais extends javax.swing.JFrame {
         textfield_QuantidadeDisp = new javax.swing.JTextField();
         Label_Quantidade = new javax.swing.JLabel();
         Label_QuantidadeDisp = new javax.swing.JLabel();
-        button_voltarcriar = new javax.swing.JButton();
-        button_confirmarcriar3 = new javax.swing.JButton();
+        Panel_criar_voltar_material = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        Panel_confirmar_criar_material = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
         Panel_atualizar = new javax.swing.JPanel();
         textfield_IDMaterial1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         textfield_NomeMaterial1 = new javax.swing.JTextField();
         textfield_Quantidade1 = new javax.swing.JTextField();
-        button_confirmarcriar1 = new javax.swing.JButton();
         Label_IDMaterial1 = new javax.swing.JLabel();
         Label_NomeMaterial1 = new javax.swing.JLabel();
         textfield_QuantidadeDisp1 = new javax.swing.JTextField();
         Label_Quantidade1 = new javax.swing.JLabel();
         Label_QuantidadeDisp1 = new javax.swing.JLabel();
-        button_voltaratualizar = new javax.swing.JButton();
+        Panel_voltar_atualizar_material = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        Panel_confirmar_atualizar_material = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
         Panel_deletar = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        button_confirmarcriar2 = new javax.swing.JButton();
-        button_voltardeletar = new javax.swing.JButton();
         textfield_IDMaterial2 = new javax.swing.JTextField();
         Label_IDMaterial2 = new javax.swing.JLabel();
         textfield_IDMaterial3 = new javax.swing.JTextField();
         Label_IDMaterial3 = new javax.swing.JLabel();
         Label_aviso = new javax.swing.JLabel();
+        Panel_voltar_deletar_material = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        Panel_confirmar_deletar_material = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
         panel_barra_menu = new javax.swing.JPanel();
         panel_hide_menu = new javax.swing.JPanel();
         button_hide_menu = new javax.swing.JLabel();
@@ -343,23 +349,61 @@ public class PaginaMateriais extends javax.swing.JFrame {
         Label_QuantidadeDisp.setForeground(new java.awt.Color(255, 255, 255));
         Label_QuantidadeDisp.setText("QUANTIDADE DISPONÍVEL");
 
-        button_voltarcriar.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
-        button_voltarcriar.setText("VOLTAR");
-        button_voltarcriar.setBorderPainted(false);
-        button_voltarcriar.addMouseListener(new java.awt.event.MouseAdapter() {
+        Panel_criar_voltar_material.setPreferredSize(new java.awt.Dimension(117, 31));
+        Panel_criar_voltar_material.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                button_voltarcriarMouseClicked(evt);
+                Panel_criar_voltar_materialMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Panel_criar_voltar_materialMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Panel_criar_voltar_materialMouseExited(evt);
             }
         });
 
-        button_confirmarcriar3.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 14)); // NOI18N
-        button_confirmarcriar3.setText("CONFIRMAR");
-        button_confirmarcriar3.setBorderPainted(false);
-        button_confirmarcriar3.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel5.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("VOLTAR");
+
+        javax.swing.GroupLayout Panel_criar_voltar_materialLayout = new javax.swing.GroupLayout(Panel_criar_voltar_material);
+        Panel_criar_voltar_material.setLayout(Panel_criar_voltar_materialLayout);
+        Panel_criar_voltar_materialLayout.setHorizontalGroup(
+            Panel_criar_voltar_materialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
+        );
+        Panel_criar_voltar_materialLayout.setVerticalGroup(
+            Panel_criar_voltar_materialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+        );
+
+        Panel_confirmar_criar_material.setPreferredSize(new java.awt.Dimension(117, 31));
+        Panel_confirmar_criar_material.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                button_confirmarcriar3MouseClicked(evt);
+                Panel_confirmar_criar_materialMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Panel_confirmar_criar_materialMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Panel_confirmar_criar_materialMouseExited(evt);
             }
         });
+
+        jLabel6.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("CONFIRMAR");
+
+        javax.swing.GroupLayout Panel_confirmar_criar_materialLayout = new javax.swing.GroupLayout(Panel_confirmar_criar_material);
+        Panel_confirmar_criar_material.setLayout(Panel_confirmar_criar_materialLayout);
+        Panel_confirmar_criar_materialLayout.setHorizontalGroup(
+            Panel_confirmar_criar_materialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
+        );
+        Panel_confirmar_criar_materialLayout.setVerticalGroup(
+            Panel_confirmar_criar_materialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout Panel_criarLayout = new javax.swing.GroupLayout(Panel_criar);
         Panel_criar.setLayout(Panel_criarLayout);
@@ -376,9 +420,9 @@ public class PaginaMateriais extends javax.swing.JFrame {
                             .addComponent(Label_Quantidade, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(Panel_criarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, Panel_criarLayout.createSequentialGroup()
-                                    .addComponent(button_voltarcriar, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Panel_criar_voltar_material, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(button_confirmarcriar3))
+                                    .addComponent(Panel_confirmar_criar_material, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addComponent(textfield_NomeMaterial, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE)
                                 .addComponent(textfield_IDMaterial, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(textfield_Quantidade, javax.swing.GroupLayout.Alignment.LEADING)
@@ -410,10 +454,13 @@ public class PaginaMateriais extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(textfield_QuantidadeDisp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(Panel_criarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(button_confirmarcriar3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(button_voltarcriar))
-                .addGap(23, 23, 23))
+                .addGroup(Panel_criarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Panel_criarLayout.createSequentialGroup()
+                        .addComponent(Panel_criar_voltar_material, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(31, 31, 31))
+                    .addGroup(Panel_criarLayout.createSequentialGroup()
+                        .addComponent(Panel_confirmar_criar_material, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(9, 9, 9))))
         );
 
         jPanel2.add(Panel_criar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 550, 320));
@@ -436,20 +483,6 @@ public class PaginaMateriais extends javax.swing.JFrame {
             }
         });
 
-        button_confirmarcriar1.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 14)); // NOI18N
-        button_confirmarcriar1.setText("CONFIRMAR");
-        button_confirmarcriar1.setBorderPainted(false);
-        button_confirmarcriar1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                button_confirmarcriar1MouseClicked(evt);
-            }
-        });
-        button_confirmarcriar1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                button_confirmarcriar1ActionPerformed(evt);
-            }
-        });
-
         Label_IDMaterial1.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 14)); // NOI18N
         Label_IDMaterial1.setForeground(new java.awt.Color(255, 255, 255));
         Label_IDMaterial1.setText("ID MATERIAL");
@@ -466,14 +499,43 @@ public class PaginaMateriais extends javax.swing.JFrame {
         Label_QuantidadeDisp1.setForeground(new java.awt.Color(255, 255, 255));
         Label_QuantidadeDisp1.setText("QUANTIDADE DISPONÍVEL");
 
-        button_voltaratualizar.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
-        button_voltaratualizar.setText("VOLTAR");
-        button_voltaratualizar.setBorderPainted(false);
-        button_voltaratualizar.addMouseListener(new java.awt.event.MouseAdapter() {
+        Panel_voltar_atualizar_material.setPreferredSize(new java.awt.Dimension(117, 31));
+        Panel_voltar_atualizar_material.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                button_voltaratualizarMouseClicked(evt);
+                Panel_voltar_atualizar_materialMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Panel_voltar_atualizar_materialMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Panel_voltar_atualizar_materialMouseExited(evt);
             }
         });
+        Panel_voltar_atualizar_material.setLayout(new java.awt.BorderLayout());
+
+        jLabel7.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText("VOLTAR");
+        Panel_voltar_atualizar_material.add(jLabel7, java.awt.BorderLayout.CENTER);
+
+        Panel_confirmar_atualizar_material.setPreferredSize(new java.awt.Dimension(117, 31));
+        Panel_confirmar_atualizar_material.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Panel_confirmar_atualizar_materialMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Panel_confirmar_atualizar_materialMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Panel_confirmar_atualizar_materialMouseExited(evt);
+            }
+        });
+        Panel_confirmar_atualizar_material.setLayout(new java.awt.BorderLayout());
+
+        jLabel8.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText("CONFIRMAR");
+        Panel_confirmar_atualizar_material.add(jLabel8, java.awt.BorderLayout.CENTER);
 
         javax.swing.GroupLayout Panel_atualizarLayout = new javax.swing.GroupLayout(Panel_atualizar);
         Panel_atualizar.setLayout(Panel_atualizarLayout);
@@ -482,29 +544,29 @@ public class PaginaMateriais extends javax.swing.JFrame {
             .addGroup(Panel_atualizarLayout.createSequentialGroup()
                 .addGroup(Panel_atualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(Panel_atualizarLayout.createSequentialGroup()
+                        .addGap(177, 177, 177)
+                        .addComponent(jLabel3))
+                    .addGroup(Panel_atualizarLayout.createSequentialGroup()
                         .addGap(132, 132, 132)
                         .addGroup(Panel_atualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Label_Quantidade1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(Panel_atualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, Panel_atualizarLayout.createSequentialGroup()
-                                    .addComponent(button_voltaratualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Panel_voltar_atualizar_material, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(button_confirmarcriar1))
+                                    .addComponent(Panel_confirmar_atualizar_material, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addComponent(textfield_NomeMaterial1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE)
                                 .addComponent(textfield_IDMaterial1, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(textfield_Quantidade1, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(Label_NomeMaterial1, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(textfield_QuantidadeDisp1, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(Label_IDMaterial1, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(Label_QuantidadeDisp1, javax.swing.GroupLayout.Alignment.LEADING))))
-                    .addGroup(Panel_atualizarLayout.createSequentialGroup()
-                        .addGap(177, 177, 177)
-                        .addComponent(jLabel3)))
+                                .addComponent(Label_QuantidadeDisp1, javax.swing.GroupLayout.Alignment.LEADING)))))
                 .addGap(32, 148, Short.MAX_VALUE))
         );
         Panel_atualizarLayout.setVerticalGroup(
             Panel_atualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Panel_atualizarLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Panel_atualizarLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -516,17 +578,20 @@ public class PaginaMateriais extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(textfield_NomeMaterial1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Label_Quantidade1, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(textfield_Quantidade1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Label_QuantidadeDisp1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(textfield_QuantidadeDisp1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
-                .addGroup(Panel_atualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(button_voltaratualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(button_confirmarcriar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(Panel_atualizarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Panel_atualizarLayout.createSequentialGroup()
+                        .addComponent(Label_Quantidade1, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(textfield_Quantidade1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Label_QuantidadeDisp1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(textfield_QuantidadeDisp1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                        .addComponent(Panel_voltar_atualizar_material, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(Panel_atualizarLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(Panel_confirmar_atualizar_material, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(21, 21, 21))
         );
 
@@ -537,31 +602,6 @@ public class PaginaMateriais extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("DELETAR MATERIAL");
-
-        button_confirmarcriar2.setFont(new java.awt.Font("Microsoft YaHei Light", 0, 14)); // NOI18N
-        button_confirmarcriar2.setText("DELETAR");
-        button_confirmarcriar2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        button_confirmarcriar2.setBorderPainted(false);
-        button_confirmarcriar2.setFocusPainted(false);
-        button_confirmarcriar2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                button_confirmarcriar2MouseClicked(evt);
-            }
-        });
-
-        button_voltardeletar.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
-        button_voltardeletar.setText("VOLTAR");
-        button_voltardeletar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        button_voltardeletar.setBorderPainted(false);
-        button_voltardeletar.setFocusCycleRoot(true);
-        button_voltardeletar.setFocusable(false);
-        button_voltardeletar.setRequestFocusEnabled(false);
-        button_voltardeletar.setRolloverEnabled(false);
-        button_voltardeletar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                button_voltardeletarMouseClicked(evt);
-            }
-        });
 
         textfield_IDMaterial2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -587,6 +627,44 @@ public class PaginaMateriais extends javax.swing.JFrame {
         Label_aviso.setForeground(new java.awt.Color(255, 0, 0));
         Label_aviso.setText("IDs DIFERENTES , CUIDADO ESSA AÇÃO É IRREVERSÍVEL");
 
+        Panel_voltar_deletar_material.setPreferredSize(new java.awt.Dimension(117, 31));
+        Panel_voltar_deletar_material.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Panel_voltar_deletar_materialMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Panel_voltar_deletar_materialMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Panel_voltar_deletar_materialMouseExited(evt);
+            }
+        });
+        Panel_voltar_deletar_material.setLayout(new java.awt.BorderLayout());
+
+        jLabel9.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setText("VOLTAR");
+        Panel_voltar_deletar_material.add(jLabel9, java.awt.BorderLayout.CENTER);
+
+        Panel_confirmar_deletar_material.setPreferredSize(new java.awt.Dimension(117, 31));
+        Panel_confirmar_deletar_material.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Panel_confirmar_deletar_materialMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Panel_confirmar_deletar_materialMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Panel_confirmar_deletar_materialMouseExited(evt);
+            }
+        });
+        Panel_confirmar_deletar_material.setLayout(new java.awt.BorderLayout());
+
+        jLabel10.setFont(new java.awt.Font("Microsoft YaHei UI Light", 0, 14)); // NOI18N
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setText("CONFIRMAR");
+        Panel_confirmar_deletar_material.add(jLabel10, java.awt.BorderLayout.CENTER);
+
         javax.swing.GroupLayout Panel_deletarLayout = new javax.swing.GroupLayout(Panel_deletar);
         Panel_deletar.setLayout(Panel_deletarLayout);
         Panel_deletarLayout.setHorizontalGroup(
@@ -600,14 +678,14 @@ public class PaginaMateriais extends javax.swing.JFrame {
                     .addGroup(Panel_deletarLayout.createSequentialGroup()
                         .addGap(127, 127, 127)
                         .addGroup(Panel_deletarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Label_IDMaterial3)
                             .addComponent(Label_IDMaterial2)
+                            .addComponent(Label_IDMaterial3)
                             .addGroup(Panel_deletarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(Panel_deletarLayout.createSequentialGroup()
-                                    .addComponent(button_voltardeletar, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
-                                    .addComponent(button_confirmarcriar2, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(textfield_IDMaterial2, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, Panel_deletarLayout.createSequentialGroup()
+                                    .addComponent(Panel_voltar_deletar_material, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(Panel_confirmar_deletar_material, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(textfield_IDMaterial2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 283, Short.MAX_VALUE)
                                 .addComponent(textfield_IDMaterial3, javax.swing.GroupLayout.Alignment.LEADING))))
                     .addGroup(Panel_deletarLayout.createSequentialGroup()
                         .addGap(92, 92, 92)
@@ -627,13 +705,14 @@ public class PaginaMateriais extends javax.swing.JFrame {
                 .addComponent(Label_IDMaterial3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(textfield_IDMaterial3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
+                .addGap(33, 33, 33)
                 .addGroup(Panel_deletarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(button_confirmarcriar2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(button_voltardeletar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(Label_aviso)
-                .addContainerGap(22, Short.MAX_VALUE))
+                    .addGroup(Panel_deletarLayout.createSequentialGroup()
+                        .addComponent(Panel_voltar_deletar_material, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Label_aviso))
+                    .addComponent(Panel_confirmar_deletar_material, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         jPanel2.add(Panel_deletar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 550, 320));
@@ -1068,6 +1147,7 @@ public class PaginaMateriais extends javax.swing.JFrame {
         Panel_criar.setVisible(false);
         Panel_deletar.setVisible(false);
         Panel_atualizar.setVisible(true);
+        Panel_voltar_atualizar_material.setVisible(true);
         changecolor(Panel_button_atualizar, new Color(200,200,200));
     }//GEN-LAST:event_Panel_button_atualizarMouseClicked
 
@@ -1080,6 +1160,7 @@ public class PaginaMateriais extends javax.swing.JFrame {
     }//GEN-LAST:event_Panel_button_atualizarMouseExited
 
     private void Panel_button_deletarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_button_deletarMouseClicked
+        Panel_voltar_deletar_material.setVisible(true);
         jScrollPane1.setVisible(false);
         jLabel1.setVisible(false);
         Panel_criar.setVisible(false);
@@ -1133,36 +1214,6 @@ public class PaginaMateriais extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_textfield_NomeMaterialActionPerformed
 
-    private void button_voltarcriarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_voltarcriarMouseClicked
-        jScrollPane1.setVisible(true);
-        jLabel1.setVisible(true);
-        Panel_criar.setVisible(false);
-        changecolor(Panel_button_criar,new Color(242,242,242));
-        DefaultTableModel materialreset = (DefaultTableModel) JTable1.getModel();
-        materialreset.setRowCount(0);
-        try{
-            //insira sua senha no "senha"
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","Bobvisoto17");
-            Statement st = conn.createStatement();
-            String sql = "select * from material";
-            ResultSet rs = st.executeQuery(sql);
-            
-            while(rs.next()){
-                String idMaterial = String.valueOf(rs.getInt("idMaterial"));
-                String material = rs.getString("material");
-                String quantidade = String.valueOf(rs.getInt("quantidadeTotal"));
-                String disponibilidade = String.valueOf(rs.getInt("quantidadeDisponivel"));
-                String materialData[] = {idMaterial,material,quantidade,disponibilidade};
-                    DefaultTableModel materialModel = (DefaultTableModel)JTable1.getModel();
-                    materialModel.addRow(materialData); 
-            }
-        conn.close();
-        }
-        catch(Exception e){
-            System.out.println(e.getMessage());
-    }
-    }//GEN-LAST:event_button_voltarcriarMouseClicked
-
     private void textfield_IDMaterial1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfield_IDMaterial1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textfield_IDMaterial1ActionPerformed
@@ -1170,66 +1221,6 @@ public class PaginaMateriais extends javax.swing.JFrame {
     private void textfield_NomeMaterial1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfield_NomeMaterial1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_textfield_NomeMaterial1ActionPerformed
-
-    private void button_voltaratualizarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_voltaratualizarMouseClicked
-        jScrollPane1.setVisible(true);
-        jLabel1.setVisible(true);
-        Panel_criar.setVisible(false);
-        changecolor(Panel_button_criar,new Color(242,242,242));
-        DefaultTableModel materialreset = (DefaultTableModel) JTable1.getModel();
-        materialreset.setRowCount(0);
-        try{
-            //insira sua senha no "senha"
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","Bobvisoto17");
-            Statement st = conn.createStatement();
-            String sql = "select * from material";
-            ResultSet rs = st.executeQuery(sql);
-            
-            while(rs.next()){
-                String idMaterial = String.valueOf(rs.getInt("idMaterial"));
-                String material = rs.getString("material");
-                String quantidade = String.valueOf(rs.getInt("quantidadeTotal"));
-                String disponibilidade = String.valueOf(rs.getInt("quantidadeDisponivel"));
-                String materialData[] = {idMaterial,material,quantidade,disponibilidade};
-                    DefaultTableModel materialModel = (DefaultTableModel)JTable1.getModel();
-                    materialModel.addRow(materialData); 
-            }
-        conn.close();
-        }
-        catch(Exception e){
-            System.out.println(e.getMessage());
-    }
-    }//GEN-LAST:event_button_voltaratualizarMouseClicked
-
-    private void button_voltardeletarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_voltardeletarMouseClicked
-        jScrollPane1.setVisible(true);
-        jLabel1.setVisible(true);
-        Panel_criar.setVisible(false);
-        changecolor(Panel_button_criar,new Color(242,242,242));
-        DefaultTableModel materialreset = (DefaultTableModel) JTable1.getModel();
-        materialreset.setRowCount(0);
-        try{
-            //insira sua senha no "senha"
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","Bobvisoto17");
-            Statement st = conn.createStatement();
-            String sql = "select * from material";
-            ResultSet rs = st.executeQuery(sql);
-            
-            while(rs.next()){
-                String idMaterial = String.valueOf(rs.getInt("idMaterial"));
-                String material = rs.getString("material");
-                String quantidade = String.valueOf(rs.getInt("quantidadeTotal"));
-                String disponibilidade = String.valueOf(rs.getInt("quantidadeDisponivel"));
-                String materialData[] = {idMaterial,material,quantidade,disponibilidade};
-                    DefaultTableModel materialModel = (DefaultTableModel)JTable1.getModel();
-                    materialModel.addRow(materialData); 
-            }
-        conn.close();
-        }
-        catch(Exception e){
-            System.out.println(e.getMessage());
-    }
-    }//GEN-LAST:event_button_voltardeletarMouseClicked
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         try{
@@ -1254,28 +1245,6 @@ public class PaginaMateriais extends javax.swing.JFrame {
             System.out.println(e.getMessage());
     }
     }//GEN-LAST:event_formWindowOpened
-
-    private void button_confirmarcriar2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_confirmarcriar2MouseClicked
-    String id = textfield_IDMaterial2.getText();
-    String id2 = textfield_IDMaterial3.getText();
-    if(id2.equals(id)){
-        try{    
-            Label_aviso.setVisible(false);
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","Bobvisoto17");
-            Statement st = conn.createStatement();
-            String sql = "DELETE FROM material WHERE idMaterial = ?";
-            PreparedStatement prst = conn.prepareStatement(sql);
-            prst.setString(1,id);
-            prst.execute();
-        }
-        catch(Exception e){
-            System.out.println(e.getMessage());
-        }
-    }
-    else{
-        Label_aviso.setVisible(true);
-    }
-    }//GEN-LAST:event_button_confirmarcriar2MouseClicked
 
     private void textfield_IDMaterial2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textfield_IDMaterial2ActionPerformed
         try{
@@ -1305,32 +1274,45 @@ public class PaginaMateriais extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_textfield_IDMaterial3ActionPerformed
 
-    private void button_confirmarcriar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_confirmarcriar1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_button_confirmarcriar1ActionPerformed
-
-    private void button_confirmarcriar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_confirmarcriar1MouseClicked
-        String idMaterial = textfield_IDMaterial1.getText();
-        String material = textfield_NomeMaterial1.getText();
-        String quantidade = textfield_Quantidade1.getText();
-        String quantidade_disp = textfield_QuantidadeDisp1.getText();
-         try{    
+    private void Panel_criar_voltar_materialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_criar_voltar_materialMouseClicked
+         jScrollPane1.setVisible(true);
+        jLabel1.setVisible(true);
+        Panel_criar.setVisible(false);
+        changecolor(Panel_button_criar,new Color(242,242,242));
+        DefaultTableModel materialreset = (DefaultTableModel) JTable1.getModel();
+        materialreset.setRowCount(0);
+        try{
+            //insira sua senha no "senha"
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","Bobvisoto17");
             Statement st = conn.createStatement();
-            String sql = "UPDATE material SET material=?,quantidadeTotal=?,quantidadeDisponivel=?  where idMaterial=?";
-            PreparedStatement prst = conn.prepareStatement(sql);
-            prst.setString(1,material);
-            prst.setString(2,quantidade);
-            prst.setString(3,quantidade_disp);
-            prst.setString(4,idMaterial);
-            prst.executeUpdate();
+            String sql = "select * from material";
+            ResultSet rs = st.executeQuery(sql);
+            
+            while(rs.next()){
+                String idMaterial = String.valueOf(rs.getInt("idMaterial"));
+                String material = rs.getString("material");
+                String quantidade = String.valueOf(rs.getInt("quantidadeTotal"));
+                String disponibilidade = String.valueOf(rs.getInt("quantidadeDisponivel"));
+                String materialData[] = {idMaterial,material,quantidade,disponibilidade};
+                    DefaultTableModel materialModel = (DefaultTableModel)JTable1.getModel();
+                    materialModel.addRow(materialData); 
+            }
+        conn.close();
         }
         catch(Exception e){
             System.out.println(e.getMessage());
-        }
-    }//GEN-LAST:event_button_confirmarcriar1MouseClicked
+    }
+    }//GEN-LAST:event_Panel_criar_voltar_materialMouseClicked
 
-    private void button_confirmarcriar3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button_confirmarcriar3MouseClicked
+    private void Panel_criar_voltar_materialMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_criar_voltar_materialMouseEntered
+         changecolor(Panel_criar_voltar_material,new Color(200,200,200));
+    }//GEN-LAST:event_Panel_criar_voltar_materialMouseEntered
+
+    private void Panel_criar_voltar_materialMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_criar_voltar_materialMouseExited
+        changecolor(Panel_criar_voltar_material,new Color(242,242,242));
+    }//GEN-LAST:event_Panel_criar_voltar_materialMouseExited
+
+    private void Panel_confirmar_criar_materialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_confirmar_criar_materialMouseClicked
         String idMaterial = textfield_IDMaterial.getText();
         String material = textfield_NomeMaterial.getText();
         String quantidade = textfield_Quantidade.getText();
@@ -1349,7 +1331,150 @@ public class PaginaMateriais extends javax.swing.JFrame {
         catch(Exception e){
             System.out.println(e.getMessage());
         }
-    }//GEN-LAST:event_button_confirmarcriar3MouseClicked
+    }//GEN-LAST:event_Panel_confirmar_criar_materialMouseClicked
+
+    private void Panel_confirmar_criar_materialMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_confirmar_criar_materialMouseEntered
+        changecolor(Panel_confirmar_criar_material,new Color(200,200,200));
+    }//GEN-LAST:event_Panel_confirmar_criar_materialMouseEntered
+
+    private void Panel_confirmar_criar_materialMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_confirmar_criar_materialMouseExited
+        changecolor(Panel_confirmar_criar_material,new Color(242,242,242));
+    }//GEN-LAST:event_Panel_confirmar_criar_materialMouseExited
+
+    private void Panel_voltar_atualizar_materialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_voltar_atualizar_materialMouseClicked
+        jScrollPane1.setVisible(true);
+        jLabel1.setVisible(true);
+        Panel_criar.setVisible(false);
+        Panel_voltar_atualizar_material.setVisible(false);
+        DefaultTableModel materialreset = (DefaultTableModel) JTable1.getModel();
+        materialreset.setRowCount(0);
+        try{
+            //insira sua senha no "senha"
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","Bobvisoto17");
+            Statement st = conn.createStatement();
+            String sql = "select * from material";
+            ResultSet rs = st.executeQuery(sql);
+            
+            while(rs.next()){
+                String idMaterial = String.valueOf(rs.getInt("idMaterial"));
+                String material = rs.getString("material");
+                String quantidade = String.valueOf(rs.getInt("quantidadeTotal"));
+                String disponibilidade = String.valueOf(rs.getInt("quantidadeDisponivel"));
+                String materialData[] = {idMaterial,material,quantidade,disponibilidade};
+                    DefaultTableModel materialModel = (DefaultTableModel)JTable1.getModel();
+                    materialModel.addRow(materialData); 
+            }
+        conn.close();
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+    }
+    }//GEN-LAST:event_Panel_voltar_atualizar_materialMouseClicked
+
+    private void Panel_voltar_atualizar_materialMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_voltar_atualizar_materialMouseEntered
+        changecolor(Panel_voltar_atualizar_material ,new Color(200,200,200));
+    }//GEN-LAST:event_Panel_voltar_atualizar_materialMouseEntered
+
+    private void Panel_voltar_atualizar_materialMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_voltar_atualizar_materialMouseExited
+        changecolor(Panel_voltar_atualizar_material,new Color(242,242,242));
+    }//GEN-LAST:event_Panel_voltar_atualizar_materialMouseExited
+
+    private void Panel_confirmar_atualizar_materialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_confirmar_atualizar_materialMouseClicked
+        String idMaterial = textfield_IDMaterial1.getText();
+        String material = textfield_NomeMaterial1.getText();
+        String quantidade = textfield_Quantidade1.getText();
+        String quantidade_disp = textfield_QuantidadeDisp1.getText();
+         try{    
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","Bobvisoto17");
+            Statement st = conn.createStatement();
+            String sql = "UPDATE material SET material=?,quantidadeTotal=?,quantidadeDisponivel=?  where idMaterial=?";
+            PreparedStatement prst = conn.prepareStatement(sql);
+            prst.setString(1,material);
+            prst.setString(2,quantidade);
+            prst.setString(3,quantidade_disp);
+            prst.setString(4,idMaterial);
+            prst.executeUpdate();
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+    }//GEN-LAST:event_Panel_confirmar_atualizar_materialMouseClicked
+
+    private void Panel_confirmar_atualizar_materialMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_confirmar_atualizar_materialMouseEntered
+        changecolor(Panel_confirmar_atualizar_material,new Color(200,200,200));
+    }//GEN-LAST:event_Panel_confirmar_atualizar_materialMouseEntered
+
+    private void Panel_confirmar_atualizar_materialMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_confirmar_atualizar_materialMouseExited
+        changecolor(Panel_confirmar_atualizar_material,new Color(242,242,242));
+    }//GEN-LAST:event_Panel_confirmar_atualizar_materialMouseExited
+
+    private void Panel_voltar_deletar_materialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_voltar_deletar_materialMouseClicked
+        jScrollPane1.setVisible(true);
+        jLabel1.setVisible(true);
+        Panel_criar.setVisible(false);
+        Panel_voltar_deletar_material.setVisible(false);
+        DefaultTableModel materialreset = (DefaultTableModel) JTable1.getModel();
+        materialreset.setRowCount(0);
+        try{
+            //insira sua senha no "senha"
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","Bobvisoto17");
+            Statement st = conn.createStatement();
+            String sql = "select * from material";
+            ResultSet rs = st.executeQuery(sql);
+            
+            while(rs.next()){
+                String idMaterial = String.valueOf(rs.getInt("idMaterial"));
+                String material = rs.getString("material");
+                String quantidade = String.valueOf(rs.getInt("quantidadeTotal"));
+                String disponibilidade = String.valueOf(rs.getInt("quantidadeDisponivel"));
+                String materialData[] = {idMaterial,material,quantidade,disponibilidade};
+                    DefaultTableModel materialModel = (DefaultTableModel)JTable1.getModel();
+                    materialModel.addRow(materialData); 
+            }
+        conn.close();
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+    }
+    }//GEN-LAST:event_Panel_voltar_deletar_materialMouseClicked
+
+    private void Panel_voltar_deletar_materialMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_voltar_deletar_materialMouseEntered
+        changecolor(Panel_voltar_deletar_material,new Color(200,200,200));
+    }//GEN-LAST:event_Panel_voltar_deletar_materialMouseEntered
+
+    private void Panel_voltar_deletar_materialMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_voltar_deletar_materialMouseExited
+        changecolor(Panel_voltar_deletar_material,new Color(242,242,242));
+    }//GEN-LAST:event_Panel_voltar_deletar_materialMouseExited
+
+    private void Panel_confirmar_deletar_materialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_confirmar_deletar_materialMouseClicked
+    String id = textfield_IDMaterial2.getText();
+    String id2 = textfield_IDMaterial3.getText();
+    if(id2.equals(id)){
+        try{    
+            Label_aviso.setVisible(false);
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbcalok","root","Bobvisoto17");
+            Statement st = conn.createStatement();
+            String sql = "DELETE FROM material WHERE idMaterial = ?";
+            PreparedStatement prst = conn.prepareStatement(sql);
+            prst.setString(1,id);
+            prst.execute();
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
+    else{
+        Label_aviso.setVisible(true);
+    }
+    }//GEN-LAST:event_Panel_confirmar_deletar_materialMouseClicked
+
+    private void Panel_confirmar_deletar_materialMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_confirmar_deletar_materialMouseEntered
+        changecolor(Panel_confirmar_deletar_material,new Color(200,200,200));
+    }//GEN-LAST:event_Panel_confirmar_deletar_materialMouseEntered
+
+    private void Panel_confirmar_deletar_materialMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Panel_confirmar_deletar_materialMouseExited
+        changecolor(Panel_confirmar_deletar_material,new Color(242,242,242));
+    }//GEN-LAST:event_Panel_confirmar_deletar_materialMouseExited
 
     /**
      * @param args the command line arguments
@@ -1417,13 +1542,16 @@ public class PaginaMateriais extends javax.swing.JFrame {
     private javax.swing.JPanel Panel_button_feedbacks;
     private javax.swing.JPanel Panel_button_materiais;
     private javax.swing.JPanel Panel_button_sair;
+    private javax.swing.JPanel Panel_confirmar_atualizar_material;
+    private javax.swing.JPanel Panel_confirmar_criar_material;
+    private javax.swing.JPanel Panel_confirmar_deletar_material;
     private javax.swing.JPanel Panel_criar;
+    private javax.swing.JPanel Panel_criar_voltar_material;
     private javax.swing.JPanel Panel_deletar;
+    private javax.swing.JPanel Panel_voltar_atualizar_material;
+    private javax.swing.JPanel Panel_voltar_deletar_material;
     private javax.swing.JLabel button_atualizar;
     private javax.swing.JLabel button_autorizacao;
-    private javax.swing.JButton button_confirmarcriar1;
-    private javax.swing.JButton button_confirmarcriar2;
-    private javax.swing.JButton button_confirmarcriar3;
     private javax.swing.JLabel button_criar;
     private javax.swing.JLabel button_deletar;
     private javax.swing.JLabel button_feedbacks;
@@ -1434,17 +1562,20 @@ public class PaginaMateriais extends javax.swing.JFrame {
     private javax.swing.JLabel button_sair;
     private javax.swing.JLabel button_voltar;
     private javax.swing.JLabel button_voltar1;
-    private javax.swing.JButton button_voltaratualizar;
-    private javax.swing.JButton button_voltarcriar;
-    private javax.swing.JButton button_voltardeletar;
     private javax.swing.JPanel close_panel;
     private javax.swing.JPanel header_icon;
     private javax.swing.JLabel icon_label_maua;
     private javax.swing.JPanel icone_min_max_close;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
