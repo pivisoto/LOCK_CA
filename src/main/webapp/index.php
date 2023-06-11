@@ -6,16 +6,18 @@
         <meta name="viewport"content="width=device-width">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="style.css">
+
     </head>
     <body>
         <header>
             <h1>LOCKC.A</h1>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         </header>
         <section class="container forms">
                 <div class="form login">
                     <div class="form-content">
                         <main>Login</main>
-                        <form action = "#">
+                        <form action = "includes/login.inc.php" method="post">
                             <slot>
                                 <div class="field input-field">
                                     <input type="text" placeholder="email Institucional" class ="input">
@@ -48,10 +50,10 @@
                 <div class="form cadastrar">
                     <div class="form-content">
                         <main>Cadastrar</main>
-                        <form class = "cadastro" action = "#">
+                        <form class = "cadastro" action = "includes/registro.inc.php" method="post">
                             <slot id = "email-cadastrar" >
                                 <div class="field input-field">
-                                    <input id = "email1" type="email" placeholder="email Institucional">
+                                    <input id = "email1" type="email" name ="email" placeholder="email Institucional">
                                 </div>
                                 <span class="error email-error">
                                     <i class='bx bx-message-alt-error error-icon'></i>                                    
@@ -60,7 +62,7 @@
                             </slot>
                             <slot id ="senha_cadastro1">
                                 <div class="field input-field">
-                                    <input id = "senha_cadastroinput" type="password" placeholder="insira uma senha" class="password">
+                                    <input id="senha_cadastroinput" type="password" name="pwd" placeholder="insira uma senha" class="password">
                                     <i class='bx bx-hide eye-icon'></i>
                                 </div>
                                 <span class="error senha">
@@ -70,7 +72,7 @@
                             </slot>
                             <slot id ="senha_confirma">
                                 <div class="field input-field">
-                                    <input id = "senha_confirmainput" type="password" placeholder="insira novamente" class="password">
+                                    <input id = "senha_confirmainput" type="password" name="pwdrepeat" placeholder="insira novamente" class="password">
                                     <i class='bx bx-hide eye-icon'></i>
                                 </div>
                                 <span class="error senha">
@@ -79,7 +81,7 @@
                                 </span>
                             </slot>
                             <div class="field button-field cadastro-button">
-                                <button type = "button" id="cadastrar-button" onclick="onConfirmar();">Confirmar</button>
+                                <input  id="cadastrar-button" type="submit" name="enviar" onclick="onConfirmar();">Confirmar</input>
                             </div>
                             <div class="line"></div>
                             <div class="field button-field">
