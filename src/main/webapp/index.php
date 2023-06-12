@@ -20,7 +20,7 @@
                         <form action = "includes/login.inc.php" method="post">
                             <slot>
                                 <div class="field input-field">
-                                    <input type="text" placeholder="email Institucional" class ="input">
+                                    <input type="text" placeholder="email Institucional" class ="input" name="email_login">
                                 </div>
                                 <span class="error email">
                                     <i class='bx bx-message-alt-error error-icon'></i>                                    
@@ -29,7 +29,7 @@
                             </slot>
                             <slot>
                                 <div class="field input-field">
-                                    <input type="password" placeholder="senha" class="password">
+                                    <input type="password" placeholder="senha" name="pwd_login" class="password">
                                     <i class='bx bx-hide eye-icon'></i>
                                 </div>
                                 <span class="error senha">
@@ -38,7 +38,7 @@
                                 </span>
                             </slot>
                             <div class="field field-button">
-                                <button class="botao">Confirmar</button>
+                                <input style="background-color: #0171d3; color:#fff;" type="submit" id="botão_enviar" class="botao"></input>
                             </div>
                             <div class="line"></div>
                             <div class="field ">
@@ -81,7 +81,7 @@
                                 </span>
                             </slot>
                             <div class="field button-field cadastro-button">
-                                <input  id="cadastrar-button" type="submit" name="enviar" onclick="onConfirmar();">Confirmar</input>
+                                <input style="background-color: #0171d3; color:#fff;"  id="cadastrar-button" type="submit" onclick="onConfirmar();"></input>
                             </div>
                             <div class="line"></div>
                             <div class="field button-field">
