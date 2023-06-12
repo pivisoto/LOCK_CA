@@ -2,7 +2,7 @@
 
 class Registro extends dbconnect{
     protected function criaUsuario($email, $senha , $ra){
-        $stmt = $this->connect()->prepare('INSERT INTO usuario (ra,email,senha) VALUES(?,?,?);');
+        $stmt = $this->connect()->prepare("INSERT INTO usuario (ra,email,senha) VALUES (?,?,?);");
 
         $hashedsenha = password_hash($senha, PASSWORD_DEFAULT);
         if(!$stmt->execute(array($ra, $email , $hashedsenha))){
@@ -13,18 +13,17 @@ class Registro extends dbconnect{
         $stmt = null;
     }
     protected function checkUser($email){
-        $stmt = $this->connect()->prepare('SELECT email FROM usuario WHERE idUsuario = ?');
-        if(!$stmt->execute($email)){
+        $stmt = $this->connect()->prepare('SELECT email FROM usuario WHERE email = ?;');
+        if(!$stmt->execute(array($email))){
             $stmt = null;
             header("location: ../index.php?error=stmtfailed");
             exit();
         }
-        $resultCheck = null;
         if($stmt->rowCount() > 0){
-            $resultCheck = true;
+            $resultCheck = false;
         }
         else {
-            $resultCheck = false;
+            $resultCheck = true;
         }
         return $resultCheck;
     }

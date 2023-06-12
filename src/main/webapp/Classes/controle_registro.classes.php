@@ -26,6 +26,10 @@ class ControleRegistro extends Registro{
             header("location: ../index.php?error=emptyinput");
             exit();
         }
+        if($this->emailCadastrado() == false){
+            header("location: ../index.php?error=emptyinput");
+            exit();
+        }
         $this->criaUsuario($this->email, $this->senha, $this->ra);
     }
     private function inputVazio(){

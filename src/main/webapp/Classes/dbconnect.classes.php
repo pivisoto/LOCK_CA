@@ -3,7 +3,7 @@
 class DbConnect{
     protected function connect(){
         try {
-            $username = "pietro";
+            $username = "root2";
             $password = "";
             $dbconnect = new PDO('mysql:host=localhost;dbname=dbcalok',$username,$password);
             return $dbconnect;
