@@ -2,8 +2,9 @@
 class emprestimo extends dbconnect{
     protected function createEmprestimo($idUsuario, $idMaterial)
     {
-        $stmt = $this->connect()->prepare('INSERT INTO emprestimo (idMaterial, idUsuario, horario) VALUES (?, ?, current_time());');
-        if (!$stmt->execute(array($idMaterial, $idUsuario))) {
+        $codigo = rand(0,100000);
+        $stmt = $this->connect()->prepare('INSERT INTO emprestimo (idMaterial, idUsuario, horario,codigo) VALUES (?, ?, current_time(),?);');
+        if (!$stmt->execute(array($idMaterial, $idUsuario,$codigo))) {
             $stmt = null;
             header("location: ../emprestimo.php?error=stmtfailed");
             exit();

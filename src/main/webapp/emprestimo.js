@@ -5,7 +5,8 @@ const botaoSinuca = document.querySelector("#botao_sinuca"),
     botaoBaralho = document.querySelector("#botao_baralho"),
     botaoDevolverBaralho = document.querySelector("#botao_devolver_baralho"),
     botaoPebolim = document.querySelector("#botao_pebolim"),
-    botaoDevolverPebolim = document.querySelector("#botao_devolver_pebolim");
+    botaoDevolverPebolim = document.querySelector("#botao_devolver_pebolim"),
+    formEmprestimo = document.querySelector("#form_emprestimo");
 
 function aparecerDevolverSinuca(){
     if(botaoSinuca.style.display == "none") {
@@ -15,7 +16,6 @@ function aparecerDevolverSinuca(){
     } else{
         botaoSinuca.style.display = "none";
         botaoDevolverSinuca.style.display = "flex";
-        onSolicitarSinuca();
     }
 }
 function aparecerDevolverTenis(){
@@ -26,7 +26,7 @@ function aparecerDevolverTenis(){
     } else{
         botaoTenis.style.display = "none";
         botaoDevolverTenis.style.display = "flex";
-        // onSolicitarTenis();
+        //onSolicitarSinuca();
     }
 }
 function aparecerDevolverBaralho(){
@@ -54,9 +54,7 @@ function aparecerDevolverPebolim(){
 // function popupFeedback(){
 //  console.log("123");
 // }
-function onSolicitarSinuca(){
-    var result = "<?php php_func();?>";
-}
 // function onSolicitarTenis(){}
 // function onSolicitarBaralho(){}
 // function onSolicitarPebolim(){}
+
