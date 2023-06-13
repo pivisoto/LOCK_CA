@@ -29,6 +29,7 @@ CREATE TABLE emprestimo(
 	 FOREIGN KEY (idUsuario)
         REFERENCES usuario (idUsuario),
 	CONSTRAINT PK_Emprestimo PRIMARY KEY (idEmprestimo)
+    CONSTRAINT K_Material_Usuario UNIQUE (idMaterial , idUsuario)
 );
 
 CREATE TABLE IF NOT EXISTS feedback(
@@ -45,5 +46,5 @@ insert into material values (null, "tenis de mesa", "5", "5");
 insert into material values (null, "baralho", "3", "3");
 insert into material values (null, "pebolim", "4", "4");
 insert into emprestimo values(null,1,1,1,default,current_time(),true);
-insert into emprestimo values(null,1,1,2,default,current_time(),true);
+insert into emprestimo values(null,2,1,2,default,current_time(),true);
 insert into feedback values (null, 1,"uma bolinha faltando");
