@@ -13,8 +13,8 @@ class Login extends dbconnect{
             header("location: ../index.php?error=usenotfound");
             exit();
         }
-        $senhaHashed = $stmt -> fetch(PDO::FETCH_ASSOC);
-        $checkSenha = password_verify($senha,$senhaHashed[1]["senha"]);
+        $senhaHashed = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $checkSenha = password_verify($senha,$senhaHashed[0]["senha"]);
         if (!$checkSenha) {
             $stmt = null;
             header("location: ../index.php?error=wrongpassword");

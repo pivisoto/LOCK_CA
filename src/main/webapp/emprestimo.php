@@ -17,13 +17,13 @@
                         <main>Empréstimo</main>
                         <form action = "#">
                             <div class="field">
-                                <div class="item"><p class ="field p">KIT SINUCA</p></div><div class="botao-item"><button id="botao_sinuca" type="button" class="field button">Solicitar</button>
-                                    <button style ="display:none" class="field button">Devolver</button>
+                                <div class="item"><p class ="field p">KIT SINUCA</p></div><div class="botao-item"><button id="botao_sinuca" type="button" class="field button" onclick="aparecerDevolver();">Solicitar</button>
+                                    <button id="botao_devolver_sinuca" style="display:none" class="field button" onClick="popupFeedback()">Devolver</button>
                                 </div>
                             </div>
                             <div class="line"></div>
                             <div class="field">
-                                <div class="item"><p class ="field p">TÊNIS DE MESA</p></div><div class="botao-item"><button type="button" class="field button" id="botao_tenis">Solicitar</button>
+                                <div class="item"><p class ="field p">TÊNIS DE MESA</p></div><div class="botao-item"><button style = "display:none" type="button" class="field button" id="botao_tenis">Solicitar</button>
                                     <button style = "display:none" class="field button">Devolver</button>
                                 </div>
                             </div>
@@ -46,4 +46,6 @@
                 </div>
         </section>
     </body>
+    <script src="emprestimo.js"></script>
 </html>
+

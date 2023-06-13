@@ -20,6 +20,9 @@ header{
     padding: 10%;
     width: 80%;
 }
+h4#indis {
+    color: red;
+}
 header>h1 {
     font-family: 'Jockey One';
     font-style: normal;
@@ -96,7 +99,6 @@ form{
 .field button:hover{
   color: #fff;
   background-color: #016dcb;
-  transition: all 0.3 ease;
   cursor: pointer;
 }
 .line{
