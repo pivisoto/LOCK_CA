@@ -12,11 +12,21 @@ class Feedback extends dbconnect{
         }
         $stmt = null;
         $this->devolveMaterial($idMaterial);
+        $this->itemDevolvido($idEmprestimo);
+    }
+    protected function itemDevolvido($idEmprestimo){
+        $stmt = $this->connect()->prepare('UPDATE emprestimo SET retorno=true WHERE idEmprestimo=?;');
+        if (!$stmt->execute(array($idEmprestimo))) {
+            $stmt = null;
+            header("location: ../emprestimo.php?error=stmtfailed");
+            exit();
+        }
+        $stmt = null;
     }
 
     protected function devolveMaterial($idMaterial)
     {
-        $stmt = $this->connect()->prepare('UPDATE material SET quantidadeDisponivel=quantidadeDisponivel+1 WHERE idMaterial = ?;');
+        $stmt = $this->connect()->prepare('UPDATE material SET quantidadeDisponivel=quantidadeDisponivel+1 WHERE idMaterial=?;');
         if (!$stmt->execute(array($idMaterial))) {
             $stmt = null;
             header("location: ../emprestimo.php?error=stmtfailed");

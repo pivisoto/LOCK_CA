@@ -34,8 +34,6 @@ function aparecerDevolverSinuca(){
 }
 function aparecerDevolverTenis(){
     if(botaoTenis.style.display == "none") {
-        botaoTenis.style.display = "flex";
-        botaoDevolverTenis.style.display = "none";
         popupFeedback_T();
     } else{
         botaoSinuca.style.display = "none";
@@ -50,9 +48,7 @@ function aparecerDevolverTenis(){
 }
 function aparecerDevolverBaralho(){
     if(botaoBaralho.style.display == "none") {
-        botaoBaralho.style.display = "flex";
-        botaoDevolverBaralho.style.display = "none";
-        popupFeedbackp_B();
+        popupFeedback_B();
     } else{
         botaoSinuca.style.display = "none";
         botaoPebolim.style.display = "none";
@@ -67,7 +63,7 @@ function aparecerDevolverBaralho(){
 }
 function aparecerDevolverPebolim(){
     if(botaoPebolim.style.display == "none") {
-        popupFeedbackp_P();
+        popupFeedback_P();
     } else{
         botaoSinuca.style.display = "none";
         botaoPebolim.style.display = "none";
@@ -75,7 +71,7 @@ function aparecerDevolverPebolim(){
         botaoBaralho.style.display = "none";
         botaoDevolverPebolim.style.display = "flex";
         botaoIndisSinuca.style.display = "flex";
-        botaoIndisPebolim.style.display = "flex";
+        botaoIndisTenis.style.display = "flex";
         botaoIndisBaralho.style.display = "flex";
     }
 }
@@ -96,11 +92,50 @@ function popupFeedback_S(){
 
 }
 function popupFeedback_T(){
-
+    Field.style.display = "none";
+    botaoIndisTenis.style.display = "none";
+    botaoIndisSinuca.style.display = "none";
+    botaoIndisPebolim.style.display = "none";
+    botaoIndisBaralho.style.display = "none";
+    botaoDevolverTenis.style.display = "none";
+    Material.forEach((texto) => {
+        texto.style.display = "none";
+    });
+    Line.forEach((texto) => {
+        texto.style.display = "none";
+    });
+    PopUp.style.display = "flex";
+    Form_titulo.textContent = "Feedback";
 }
-function popupFeedbackp_B(){
-
+function popupFeedback_B(){
+    Field.style.display = "none";
+    botaoIndisTenis.style.display = "none";
+    botaoIndisSinuca.style.display = "none";
+    botaoIndisPebolim.style.display = "none";
+    botaoIndisBaralho.style.display = "none";
+    botaoDevolverBaralho.style.display = "none";
+    Material.forEach((texto) => {
+        texto.style.display = "none";
+    });
+    Line.forEach((texto) => {
+        texto.style.display = "none";
+    });
+    PopUp.style.display = "flex";
+    Form_titulo.textContent = "Feedback";
 }
-function popupFeedbackp_P(){
-
+function popupFeedback_P(){
+    Field.style.display = "none";
+    botaoIndisTenis.style.display = "none";
+    botaoIndisSinuca.style.display = "none";
+    botaoIndisPebolim.style.display = "none";
+    botaoIndisBaralho.style.display = "none";
+    botaoDevolverPebolim.style.display = "none";
+    Material.forEach((texto) => {
+        texto.style.display = "none";
+    });
+    Line.forEach((texto) => {
+        texto.style.display = "none";
+    });
+    PopUp.style.display = "flex";
+    Form_titulo.textContent = "Feedback";
 }

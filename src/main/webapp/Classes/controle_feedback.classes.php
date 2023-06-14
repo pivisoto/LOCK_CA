@@ -5,7 +5,6 @@ class ControleFeedback extends Feedback
 
     private $idEmprestimo;
     private $idMaterial;
-
     private $feedback;
 
     public function __construct($feedback, $idMaterial,$idEmprestimo)
@@ -21,7 +20,7 @@ class ControleFeedback extends Feedback
             header("location: ../emprestimo.php?error=emptyinput");
             exit();
         }
-        $this->createFeedback($this->feedback,$this->idMaterial,this->idEmprestimo);
+        $this->createFeedback($this->feedback,$this->idMaterial,$this->idEmprestimo);
     }
 
     private function inputVazio()

@@ -17,17 +17,15 @@
     <div class="form cadastrar">
         <div class="form-content">
             <main id="form_titulo">Empréstimo</main>
-            <form method="post" id="form_emprestimo">
-                <form action = "includes/feedback.inc.php" method="post">
+            <form method="post" id="form_emprestimo" action = "includes/feedback.inc.php">
                 <div class="field_popup" id="popup" style="display:none;">
                     <div class="popup">
                         <div class="popup-content">
-                            <input id="input_feedback" type="text" placeholder="Escreva aqui seu feedback">
+                            <input id="input_feedback" name="input_feedback" type="text" placeholder="Escreva aqui seu feedback">
                             <button type="submit" id="botao_feedback" class="field button">ENVIAR</button>
                         </div>
                     </div>
                 </div>
-                </form>
                 <div class="field" id="field_botao">
                     <div class="item">
                         <p class="field p" id="nome">KIT SINUCA</p>
@@ -159,15 +157,15 @@
     $(document).ready(function() {
         $("#botao_devolver_sinuca").click(function(event) {
             event.preventDefault();
-            var item = "sinuca";
             $.ajax({
-                url: "includes/emprestimo.inc.php",
+                url: "includes/feedback.inc.php",
                 type: "POST",
                 data: {
                     item: item
                 },
                 success: function(response) {
                     console.log(response);
+                    // Você pode exibir uma mensagem de sucesso aqui, se desejar
                 },
                 error: function(error) {
                     console.error(error);
@@ -175,6 +173,65 @@
             });
         });
     });
+    $(document).ready(function() {
+        $("#botao_devolver_tenis").click(function(event) {
+            event.preventDefault();
+            $.ajax({
+                url: "includes/feedback.inc.php",
+                type: "POST",
+                data: {
+                    item: item
+                },
+                success: function(response) {
+                    console.log(response);
+                    // Você pode exibir uma mensagem de sucesso aqui, se desejar
+                },
+                error: function(error) {
+                    console.error(error);
+                }
+            });
+        });
+    });
+    $(document).ready(function() {
+        $("#botao_devolver_baralho").click(function(event) {
+            event.preventDefault();
+            $.ajax({
+                url: "includes/feedback.inc.php",
+                type: "POST",
+                data: {
+                    item: item
+                },
+                success: function(response) {
+                    console.log(response);
+                    // Você pode exibir uma mensagem de sucesso aqui, se desejar
+                },
+                error: function(error) {
+                    console.error(error);
+                }
+            });
+        });
+    });
+    $(document).ready(function() {
+        $("#botao_devolver_pebolim").click(function(event) {
+            event.preventDefault();
+            $.ajax({
+                url: "includes/feedback.inc.php",
+                type: "POST",
+                data: {
+                    item: item
+                },
+                success: function(response) {
+                    console.log(response);
+                    // Você pode exibir uma mensagem de sucesso aqui, se desejar
+                },
+                error: function(error) {
+                    console.error(error);
+                }
+            });
+        });
+    });
+
+
 </script>
 </body>
 <script src="emprestimo.js"></script>
