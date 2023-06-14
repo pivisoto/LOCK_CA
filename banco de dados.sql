@@ -21,15 +21,14 @@ CREATE TABLE emprestimo(
 	idEmprestimo integer not null unique auto_increment,
 	idMaterial INTEGER ,
     idUsuario INTEGER NOT NULL,
-    codigo integer not null unique auto_increment,
+    codigo integer not null unique,
     dia datetime default now() not null,
     horario time not null,
-    retorno bool not null default false,
+    retorno bool not null,
     FOREIGN KEY (idMaterial) REFERENCES material(idMaterial),
 	 FOREIGN KEY (idUsuario)
         REFERENCES usuario (idUsuario),
 	CONSTRAINT PK_Emprestimo PRIMARY KEY (idEmprestimo)
-    CONSTRAINT K_Material_Usuario UNIQUE (idMaterial , idUsuario)
 );
 
 CREATE TABLE IF NOT EXISTS feedback(
@@ -41,10 +40,7 @@ CREATE TABLE IF NOT EXISTS feedback(
     CONSTRAINT PK_Feedback PRIMARY KEY (idFeedback)
 );
 insert into usuario values (1,"22.00865-9", "123@gmail.com","senha");
-insert into material values (null, "kit sinuca", "3", "3");
-insert into material values (null, "tenis de mesa", "5", "5");
-insert into material values (null, "baralho", "3", "3");
-insert into material values (null, "pebolim", "4", "4");
+insert into material values (null, "kit sinuca", "1", True);
 insert into emprestimo values(null,1,1,1,default,current_time(),true);
-insert into emprestimo values(null,2,1,2,default,current_time(),true);
+insert into emprestimo values(null,1,1,2,default,current_time(),true);
 insert into feedback values (null, 1,"uma bolinha faltando");
