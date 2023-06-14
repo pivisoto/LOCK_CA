@@ -1,8 +1,7 @@
 <?php
 class emprestimo extends dbconnect{
-    protected function createEmprestimo($idUsuario, $idMaterial)
+    protected function createEmprestimo($idUsuario, $idMaterial,$codigo)
     {
-        $codigo = rand(0,100000);
         $stmt = $this->connect()->prepare('INSERT INTO emprestimo (idMaterial, idUsuario, horario,codigo) VALUES (?, ?, current_time(),?);');
         if (!$stmt->execute(array($idMaterial, $idUsuario,$codigo))) {
             $stmt = null;
@@ -19,6 +18,24 @@ class emprestimo extends dbconnect{
             header("location: ../emprestimo.php?error=stmtfailed");
             exit();
         }
+        $stmt = null;
+    }
+    protected function getIDemprestimo($codigo){
+        $stmt = $this->connect()->prepare('SELECT idEmprestimo, idMaterial FROM emprestimo WHERE codigo = ?;');
+        if (!$stmt->execute(array($codigo))) {
+            $stmt = null;
+            header("location: ../emprestimo.php?error=stmtfailed");
+            exit();
+        }
+        if ($stmt->rowCount() == 0) {
+            $stmt = null;
+            header("location: ../emprestimo.php?error=codigonotfound");
+            exit();
+        }
+        $user = $stmt->fetchAll(PDO::FETCH_ASSOC);;
+        session_start();
+        $_SESSION["idEmprestimo"] = $user[0]["idEmprestimo"];
+        $_SESSION["idMaterial"] = $user[0]["idMaterial"];
         $stmt = null;
     }
 }

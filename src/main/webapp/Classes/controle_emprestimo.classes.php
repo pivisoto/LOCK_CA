@@ -3,9 +3,11 @@ class ControleEmprestimo extends Emprestimo{
 
     private $idUsuario;
     private $idMaterial;
+    private $codigo;
 
-    public function __construct($idUsuario, $idMaterial)
+    public function __construct($idUsuario, $idMaterial,$codigo)
     {
+        $this->codigo = $codigo;
         $this->idUsuario = $idUsuario;
         $this->idMaterial = $idMaterial;
     }
@@ -16,7 +18,7 @@ class ControleEmprestimo extends Emprestimo{
             header("location: ../emprestimo.php?error=emptyinput");
             exit();
         }
-        $this->createEmprestimo($this->idUsuario, $this->idMaterial);
+        $this->createEmprestimo($this->idUsuario, $this->idMaterial,$this->codigo);
     }
 
     private function inputVazio()
