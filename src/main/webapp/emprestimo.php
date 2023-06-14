@@ -230,6 +230,78 @@
             });
         });
     });
+    $(document).ready(function() {
+        $("#indis_sinuca").click(function(event){
+            event.preventDefault();
+            $.ajax({
+                url: "includes/feedback.inc.php",
+                type: "POST",
+                data: {
+                },
+                success: function(response) {
+                    console.log(response);
+                    // Você pode exibir uma mensagem de sucesso aqui, se desejar
+                },
+                error: function(error) {
+                    console.error(error);
+                }
+            });
+        });
+    });
+    $(document).ready(function() {
+        $("#indis_tenis").click(function(event) {
+            event.preventDefault();
+            $.ajax({
+                url: "includes/feedback.inc.php",
+                type: "POST",
+                data: {
+                },
+                success: function(response) {
+                    console.log(response);
+                    // Você pode exibir uma mensagem de sucesso aqui, se desejar
+                },
+                error: function(error) {
+                    console.error(error);
+                }
+            });
+        });
+    });
+    $(document).ready(function() {
+        $("#indis_baralho").click(function(event) {
+            event.preventDefault();
+            $.ajax({
+                url: "includes/feedback.inc.php",
+                type: "POST",
+                data: {
+                },
+                success: function(response) {
+                    console.log(response);
+                    // Você pode exibir uma mensagem de sucesso aqui, se desejar
+                },
+                error: function(error) {
+                    console.error(error);
+                }
+            });
+        });
+    });
+    $(document).ready(function() {
+        $("#indis_pebolim").click(function(event) {
+            event.preventDefault();
+            $.ajax({
+                url: "includes/feedback.inc.php",
+                type: "POST",
+                data: {
+                },
+                success: function(response) {
+                    console.log(response);
+                    // Você pode exibir uma mensagem de sucesso aqui, se desejar
+                },
+                error: function(error) {
+                    console.error(error);
+                }
+            });
+        });
+    });
 
 
 </script>
